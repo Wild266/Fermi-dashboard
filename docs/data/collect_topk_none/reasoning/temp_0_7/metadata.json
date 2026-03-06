@@ -1,0 +1,17 @@
+{
+  "run_started_at": "2026-02-12 03:06:13",
+  "csv_path": "/work/users/a/s/asameull/GE8/data/LLN_Dataset.csv",
+  "out_dir": "/work/users/a/s/asameull/GE8/runs/ll_7b_g2_30275557/collect_topk_none/reasoning/temp_0_7",
+  "temperature": "0.7",
+  "top_k": "none",
+  "num_samples": "20",
+  "models_to_run": "both",
+  "max_new_tokens": "4096",
+  "seed_offset": "0",
+  "endpoints": [
+    "http://127.0.0.1:21557"
+  ],
+  "model_ids": [
+    "reasoning"
+  ]
+}

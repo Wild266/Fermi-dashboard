@@ -1,0 +1,49 @@
+{
+  "title": "LLN Dashboard",
+  "datasets": [
+    {
+      "id": "collect_topk_40",
+      "label": "collect_topk_40",
+      "files": [
+        {
+          "label": "T=0.1 (temp_0_1)",
+          "path": "data/collect_topk_40/temp_0_1/responses.csv"
+        },
+        {
+          "label": "T=0.4 (temp_0_4)",
+          "path": "data/collect_topk_40/temp_0_4/responses.csv"
+        },
+        {
+          "label": "T=0.7 (temp_0_7)",
+          "path": "data/collect_topk_40/temp_0_7/responses.csv"
+        },
+        {
+          "label": "T=1 (temp_1_0)",
+          "path": "data/collect_topk_40/temp_1_0/responses.csv"
+        }
+      ]
+    },
+    {
+      "id": "collect_topk_none",
+      "label": "collect_topk_none",
+      "files": [
+        {
+          "label": "T=0.1 (temp_0_1)",
+          "path": "data/collect_topk_none/temp_0_1/responses.csv"
+        },
+        {
+          "label": "T=0.4 (temp_0_4)",
+          "path": "data/collect_topk_none/temp_0_4/responses.csv"
+        },
+        {
+          "label": "T=0.7 (temp_0_7)",
+          "path": "data/collect_topk_none/temp_0_7/responses.csv"
+        },
+        {
+          "label": "T=1 (temp_1_0)",
+          "path": "data/collect_topk_none/temp_1_0/responses.csv"
+        }
+      ]
+    }
+  ]
+}

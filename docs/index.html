@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LLN Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CSV parsing + plotting via CDN (works on GitHub Pages) -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="pageTitle">LLN Dashboard</h1>
+      <p class="muted">
+        Simple, static dashboard for <code>responses.csv</code> / <code>responses_labeled.csv</code> outputs.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Load data</h2>
+
+      <div class="controls">
+        <div class="control">
+          <label for="datasetSelect">Dataset</label>
+          <select id="datasetSelect"></select>
+        </div>
+        <div class="control">
+          <label for="fileSelect">File</label>
+          <select id="fileSelect"></select>
+        </div>
+        <div class="control">
+          <label>&nbsp;</label>
+          <button id="loadBtn">Load</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control wide">
+          <label for="fileInput">Or upload a CSV (local)</label>
+          <input id="fileInput" type="file" accept=".csv" />
+        </div>
+      </div>
+
+      <div id="status" class="status"></div>
+    </section>
+
+    <section id="summary" class="card" style="display:none;"></section>
+
+    <section id="filters" class="card" style="display:none;">
+      <h2>Filters</h2>
+      <div class="controls">
+        <div class="control wide">
+          <label>Model kinds</label>
+          <div id="modelFilter" class="model-filter"></div>
+        </div>
+        <div class="control wide">
+          <label for="filterInput">Question contains</label>
+          <input id="filterInput" type="text" placeholder="e.g., 'mass of the sun'" />
+        </div>
+      </div>
+      <div class="muted">Plots + preview update automatically.</div>
+    </section>
+
+    <section id="plots" class="grid" style="display:none;">
+      <div class="card">
+        <h2 id="plotKTitle">k distribution</h2>
+        <div id="plotK" class="plot"></div>
+      </div>
+      <div class="card">
+        <h2>Accuracy by model kind</h2>
+        <div id="plotAcc" class="plot"></div>
+        <div id="plotAccNote" class="muted"></div>
+      </div>
+      <div class="card">
+        <h2>Error distribution</h2>
+        <div id="plotErr" class="plot"></div>
+        <div id="plotErrNote" class="muted"></div>
+      </div>
+    </section>
+
+    <section id="preview" class="card" style="display:none;">
+      <div class="preview-header">
+        <h2>Data preview</h2>
+        <a id="downloadLink" class="button" href="#" download>Download CSV</a>
+      </div>
+      <div class="muted">Showing first <span id="previewCount">200</span> rows after filters.</div>
+      <div id="tableWrap" class="table-wrap"></div>
+    </section>
+
+    <footer class="footer muted">
+      <div>
+        Tip: put your CSVs under <code>docs/data/</code> and update <code>docs/data/manifest.json</code>.
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
