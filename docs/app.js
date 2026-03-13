@@ -4,6 +4,7 @@
  */
 
 const MANIFEST_URL = 'manifest.json';
+const DATA_MANIFEST_URL = 'data/manifest.json';
 
 const el = (id) => document.getElementById(id);
 
@@ -150,6 +151,103 @@ async function safeFetchText(url) {
 }
 
 let manifest = null;
+
+let llnManifest = null;
+
+function getSelectedDataset() {
+  const datasetId = el('llnDatasetSelect')?.value;
+  return (llnManifest?.datasets || []).find((d) => d.id === datasetId) || null;
+}
+
+function getSelectedDatasetFile(dataset) {
+  if (!dataset) return null;
+  const path = el('llnFileSelect')?.value;
+  return (dataset.files || []).find((f) => f.path === path) || null;
+}
+
+function renderLlnPreview(dataset, file) {
+  const meta = el('llnMeta');
+  const preview = el('llnPreview');
+  if (!meta || !preview) return;
+
+  if (!dataset || !file) {
+    meta.textContent = 'No LLN dataset selected.';
+    preview.innerHTML = '<div class="muted" style="padding:8px 10px;">(select a dataset file)</div>';
+    return;
+  }
+
+  meta.textContent = `Showing ${dataset.label || dataset.id} — ${file.label}`;
+  safeFetchText(file.path).then((txt) => {
+    if (!txt) {
+      preview.innerHTML = '<div class="muted" style="padding:8px 10px;">Could not load LLN CSV file.</div>';
+      return;
+    }
+    renderTable(preview, txt, 120);
+  });
+}
+
+function populateLlnSelectors() {
+  const datasetSel = el('llnDatasetSelect');
+  const fileSel = el('llnFileSelect');
+  const meta = el('llnMeta');
+  const preview = el('llnPreview');
+
+  if (!datasetSel || !fileSel || !meta || !preview) return;
+
+  datasetSel.innerHTML = '';
+  fileSel.innerHTML = '';
+
+  const datasets = llnManifest?.datasets || [];
+  if (!datasets.length) {
+    datasetSel.innerHTML = '<option value="">(no LLN datasets)</option>';
+    fileSel.innerHTML = '<option value="">(no files)</option>';
+    meta.textContent = 'LLN dataset manifest not found.';
+    preview.innerHTML = '<div class="muted" style="padding:8px 10px;">(missing data/manifest.json)</div>';
+    return;
+  }
+
+  for (const d of datasets) {
+    const opt = document.createElement('option');
+    opt.value = d.id;
+    opt.textContent = d.label || d.id;
+    datasetSel.appendChild(opt);
+  }
+
+  function rebuildFiles() {
+    const dataset = getSelectedDataset();
+    fileSel.innerHTML = '';
+    const files = dataset?.files || [];
+    for (const f of files) {
+      const opt = document.createElement('option');
+      opt.value = f.path;
+      opt.textContent = f.label || basename(f.path);
+      fileSel.appendChild(opt);
+    }
+    if (files.length) fileSel.value = files[0].path;
+    renderLlnPreview(dataset, getSelectedDatasetFile(dataset));
+  }
+
+  datasetSel.value = datasets[0].id;
+  rebuildFiles();
+
+  datasetSel.onchange = () => rebuildFiles();
+  fileSel.onchange = () => {
+    const dataset = getSelectedDataset();
+    renderLlnPreview(dataset, getSelectedDatasetFile(dataset));
+  };
+}
+
+async function loadLlnManifest() {
+  try {
+    const r = await fetch(DATA_MANIFEST_URL, { cache: 'no-store' });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    llnManifest = await r.json();
+  } catch {
+    llnManifest = null;
+  }
+  populateLlnSelectors();
+}
+
 
 function getSelectedModel() {
   const modelId = el('modelSelect').value;
@@ -598,6 +696,13 @@ async function loadManifest() {
 
 el('reloadBtn').addEventListener('click', async () => {
   await loadManifest();
+  await loadLlnManifest();
+});
+
+el('plotTypeSelect').addEventListener('change', () => {
+  const model = getSelectedModel();
+  const agg = getSelectedAgg(model);
+  renderPlots(agg);
 });
 
 el('plotTypeSelect').addEventListener('change', () => {
@@ -608,3 +713,4 @@ el('plotTypeSelect').addEventListener('change', () => {
 
 hookHistogramEvents();
 loadManifest();
+loadLlnManifest();
