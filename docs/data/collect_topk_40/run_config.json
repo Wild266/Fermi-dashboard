@@ -1,1 +1,0 @@
-{"model_base":"Qwen/Qwen2.5-Math-7B","model_reasoning":"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B","top_k":"40","max_model_len":8192,"num_samples":20}

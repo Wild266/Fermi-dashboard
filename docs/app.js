@@ -705,6 +705,12 @@ el('plotTypeSelect').addEventListener('change', () => {
   renderPlots(agg);
 });
 
+el('plotTypeSelect').addEventListener('change', () => {
+  const model = getSelectedModel();
+  const agg = getSelectedAgg(model);
+  renderPlots(agg);
+});
+
 hookHistogramEvents();
 loadManifest();
 loadLlnManifest();
