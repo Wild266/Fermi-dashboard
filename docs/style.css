@@ -1,10 +1,11 @@
 :root {
-  --bg: #0b0c10;
-  --card: #12141b;
-  --text: #e6e6e6;
-  --muted: #9aa4b2;
-  --border: #262a36;
-  --link: #86b6ff;
+  --bg: #080b12;
+  --card: #101624;
+  --text: #e7edf8;
+  --muted: #9eacc3;
+  --border: #243049;
+  --link: #9bc6ff;
+  --accent: #59a5ff;
 }
 
 * { box-sizing: border-box; }
@@ -12,17 +13,17 @@
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  background: var(--bg);
+  background: radial-gradient(circle at 10% -20%, #1c2f56 0%, var(--bg) 35%);
   color: var(--text);
 }
 
 header {
-  padding: 16px 18px 10px;
+  padding: 16px 18px 12px;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  background: rgba(11, 12, 16, 0.95);
-  backdrop-filter: blur(6px);
+  background: rgba(8, 11, 18, 0.94);
+  backdrop-filter: blur(8px);
   z-index: 10;
 }
 
@@ -32,23 +33,50 @@ header {
   gap: 12px;
 }
 
-h1 { margin: 0; font-size: 20px; }
+h1 { margin: 0; font-size: 22px; }
 
 main {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 14px 18px 40px;
+  padding: 16px 18px 42px;
 }
 
 .card {
-  background: var(--card);
+  background: linear-gradient(180deg, #111a2d, #0d1423);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 14px;
   margin: 12px 0;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
 }
 
-h2 { margin: 0 0 10px; font-size: 16px; }
+.summaryCard {
+  padding: 12px 14px;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  border: 1px solid #355184;
+  background: #11203d;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+h2 { margin: 0; font-size: 16px; }
 h3 { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
 
 .controls {
@@ -57,6 +85,10 @@ h3 { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
   align-items: flex-end;
   flex-wrap: wrap;
   margin-top: 10px;
+}
+
+.controls.inline {
+  margin-top: 0;
 }
 
 .controls.small {
@@ -72,7 +104,7 @@ label {
 }
 
 select, input[type="number"] {
-  background: #0f1117;
+  background: #0b1120;
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -83,7 +115,7 @@ select, input[type="number"] {
 input[type="number"] { min-width: 100px; }
 
 button {
-  background: #1a1f2b;
+  background: #182641;
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -91,7 +123,10 @@ button {
   cursor: pointer;
 }
 
-button:hover { border-color: #3a4257; }
+button:hover {
+  border-color: #4f6ea6;
+  box-shadow: 0 0 0 2px rgba(89, 165, 255, 0.2);
+}
 
 .status {
   margin-top: 10px;
@@ -108,14 +143,14 @@ a:hover { text-decoration: none; }
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 
 .thumb {
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
-  background: #0f1117;
+  background: #0b1120;
 }
 
 .thumb img {
@@ -145,7 +180,7 @@ a:hover { text-decoration: none; }
   padding: 8px 10px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: #0f1117;
+  background: #0b1120;
   font-size: 12px;
 }
 
@@ -153,7 +188,7 @@ a:hover { text-decoration: none; }
   overflow: auto;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: #0f1117;
+  background: #0b1120;
   max-height: 320px;
 }
 
@@ -166,7 +201,7 @@ table {
 thead th {
   position: sticky;
   top: 0;
-  background: #10131a;
+  background: #101b33;
   color: var(--muted);
 }
 
@@ -176,13 +211,13 @@ th, td {
   vertical-align: top;
 }
 
-tr:hover td { background: rgba(134, 182, 255, 0.06); }
+tr:hover td { background: rgba(89, 165, 255, 0.08); }
 
 .pre {
   overflow: auto;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: #0f1117;
+  background: #0b1120;
   padding: 10px;
   max-height: 320px;
   font-size: 12px;
@@ -201,7 +236,7 @@ tr:hover td { background: rgba(134, 182, 255, 0.06); }
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 12px;
-  background: #0f1117;
+  background: #0b1120;
 }
 
 .histWrap img {
@@ -212,7 +247,7 @@ tr:hover td { background: rgba(134, 182, 255, 0.06); }
 }
 
 code {
-  background: #0f1117;
+  background: #0b1120;
   border: 1px solid var(--border);
   padding: 2px 6px;
   border-radius: 6px;
