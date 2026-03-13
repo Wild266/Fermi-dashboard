@@ -3,100 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LLN Dashboard</title>
+  <title>Model Analytics Dashboard</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- CSV parsing + plotting via CDN (works on GitHub Pages) -->
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <h1 id="pageTitle">LLN Dashboard</h1>
-      <p class="muted">
-        Simple, static dashboard for <code>responses.csv</code> / <code>responses_labeled.csv</code> outputs.
-      </p>
-    </header>
+  <header>
+    <div class="title-row">
+      <h1>Model Analytics Dashboard</h1>
+      <span id="manifestMeta" class="muted"></span>
+    </div>
+
+    <div class="controls">
+      <label>
+        Model
+        <select id="modelSelect"></select>
+      </label>
+
+      <label>
+        Run
+        <select id="aggSelect"></select>
+      </label>
+
+      <button id="reloadBtn" type="button">Reload</button>
+    </div>
+
+    <div id="status" class="status"></div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Plots</h2>
+      <div id="plots" class="gallery"></div>
+      <div id="plotsEmpty" class="muted"></div>
+    </section>
 
     <section class="card">
-      <h2>Load data</h2>
+      <h2>Key files</h2>
+      <div id="downloads" class="downloads"></div>
 
-      <div class="controls">
-        <div class="control">
-          <label for="datasetSelect">Dataset</label>
-          <select id="datasetSelect"></select>
+      <div class="grid2">
+        <div>
+          <h3>metrics_overall.csv</h3>
+          <div id="metricsOverall" class="tableWrap"></div>
         </div>
-        <div class="control">
-          <label for="fileSelect">File</label>
-          <select id="fileSelect"></select>
-        </div>
-        <div class="control">
-          <label>&nbsp;</label>
-          <button id="loadBtn">Load</button>
+        <div>
+          <h3>metrics_global.csv</h3>
+          <div id="metricsGlobal" class="tableWrap"></div>
         </div>
       </div>
 
-      <div class="controls">
-        <div class="control wide">
-          <label for="fileInput">Or upload a CSV (local)</label>
-          <input id="fileInput" type="file" accept=".csv" />
+      <div class="grid2">
+        <div>
+          <h3>method_rankings.txt</h3>
+          <pre id="methodRankings" class="pre"></pre>
         </div>
-      </div>
-
-      <div id="status" class="status"></div>
-    </section>
-
-    <section id="summary" class="card" style="display:none;"></section>
-
-    <section id="filters" class="card" style="display:none;">
-      <h2>Filters</h2>
-      <div class="controls">
-        <div class="control wide">
-          <label>Model kinds</label>
-          <div id="modelFilter" class="model-filter"></div>
+        <div>
+          <h3>run_config.json</h3>
+          <pre id="runConfig" class="pre"></pre>
         </div>
-        <div class="control wide">
-          <label for="filterInput">Question contains</label>
-          <input id="filterInput" type="text" placeholder="e.g., 'mass of the sun'" />
-        </div>
-      </div>
-      <div class="muted">Plots + preview update automatically.</div>
-    </section>
-
-    <section id="plots" class="grid" style="display:none;">
-      <div class="card">
-        <h2 id="plotKTitle">k distribution</h2>
-        <div id="plotK" class="plot"></div>
-      </div>
-      <div class="card">
-        <h2>Accuracy by model kind</h2>
-        <div id="plotAcc" class="plot"></div>
-        <div id="plotAccNote" class="muted"></div>
-      </div>
-      <div class="card">
-        <h2>Error distribution</h2>
-        <div id="plotErr" class="plot"></div>
-        <div id="plotErrNote" class="muted"></div>
       </div>
     </section>
 
-    <section id="preview" class="card" style="display:none;">
-      <div class="preview-header">
-        <h2>Data preview</h2>
-        <a id="downloadLink" class="button" href="#" download>Download CSV</a>
+    <section class="card">
+      <h2>Histogram viewer</h2>
+      <div class="controls small">
+        <label>
+          topk
+          <select id="histTopk"></select>
+        </label>
+        <label>
+          kind
+          <select id="histKind"></select>
+        </label>
+        <label>
+          temp
+          <select id="histTemp"></select>
+        </label>
+        <label>
+          q
+          <input id="histQ" type="number" min="0" step="1" value="0" />
+        </label>
+        <button id="prevQ" type="button">◀</button>
+        <button id="nextQ" type="button">▶</button>
+        <span id="histRange" class="muted"></span>
       </div>
-      <div class="muted">Showing first <span id="previewCount">200</span> rows after filters.</div>
-      <div id="tableWrap" class="table-wrap"></div>
+
+      <div class="histWrap">
+        <a id="histLink" href="#" target="_blank" rel="noreferrer">
+          <img id="histImg" alt="histogram" />
+        </a>
+        <div id="histEmpty" class="muted"></div>
+      </div>
     </section>
 
-    <footer class="footer muted">
-      <div>
-        Tip: put your CSVs under <code>docs/data/</code> and update <code>docs/data/manifest.json</code>.
-      </div>
+    <footer class="muted">
+      <p>
+        Put analytics folders under <code>docs/models/&lt;MODEL&gt;/&lt;RUN&gt;/</code> (example: <code>docs/models/7B/agg_v2/</code>), then run:
+        <code>python tools/build_manifest.py</code>
+      </p>
     </footer>
-  </div>
+  </main>
 
-  <script src="app.js" defer></script>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+{
+  "run_dir": "/work/users/a/s/asameull/GE8/runs/ll_14b_g2_30275550/",
+  "out_dir": "/work/users/a/s/asameull/GE8/runs/ll_14b_g2_30275550/agg_v2/20260227_091222_job33296471",
+  "k_column": null,
+  "cluster_threshold": 0.85,
+  "cluster_kinds": "reasoning",
+  "cluster_strip_numbers": true,
+  "include_optional": true,
+  "make_plots": true,
+  "make_histograms": true,
+  "max_histograms": null,
+  "resolved_run_dir": "/work/users/a/s/asameull/GE8/runs/ll_14b_g2_30275550",
+  "chosen_k_col": "k_llama70b"
+}

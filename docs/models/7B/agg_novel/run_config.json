@@ -1,0 +1,11 @@
+{
+  "run_dir": "/work/users/a/s/asameull/GE8/runs/ll_7b_g2_30226581/",
+  "out_dir": "/work/users/a/s/asameull/GE8/runs/ll_7b_g2_30226581/agg_novel/20260227_114055_job33330436",
+  "k_column": null,
+  "cluster_strip_numbers": true,
+  "calib_alpha": 0.001,
+  "calib_cv_folds": 0,
+  "make_plots": true,
+  "resolved_run_dir": "/work/users/a/s/asameull/GE8/runs/ll_7b_g2_30226581",
+  "chosen_k_col": "k_llama70b"
+}

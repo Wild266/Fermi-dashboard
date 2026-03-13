@@ -1,0 +1,485 @@
+{
+  "generated_at": "2026-03-13T01:28:04.496723+00:00",
+  "models": [
+    {
+      "id": "14B",
+      "label": "14B",
+      "aggs": [
+        {
+          "id": "agg_v2",
+          "label": "agg_v2",
+          "base_path": "models/14B/agg_v2",
+          "plots": [
+            "models/14B/agg_v2/plots/acc_vs_temp_base_topk_40.png",
+            "models/14B/agg_v2/plots/acc_vs_temp_base_topk_none.png",
+            "models/14B/agg_v2/plots/acc_vs_temp_reasoning_topk_40.png",
+            "models/14B/agg_v2/plots/acc_vs_temp_reasoning_topk_none.png",
+            "models/14B/agg_v2/plots/global_accuracy_by_method_all.png",
+            "models/14B/agg_v2/plots/global_accuracy_by_method_top40.png",
+            "models/14B/agg_v2/plots/global_mae_by_method_top40.png",
+            "models/14B/agg_v2/plots/global_score_inv1p_abs_by_method_top40.png",
+            "models/14B/agg_v2/plots/legend_methods.png",
+            "models/14B/agg_v2/plots/overall_accuracy_base_topk_40.png",
+            "models/14B/agg_v2/plots/overall_accuracy_base_topk_none.png",
+            "models/14B/agg_v2/plots/overall_accuracy_reasoning_topk_40.png",
+            "models/14B/agg_v2/plots/overall_accuracy_reasoning_topk_none.png",
+            "models/14B/agg_v2/plots/overall_mae_base_topk_40.png",
+            "models/14B/agg_v2/plots/overall_mae_base_topk_none.png",
+            "models/14B/agg_v2/plots/overall_mae_reasoning_topk_40.png",
+            "models/14B/agg_v2/plots/overall_mae_reasoning_topk_none.png",
+            "models/14B/agg_v2/plots/overall_score_inv1p_abs_base_topk_40.png",
+            "models/14B/agg_v2/plots/overall_score_inv1p_abs_base_topk_none.png",
+            "models/14B/agg_v2/plots/overall_score_inv1p_abs_reasoning_topk_40.png",
+            "models/14B/agg_v2/plots/overall_score_inv1p_abs_reasoning_topk_none.png"
+          ],
+          "files": {
+            "method_rankings.txt": "models/14B/agg_v2/method_rankings.txt",
+            "metrics_by_group.csv": "models/14B/agg_v2/metrics_by_group.csv",
+            "metrics_by_temp_kind.csv": "models/14B/agg_v2/metrics_by_temp_kind.csv",
+            "metrics_global.csv": "models/14B/agg_v2/metrics_global.csv",
+            "metrics_overall.csv": "models/14B/agg_v2/metrics_overall.csv",
+            "per_group_predictions.csv": "models/14B/agg_v2/per_group_predictions.csv",
+            "run_config.json": "models/14B/agg_v2/run_config.json",
+            "plots/legend_methods.pdf": "models/14B/agg_v2/plots/legend_methods.pdf",
+            "plots/legend_methods.png": "models/14B/agg_v2/plots/legend_methods.png",
+            "plots/method_styles.json": "models/14B/agg_v2/plots/method_styles.json"
+          },
+          "histograms": {
+            "topk_40": {
+              "base": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              },
+              "reasoning": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              }
+            },
+            "topk_none": {
+              "base": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              },
+              "reasoning": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "agg_weighted",
+          "label": "agg_weighted",
+          "base_path": "models/14B/agg_weighted",
+          "plots": [
+            "models/14B/agg_weighted/plots/acc_vs_temp_base_topk_40.png",
+            "models/14B/agg_weighted/plots/acc_vs_temp_base_topk_none.png",
+            "models/14B/agg_weighted/plots/acc_vs_temp_reasoning_topk_40.png",
+            "models/14B/agg_weighted/plots/acc_vs_temp_reasoning_topk_none.png",
+            "models/14B/agg_weighted/plots/global_accuracy_by_method_all.png",
+            "models/14B/agg_weighted/plots/global_accuracy_by_method_top40.png",
+            "models/14B/agg_weighted/plots/global_mae_by_method_top40.png",
+            "models/14B/agg_weighted/plots/global_score_inv1p_abs_by_method_top40.png",
+            "models/14B/agg_weighted/plots/legend_methods.png",
+            "models/14B/agg_weighted/plots/overall_accuracy_base_topk_40.png",
+            "models/14B/agg_weighted/plots/overall_accuracy_base_topk_none.png",
+            "models/14B/agg_weighted/plots/overall_accuracy_reasoning_topk_40.png",
+            "models/14B/agg_weighted/plots/overall_accuracy_reasoning_topk_none.png",
+            "models/14B/agg_weighted/plots/overall_mae_base_topk_40.png",
+            "models/14B/agg_weighted/plots/overall_mae_base_topk_none.png",
+            "models/14B/agg_weighted/plots/overall_mae_reasoning_topk_40.png",
+            "models/14B/agg_weighted/plots/overall_mae_reasoning_topk_none.png",
+            "models/14B/agg_weighted/plots/overall_score_inv1p_abs_base_topk_40.png",
+            "models/14B/agg_weighted/plots/overall_score_inv1p_abs_base_topk_none.png",
+            "models/14B/agg_weighted/plots/overall_score_inv1p_abs_reasoning_topk_40.png",
+            "models/14B/agg_weighted/plots/overall_score_inv1p_abs_reasoning_topk_none.png"
+          ],
+          "files": {
+            "method_rankings.txt": "models/14B/agg_weighted/method_rankings.txt",
+            "metrics_by_group.csv": "models/14B/agg_weighted/metrics_by_group.csv",
+            "metrics_by_temp_kind.csv": "models/14B/agg_weighted/metrics_by_temp_kind.csv",
+            "metrics_global.csv": "models/14B/agg_weighted/metrics_global.csv",
+            "metrics_overall.csv": "models/14B/agg_weighted/metrics_overall.csv",
+            "per_group_predictions.csv": "models/14B/agg_weighted/per_group_predictions.csv",
+            "run_config.json": "models/14B/agg_weighted/run_config.json",
+            "plots/legend_methods.pdf": "models/14B/agg_weighted/plots/legend_methods.pdf",
+            "plots/legend_methods.png": "models/14B/agg_weighted/plots/legend_methods.png",
+            "plots/method_styles.json": "models/14B/agg_weighted/plots/method_styles.json"
+          },
+          "histograms": {
+            "topk_40": {
+              "base": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              },
+              "reasoning": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              }
+            },
+            "topk_none": {
+              "base": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              },
+              "reasoning": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "7B",
+      "label": "7B",
+      "aggs": [
+        {
+          "id": "agg_methods",
+          "label": "agg_methods",
+          "base_path": "models/7B/agg_methods",
+          "plots": [
+            "models/7B/agg_methods/plots/global_accuracy_by_method.png",
+            "models/7B/agg_methods/plots/reasoning_accuracy_topk_40.png",
+            "models/7B/agg_methods/plots/reasoning_accuracy_topk_none.png"
+          ],
+          "files": {
+            "method_rankings.txt": "models/7B/agg_methods/method_rankings.txt",
+            "metrics_by_group.csv": "models/7B/agg_methods/metrics_by_group.csv",
+            "metrics_global.csv": "models/7B/agg_methods/metrics_global.csv",
+            "metrics_overall.csv": "models/7B/agg_methods/metrics_overall.csv",
+            "per_group_predictions.csv": "models/7B/agg_methods/per_group_predictions.csv",
+            "run_config.json": "models/7B/agg_methods/run_config.json"
+          },
+          "histograms": {}
+        },
+        {
+          "id": "agg_novel",
+          "label": "agg_novel",
+          "base_path": "models/7B/agg_novel",
+          "plots": [
+            "models/7B/agg_novel/plots/acc_vs_temp_reasoning_topk_40.png",
+            "models/7B/agg_novel/plots/acc_vs_temp_reasoning_topk_none.png",
+            "models/7B/agg_novel/plots/global_accuracy_by_method.png",
+            "models/7B/agg_novel/plots/global_score_by_method.png",
+            "models/7B/agg_novel/plots/legend_methods.png",
+            "models/7B/agg_novel/plots/overall_acc_reasoning_topk_40.png",
+            "models/7B/agg_novel/plots/overall_acc_reasoning_topk_none.png",
+            "models/7B/agg_novel/plots/overall_score_inv1p_abs_reasoning_topk_40.png",
+            "models/7B/agg_novel/plots/overall_score_inv1p_abs_reasoning_topk_none.png"
+          ],
+          "files": {
+            "method_rankings.txt": "models/7B/agg_novel/method_rankings.txt",
+            "metrics_by_temp_kind.csv": "models/7B/agg_novel/metrics_by_temp_kind.csv",
+            "metrics_global.csv": "models/7B/agg_novel/metrics_global.csv",
+            "metrics_overall.csv": "models/7B/agg_novel/metrics_overall.csv",
+            "per_group_predictions.csv": "models/7B/agg_novel/per_group_predictions.csv",
+            "run_config.json": "models/7B/agg_novel/run_config.json",
+            "plots/legend_methods.pdf": "models/7B/agg_novel/plots/legend_methods.pdf",
+            "plots/legend_methods.png": "models/7B/agg_novel/plots/legend_methods.png",
+            "plots/method_styles.json": "models/7B/agg_novel/plots/method_styles.json"
+          },
+          "histograms": {}
+        },
+        {
+          "id": "agg_v2",
+          "label": "agg_v2",
+          "base_path": "models/7B/agg_v2",
+          "plots": [
+            "models/7B/agg_v2/plots/acc_vs_temp_reasoning_topk_40.png",
+            "models/7B/agg_v2/plots/acc_vs_temp_reasoning_topk_none.png",
+            "models/7B/agg_v2/plots/legend_methods.png"
+          ],
+          "files": {
+            "method_rankings.txt": "models/7B/agg_v2/method_rankings.txt",
+            "metrics_by_temp_kind.csv": "models/7B/agg_v2/metrics_by_temp_kind.csv",
+            "metrics_global.csv": "models/7B/agg_v2/metrics_global.csv",
+            "metrics_overall.csv": "models/7B/agg_v2/metrics_overall.csv",
+            "per_group_predictions.csv": "models/7B/agg_v2/per_group_predictions.csv",
+            "run_config.json": "models/7B/agg_v2/run_config.json",
+            "plots/legend_methods.pdf": "models/7B/agg_v2/plots/legend_methods.pdf",
+            "plots/legend_methods.png": "models/7B/agg_v2/plots/legend_methods.png",
+            "plots/method_styles.json": "models/7B/agg_v2/plots/method_styles.json"
+          },
+          "histograms": {
+            "topk_40": {
+              "reasoning": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              }
+            },
+            "topk_none": {
+              "reasoning": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "agg_weighted",
+          "label": "agg_weighted",
+          "base_path": "models/7B/agg_weighted",
+          "plots": [
+            "models/7B/agg_weighted/plots/acc_vs_temp_reasoning_topk_40.png",
+            "models/7B/agg_weighted/plots/acc_vs_temp_reasoning_topk_none.png",
+            "models/7B/agg_weighted/plots/global_accuracy_by_method_all.png",
+            "models/7B/agg_weighted/plots/global_accuracy_by_method_top40.png",
+            "models/7B/agg_weighted/plots/global_mae_by_method_top40.png",
+            "models/7B/agg_weighted/plots/global_score_inv1p_abs_by_method_top40.png",
+            "models/7B/agg_weighted/plots/legend_methods.png",
+            "models/7B/agg_weighted/plots/overall_accuracy_reasoning_topk_40.png",
+            "models/7B/agg_weighted/plots/overall_accuracy_reasoning_topk_none.png",
+            "models/7B/agg_weighted/plots/overall_mae_reasoning_topk_40.png",
+            "models/7B/agg_weighted/plots/overall_mae_reasoning_topk_none.png",
+            "models/7B/agg_weighted/plots/overall_score_inv1p_abs_reasoning_topk_40.png",
+            "models/7B/agg_weighted/plots/overall_score_inv1p_abs_reasoning_topk_none.png"
+          ],
+          "files": {
+            "method_rankings.txt": "models/7B/agg_weighted/method_rankings.txt",
+            "metrics_by_group.csv": "models/7B/agg_weighted/metrics_by_group.csv",
+            "metrics_by_temp_kind.csv": "models/7B/agg_weighted/metrics_by_temp_kind.csv",
+            "metrics_global.csv": "models/7B/agg_weighted/metrics_global.csv",
+            "metrics_overall.csv": "models/7B/agg_weighted/metrics_overall.csv",
+            "per_group_predictions.csv": "models/7B/agg_weighted/per_group_predictions.csv",
+            "run_config.json": "models/7B/agg_weighted/run_config.json",
+            "plots/legend_methods.pdf": "models/7B/agg_weighted/plots/legend_methods.pdf",
+            "plots/legend_methods.png": "models/7B/agg_weighted/plots/legend_methods.png",
+            "plots/method_styles.json": "models/7B/agg_weighted/plots/method_styles.json"
+          },
+          "histograms": {
+            "topk_40": {
+              "reasoning": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              }
+            },
+            "topk_none": {
+              "reasoning": {
+                "temp_0_1": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_4": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_0_7": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                },
+                "temp_1_0": {
+                  "min_q": 0,
+                  "max_q": 353,
+                  "ext": "png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

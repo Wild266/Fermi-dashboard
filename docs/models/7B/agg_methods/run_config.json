@@ -1,0 +1,14 @@
+{
+  "run_dir": "/work/users/a/s/asameull/GE8/runs/ll_7b_g2_30226581",
+  "out_dir": "/work/users/a/s/asameull/GE8/runs/ll_7b_g2_30226581/agg_methods",
+  "overwrite": false,
+  "k_column": null,
+  "cluster_threshold": 0.85,
+  "cluster_kinds": "reasoning",
+  "cluster_strip_numbers": true,
+  "include_optional": true,
+  "make_plots": true,
+  "max_questions": null,
+  "resolved_run_dir": "/work/users/a/s/asameull/GE8/runs/ll_7b_g2_30226581",
+  "chosen_k_col": "k_llama70b"
+}

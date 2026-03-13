@@ -1,55 +1,84 @@
-# Simple GitHub Pages Dashboard (LLN / Fermi outputs)
+# Simple GitHub Pages dashboard (multi-model)
 
-This is a **static** dashboard you can host on **GitHub Pages**.
+This is a **static** dashboard designed for **GitHub Pages**.
 
-It can load:
-- `responses.csv` (from `fermi_collect_vllm_multi_bt*.py`)
-- `responses_labeled.csv` (from `label_k_vllm*.py`)
+It lets you select:
+- **Model** (e.g., `7B`, `14B`, `32B`)
+- **Run** (e.g., `agg_v2`, `agg_weighted`)
 
-…and show a few basic plots + a small data preview.
+…and view:
+- all images in `plots/` as a thumbnail gallery
+- quick previews of `metrics_overall.csv` and `metrics_global.csv`
+- `method_rankings.txt` and `run_config.json`
+- a histogram viewer for `histograms/<topk>/<kind>/<temp>/q_<n>.png`
 
-## Quick start
+## Expected folder layout
 
-1) Copy the `docs/` folder into your repo.
+Put each model’s analytics folder under `docs/models/<MODEL>/<RUN>/`.
 
-2) Put your CSVs under `docs/data/`.
-
-Example layout (recommended):
+Example:
 
 ```
 docs/
   index.html
   app.js
   style.css
-  data/
-    manifest.json
-    topk_none/
-      temp_0_1/
-        responses_labeled.csv
-      temp_0_4/
-        responses_labeled.csv
-      temp_0_7/
-        responses_labeled.csv
-    topk_40/
-      temp_0_1/
-        responses_labeled.csv
-      ...
+  manifest.json
+  models/
+    7B/
+      agg_v2/
+        histograms/
+        plots/
+        metrics_global.csv
+        metrics_overall.csv
+        ...
+      agg_weighted/
+        ...
+    14B/
+      agg_v2/
+        ...
+    32B/
+      agg_v2/
+        ...
 ```
 
-3) Edit `docs/data/manifest.json` to point at your real files.
+### Where your existing folders go
 
-4) Commit + push.
+If you currently have a folder like:
 
-5) In GitHub:
-- **Settings → Pages**
+```
+agg_v2/
+  histograms/
+  plots/
+  metrics_global.csv
+  ...
+```
+
+Copy it into (for 7B):
+
+```
+docs/models/7B/agg_v2/
+```
+
+Do the same for 14B and 32B when you have them.
+
+## Build / update the manifest
+
+The dashboard is static, so it uses a manifest file (`docs/manifest.json`) listing what exists.
+
+After copying data:
+
+```bash
+python tools/build_manifest.py
+```
+
+Commit + push.
+
+## Enable GitHub Pages
+
+- Repo **Settings → Pages**
 - Source: **Deploy from a branch**
-- Branch: `main` (or your branch) / Folder: **`/docs`**
+- Branch: `main` (or your branch)
+- Folder: `/docs`
 
-Then open the Pages URL.
-
-## Notes
-
-- If you don’t want to commit big CSVs, you can still use the dashboard by uploading a CSV in the browser.
-- The dashboard auto-detects a label column in this order:
-  `k_labeler`, `k_regex`, `k_auto`, `k_human`.
-- Accuracy + error plots require both a label column and `true_k`.
+Then open your Pages URL.
