@@ -150,6 +150,15 @@ async function safeFetchText(url) {
   }
 }
 
+async function fetchTextWithFallback(urls) {
+  for (const url of urls) {
+    if (!url) continue;
+    const txt = await safeFetchText(url);
+    if (txt) return txt;
+  }
+  return null;
+}
+
 let manifest = null;
 
 let llnManifest = null;
@@ -177,9 +186,22 @@ function renderLlnPreview(dataset, file) {
   }
 
   meta.textContent = `Showing ${dataset.label || dataset.id} — ${file.label}`;
-  safeFetchText(file.path).then((txt) => {
+
+  const directPath = file.path || '';
+  const noLeadingSlash = directPath.replace(/^\/+/, '');
+  const withoutDocsPrefix = noLeadingSlash.replace(/^docs\//, '');
+  const withDocsPrefix = noLeadingSlash.startsWith('docs/') ? noLeadingSlash : `docs/${noLeadingSlash}`;
+
+  fetchTextWithFallback([
+    directPath,
+    `./${noLeadingSlash}`,
+    withoutDocsPrefix,
+    `./${withoutDocsPrefix}`,
+    withDocsPrefix,
+    `./${withDocsPrefix}`,
+  ]).then((txt) => {
     if (!txt) {
-      preview.innerHTML = '<div class="muted" style="padding:8px 10px;">Could not load LLN CSV file.</div>';
+      preview.innerHTML = `<div class="muted" style="padding:8px 10px;">Could not load LLN CSV file: ${escapeHtml(file.path)}</div>`;
       return;
     }
     renderTable(preview, txt, 120);
@@ -697,12 +719,6 @@ async function loadManifest() {
 el('reloadBtn').addEventListener('click', async () => {
   await loadManifest();
   await loadLlnManifest();
-});
-
-el('plotTypeSelect').addEventListener('change', () => {
-  const model = getSelectedModel();
-  const agg = getSelectedAgg(model);
-  renderPlots(agg);
 });
 
 el('plotTypeSelect').addEventListener('change', () => {
