@@ -19,11 +19,19 @@ function basename(path) {
 }
 
 function prettyName(file) {
-  // Turn acc_vs_temp_reasoning_topk_40.png into a nicer caption
   return file
     .replace(/\.[^.]+$/, '')
     .replace(/_/g, ' ')
     .trim();
+}
+
+function getPlotType(file) {
+  const name = file.replace(/\.[^.]+$/, '');
+  if (name.startsWith('overall_')) return 'overall';
+  if (name.startsWith('global_')) return 'global';
+  if (name.startsWith('acc_vs_temp_')) return 'accuracy vs temperature';
+  if (name.startsWith('legend_')) return 'legend';
+  return 'other';
 }
 
 function escapeHtml(s) {
@@ -36,7 +44,6 @@ function escapeHtml(s) {
 }
 
 function parseCsv(text) {
-  // Minimal CSV parser (supports quoted fields and escaped quotes "").
   const rows = [];
   let row = [];
   let field = '';
@@ -79,21 +86,15 @@ function parseCsv(text) {
       continue;
     }
 
-    if (c === '\r') {
-      // ignore (we'll handle \r\n via \n case)
-      continue;
-    }
-
+    if (c === '\r') continue;
     field += c;
   }
 
-  // last cell
   if (field.length > 0 || row.length > 0) {
     row.push(field);
     rows.push(row);
   }
 
-  // drop trailing empty row
   if (rows.length && rows[rows.length - 1].length === 1 && rows[rows.length - 1][0] === '') {
     rows.pop();
   }
@@ -168,6 +169,26 @@ function clearMetrics() {
   el('runConfig').textContent = '';
 }
 
+function renderSelectionSummary(model, agg) {
+  const wrap = el('selectionSummary');
+  if (!model || !agg) {
+    wrap.innerHTML = '<span class="muted">No run selected.</span>';
+    return;
+  }
+
+  const plotCount = (agg.plots || []).length;
+  const fileCount = Object.keys(agg.files || {}).length;
+  const topkCount = Object.keys(agg.histograms || {}).length;
+
+  wrap.innerHTML = `
+    <span class="pill"><strong>Model:</strong> ${escapeHtml(model.label || model.id)}</span>
+    <span class="pill"><strong>Run:</strong> ${escapeHtml(agg.label || agg.id)}</span>
+    <span class="pill">${plotCount} plot${plotCount === 1 ? '' : 's'}</span>
+    <span class="pill">${fileCount} key file${fileCount === 1 ? '' : 's'}</span>
+    <span class="pill">${topkCount} histogram group${topkCount === 1 ? '' : 's'}</span>
+  `;
+}
+
 function renderDownloads(agg) {
   const wrap = el('downloads');
   wrap.innerHTML = '';
@@ -189,15 +210,42 @@ function renderDownloads(agg) {
   }
 }
 
+function refreshPlotTypeOptions(agg) {
+  const plots = (agg?.plots || []).slice();
+  const types = [...new Set(plots.map((p) => getPlotType(basename(p))))].sort();
+  const sel = el('plotTypeSelect');
+  const current = sel.value;
+
+  sel.innerHTML = '';
+  const allOpt = document.createElement('option');
+  allOpt.value = 'all';
+  allOpt.textContent = 'all plot types';
+  sel.appendChild(allOpt);
+
+  for (const t of types) {
+    const opt = document.createElement('option');
+    opt.value = t;
+    opt.textContent = t;
+    sel.appendChild(opt);
+  }
+
+  sel.value = types.includes(current) ? current : 'all';
+}
+
 function renderPlots(agg) {
   const gallery = el('plots');
   const empty = el('plotsEmpty');
   gallery.innerHTML = '';
   empty.textContent = '';
 
-  const plots = (agg?.plots || []).slice();
+  const selectedType = el('plotTypeSelect').value || 'all';
+  const plots = (agg?.plots || []).filter((p) => {
+    if (selectedType === 'all') return true;
+    return getPlotType(basename(p)) === selectedType;
+  });
+
   if (!plots.length) {
-    empty.textContent = 'No plot images found in plots/. (Expected: plots/*.png)';
+    empty.textContent = 'No matching plots for this filter.';
     return;
   }
 
@@ -231,7 +279,6 @@ async function renderMetrics(agg) {
   clearMetrics();
   if (!agg) return;
 
-  // CSV previews
   const overallPath = agg.files?.['metrics_overall.csv'];
   const globalPath = agg.files?.['metrics_global.csv'];
 
@@ -251,7 +298,6 @@ async function renderMetrics(agg) {
     el('metricsGlobal').innerHTML = '<div class="muted">(missing)</div>';
   }
 
-  // Text previews
   const rankingsPath = agg.files?.['method_rankings.txt'];
   if (rankingsPath) {
     const txt = await safeFetchText(rankingsPath);
@@ -320,7 +366,6 @@ function refreshHistogramControls(agg) {
   histState.temp = temps[0] || null;
   el('histTemp').value = histState.temp || '';
 
-  // Update range from selected
   syncHistogramRange(agg);
   updateHistogramImage(agg);
 }
@@ -342,7 +387,6 @@ function syncHistogramRange(agg) {
   histState.maxQ = Number(info.max_q ?? 0);
   histState.ext = info.ext || 'png';
 
-  // Clamp q
   const qEl = el('histQ');
   let q = Number(qEl.value || 0);
   if (Number.isNaN(q)) q = histState.minQ;
@@ -391,7 +435,6 @@ function hookHistogramEvents() {
     const agg = getSelectedAgg(model);
     histState.topk = el('histTopk').value;
 
-    // Refresh downstream selects
     const hist = agg?.histograms || {};
     const kinds = histState.topk ? Object.keys(hist[histState.topk] || {}).sort() : [];
     _setOptions(el('histKind'), kinds, '(none)');
@@ -466,6 +509,9 @@ function populateSelectors() {
   const modelSel = el('modelSelect');
   const aggSel = el('aggSelect');
 
+  const prevModel = modelSel.value;
+  const prevAgg = aggSel.value;
+
   modelSel.innerHTML = '';
   aggSel.innerHTML = '';
 
@@ -482,7 +528,7 @@ function populateSelectors() {
     modelSel.appendChild(opt);
   }
 
-  modelSel.value = models[0].id;
+  modelSel.value = models.some((m) => m.id === prevModel) ? prevModel : models[0].id;
 
   function rebuildAggOptions() {
     const model = getSelectedModel();
@@ -496,19 +542,21 @@ function populateSelectors() {
       aggSel.appendChild(opt);
     }
 
-    if (aggs.length) aggSel.value = aggs[0].id;
+    if (aggs.length) {
+      aggSel.value = aggs.some((a) => a.id === prevAgg) ? prevAgg : aggs[0].id;
+    }
   }
 
   rebuildAggOptions();
 
-  modelSel.addEventListener('change', async () => {
+  modelSel.onchange = async () => {
     rebuildAggOptions();
     await refreshView();
-  });
+  };
 
-  aggSel.addEventListener('change', async () => {
+  aggSel.onchange = async () => {
     await refreshView();
-  });
+  };
 }
 
 async function refreshView() {
@@ -522,6 +570,8 @@ async function refreshView() {
 
   setStatus(`Viewing ${model.id} / ${agg.id}`);
 
+  renderSelectionSummary(model, agg);
+  refreshPlotTypeOptions(agg);
   renderPlots(agg);
   renderDownloads(agg);
   refreshHistogramControls(agg);
@@ -548,6 +598,12 @@ async function loadManifest() {
 
 el('reloadBtn').addEventListener('click', async () => {
   await loadManifest();
+});
+
+el('plotTypeSelect').addEventListener('change', () => {
+  const model = getSelectedModel();
+  const agg = getSelectedAgg(model);
+  renderPlots(agg);
 });
 
 hookHistogramEvents();
