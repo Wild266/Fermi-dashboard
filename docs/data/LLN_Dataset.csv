@@ -1,0 +1,940 @@
+Number,Questions,Reasoning,Numerical Answer (If available),Nearest Power of ten
+1,How many full size computer keyboards would it take to match every key from every keyboard to a key for every house in the US?,"144 e6 houses * 1 key/house * 1 keyboard/104 keys = 1.384e6
+https://www.statista.com/statistics/240267/number-of-housing-units-in-the-united-states/",1.38E+06,6
+2,How many hydrogen atoms would be in a sphere of water the size of the moon?,"2.197e10 km^3 Moon volume (you can calculate this from the radius too)
+https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html
+18 g/mol is molar mass of water (and 2 g/mol of hydrogen in water)
+2.197e10 km^3 * 1e12 L/km^3 * 1e3 mL/L * 1 g/mL water * 1 mol water/18 g * 2 mol hydrogen/1 mol water = 2.44e24",2.44E+24,24
+3,How many standard water bottles’ worth of liquid would it take to fill up Lake Mead to full capacity?,"Max capacity: 2.9904e7 acre-ft.
+https://snoflo.org/reservoir/nevada/lake-mead
+2.99e7 acre-ft * 1.233e6 L/1 acre-ft * 1 water bottle/0.5 L = 7.374e13",7.37E+13,14
+4,Solve the Equation: 20 * 69!,https://www.wolframalpha.com/input?i=69%21+*+20,3.42E+99,99
+5,"What would be the mass of a planet, in Daltons, the same size as Earth which generates 4g of gravity?","g = G*m/r^2, so solving for mass yields m = g*r^2/G.
+Same size ( r ), but 4g means 4m as well.
+5.97e24 kg mass of Earth * 4 * 1 Dalton / 1.66e-27 kg = 1.44e52",1.44E+52,52
+6,How many M&M’s would it take to recoup the cumulative energy used by all the marathon runners in this year’s Boston marathon?,"Boston is pretty competitive so they are going to be fairly efficient: my guess is around 100 to 120 cal/mi
+(average of a bunch of estimates online)
+Boston had 25230 runners start the race in 2022.
+http://registration.baa.org/2022/cf/Public/iframe_Statistics.htm
+There’s 3.44 cal/m&m
+https://fdc.nal.usda.gov/fdc-app.html#/food-details/169583/nutrients
+2.523e4 runners * 26.2 mi/runner * 100 to 120 cal/mi * 1 M&M/3.44 cal = 1.92 to 2.31e7",2.31E+07,7
+7,"How much dissolved oxygen, in nanograms, is present in enough tap water to cover Manhattan 1 meter deep?","Dissolved oxygen in tap water: 6.5 to 8 mg/L
+https://atlas-scientific.com/blog/dissolved-oxygen-in-drinking-water/
+Manhattan area: 59.13 km^2 = 5.913 m^2
+https://en.wikipedia.org/wiki/Manhattan
+5.913e7m^2 * 1 m depth * 1e3 L/m^3 * 6.5 to 8 mg/L * 1e6 ng/mg = 3.84 to 4.73e17",4.73E+17,17
+8,How many red blood cells would fit inside the Sun?,"1.41e18 km^3 Sun volume = 1.41e27 m^3
+https://en.wikipedia.org/wiki/Sun
+9e-17 m^3 red blood cell volume
+https://en.wikipedia.org/wiki/Orders_of_magnitude_(volume)
+1.41e27 m^3 * 74% sphere packing density / (9e-17 m^3) = 1.16e43
+The packing density doesn’t actually change the answer anyway",1.16E+43,43
+9,Recall that an electron needs energy to move from one energy level to another in an atom. How many leaps from the ground state to the first excited state of an electron in a neutral hydrogen atom could be powered by the energy usage of an average US household?,"10,632 kWh energy for US household in year
+https://www.energybot.com/blog/average-energy-consumption.html
+10.2 eV for transition 
+https://cas.sdss.org/DR5/en/proj/advanced/spectraltypes/energylevels.asp
+https://astro.unl.edu/naap/hydrogen/transitions.html
+Seems very arbitrary, but this is a useful baseline
+1.063e4 kWh * 2.247e25 eV/1 kWh * 1 transition/10.2 eV = 2.34e28",2.34E+28,28
+10,"How many centaurs would span the distance from Earth to Proxima Centauri, assuming that centaurs would be the same size as a horse?","4.247 ly distance to Proxima Centauri
+https://en.wikipedia.org/wiki/Proxima_Centauri
+2.4 m Horse length (https://en.wikipedia.org/wiki/Horse_length)
+4.247 ly * 9.461e15m / 1 ly * 1 horse length/2.4 m = 1.67e16",1.67E+16,16
+11,How many seconds apart were the completion of the Pyramid of Giza and the Colosseum?,"2570 BC build date of Pyramid
+https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+80 AD build date of Colosseum (https://en.wikipedia.org/wiki/Colosseum)
+80 - (-2570) = 2650 yr * 3.154e7 sec/yr = 8.36e10",8.36E+10,11
+12,"How long, in decades, would it take for light to complete the famous Cannonball Run challenge (Red Ball Garage in NY to Portofino Hotel in LA)?","Cannonball run (NY to LA) is ~2900 mi (distances vary based on route taken)
+https://en.wikipedia.org/wiki/Cannonball_Run_challenge
+Speed of light is 3e8 m/s
+2.9e3 mi * 1.6e3 m/mi * 1 sec/3e8 m * 1 decade/3.154e8 sec = 4.9e-11.
+Seems close to the next exponent, but keep in mind that 2900 mi is an indirect route. Light would move in a straight line, so it would be less distance, so smaller than 4.9 (less chance of my calculation resulting in a different answer).",4.90E-11,-11
+13,What is the major axis diameter of Neptune’s orbit in picas?,"https://en.wikipedia.org/wiki/Semi-major_and_semi-minor_axes#/media/File:Solar_system_orbital_period_vs_semimajor_axis.svg
+This details the semi-major axes lengths. Double to get the major axis length
+328 ly * 9.461e15 m/ly * 236.22 pica/m = 7.33e20",7.33E+20,20
+14,How many Interstate highway dashed lines would it take to connect K2 to Mauna Kea?,"11750 km, distance from K2 to Mauna Kea (connected 2 points in Google Maps)
+3 m length of a line marker
+https://mutcd.fhwa.dot.gov/htm/2003r1/part3/part3a.htm
+1.175e7m / 3m = 3.92e6",3.92E+06,6
+15,How many individual doses of the COVID-19 booster vaccine would be needed to create a column of liquid that is 5 m in diameter to the ISS?,"0.25 mL for booster dose of vaccine
+https://www.fda.gov/media/144637/download
+400 km distance of ISS to Earth
+https://www.jpl.nasa.gov/edu/teach/activity/how-far-away-is-space/
+pi * 2.5^2 * 400e3 * 1e3 L/m^3 * 1e3 mL/L * 1 dose/0.25mL = pi*e13",3.14159E+13,13
+16,How long is the longest aircraft carrier in buckyballs (buckminsterfullerene)?,"333 m carrier length (https://en.wikipedia.org/wiki/Nimitz-class_aircraft_carrier)
+0.71 nm Buckyball diameter nucleus to nucleus
+https://en.wikipedia.org/wiki/Buckminsterfullerene
+333 m / 0.71e-9 m = 4.7e11",4.70E+11,11
+17,"How many wavelengths of violet visible light exist between the Sun and Neptune, at their average distance apart?","~400 nm violet wavelength, technically 380 to 450 nm
+https://www.britannica.com/science/violet
+4.5e9 km distance on avg (https://science.nasa.gov/neptune/facts/)
+4.5e9 km * 1e12 nm / 1 km * 400 nm = 1.8e24",1.80E+24,24
+18,"If all corn produced yearly worldwide were distributed equally to all the blue whales on Earth, how much would each blue whale weigh, in lb, carrying their assigned amount of corn?","1.2e9 metric tons corn worldwide yearly
+https://ipad.fas.usda.gov/cropexplorer/cropview/commodityView.aspx?cropid=0440000
+10-25,000 population (https://www.worldwildlife.org/species/blue-whale)
+2-300,000 lbs
+https://www.marinemammalcenter.org/animal-care/learn-about-marine-mammals/cetaceans/blue-whale
+[ (1.2e9 metric tons * 2.2e3 lb/1 MT) corn weight + (10 to 25,000 population * 2 to 300,000 lbs each) blue whale weight ] / [10 to 25,000 population]
+Answer: 1.06e8 lowest possible estimate to 2.65e8 highest possible estimate",2.65E+08,8
+19,"How long, in Planck time, would it take to move across the length of the universe at the speed of light?","8.8e26 m universe diameter (https://en.wikipedia.org/wiki/Observable_universe)
+3e8 speed of light
+8.8e26 m * 1 sec/3e8 m * 1 Planck time/5.391e-44 sec = 5.44e61",5.44E+61,61
+20,How many centuries would it take for Usain Bolt to run a light-second while running at his 100m world record pace?,"9.58 sec for 100m sprint (https://en.wikipedia.org/wiki/Usain_Bolt)
+3e8 m * 9.58 sec/100 m * 1 century/3.154e9 sec = 9.11e-3",9.11E-03,-2
+21,"If everyone in the world were to stand side-by-side (shoulder to shoulder with no gaps) to form a circle, what would be the diameter of the circle, in human hairs?","75 um human hair (https://en.wikipedia.org/wiki/Hair%27s_breadth)
+8.07e9 human population (https://www.worldometers.info/world-population/)
+15 in shoulder width (average of male and female) = 0.381 m
+https://criticalbody.com/average-shoulder-width/
+8.07e9 * 0.381 m = 3.07e9 m circumference of human circle
+C = 2*pi*r ? 2r = C/pi.
+3.07e9 / pi = 9.78e8 m diameter of human circle
+9.78e8 / 75e-9 = 1.3e16",1.30E+16,16
+22,How many leagues under the sea is the center of the Earth?,"6371 km radius of Earth (https://en.wikipedia.org/wiki/Earth_radius)
+6371 km * 1 league/4.8 km = 1.327e3",1.33E+03,3
+23,"How heavy is the combined weight of the UGA football team, in cricket balls?","232 lb avg weight
+https://www.ncaa.com/news/football/article/2017-11-07/how-big-average-college-football-player-breaking-down-size
+~100 players on UGA roster probably (125 is cap)
+https://payperhead.com/ncaa-football-player-rosters/
+Sort of sus source, but that number sounds about right
+160 g (https://www.cric-life.com/article/what-is-the-weight-of-a-cricket-ball/)
+100 * 232 lb * 453 g/1lb * 1 cricket ball/160g = 6.57e4",6.57E+04,5
+24,How many houseflies’ worth of lift would you need to lift a school bus?,"10 mg of lift from a fly
+https://washingtoncitypaper.com/article/208540/straight-dope-how-many-houseflies-would-you-need-to-lift/
+I know it’s a random website, so not a great source, but it seemed reasonable
+1.5-2e4 lbs school bus
+https://measuringstuff.com/how-heavy-is-a-school-bus-empty-and-full/
+Also rando website
+2e4 lb * 453592 mg/lb * 1 fly/10 mg = 9.07e8",9.07E+08,9
+25,"How much paraffin wax, in oz, would be needed to power a hot air balloon for a week (ignore the energy needed to carry the weight of the wax itself)?","1 week = 604800 sec
+30 gal LPG/hour of flight
+https://outdoortroop.com/how-much-fuel-does-a-hot-air-balloon-use/
+Rando website
+0.55 g/mL density of LPG
+https://www.nrl.co.in/upload/nrlLPG-Specifications.pdf
+46 MJ/kg for candles. 49.3 MJ/kg
+https://www.engineeringtoolbox.com/fuels-higher-calorific-values-d_169.html
+604800 sec* 30 gal LPG/3600 sec * 3785 mL/1 gal * 0.55 g/mL LPG * 49.3 MJ / 1e3 g LPG * 1 kg/46 MJ paraffin * 35 oz/kg = 3.94e5",3.94E+05,5
+1,"How many cans of Campbell’s chicken noodle soup will it take to fill up an
+Olympic-sized swimming pool?",,,7
+2,"Consider the label of standard soup can. How many labels laid in a line would it
+take to circumnavigate the equator? (Assuming the labels float on top of the oceans)",,,8
+3,"Soup cans are made of tin-coated steel. How many cans would need to be melted
+to form a 1-by-1-by-1 meter solid cube?",,,5
+4,"Chinese bird drop soup is made from a species called the edible-nest swiftlet
+(Aerodramus fuciphagus). How many of these birds are there in Asia?",,,5
+5,How much sodium (in mg) is in a 24-pack of Maruchan chicken ramen?,,,4
+6,How many units (cans) of soup are sold each year in the United States?,,,12
+7,"Consider placing soup cans upright in a hexagonal region from a bird’s eye view.
+How many can fit in a regular hexagonal region with side lengths of 1 mile?",,,9
+8,"How many milliliters of water would need to be boiled to cook enough ramen cups
+to feed each and every college student in the U.S.? Each ramen cup should be filled to the brim
+with water and each college student eats 1 package.",,,11
+9,"How much gross profit, in USD, has the Campbell’s soup company made since
+2000?",,,10
+10,"Consider throwing a soup can using a cannon with an angle of elevation of 30
+degrees. Considering the earth as flat, at what velocity (in meters per second) is it necessary to
+launch the soup from New York City to Philadelphia?",,,3
+11,"Eric has a collection of 2023 different types of soup. If he tries a different type
+of soup each day uniformly at random, how many days would you expect it to take for him to
+finish trying every type of soup?",,,4
+12,"You travel in a can-shaped spaceship from earth to Soup Galaxy, which is 7
+light years away from earth. You move at approximately 40 percent of the speed of light. Upon
+arrival, what will the difference in time, in hours, between your clock and a clock back on earth?",,,3
+13,How many cans of soup do you need to stack to reach the moon?,,,9
+14,"A soup can finishes a marathon by rolling straight ahead. How many rotations
+has the soup can completed?",,,7
+15,"A ladle is a wonderful device for serving soup. Suppose you wanted to serve the
+ocean; how many scoops would it take to empty the ocean?",,,22
+16,"Andrew, a notable soup scholar, decides to write a definitive guide to the history
+of soup. He ends up with a text with about as many words as the Bible. To save on printing
+costs, he prints in Times News Roman, with size 1 font and double spaced. How many pages
+does he need to print for one copy of his book?",,,1
+17,"An empty can of soup is filled with ice and placed outside on a table. Assuming
+uniform, constant heat from the summer heat, how many seconds would it take for the cylindrical
+block of ice to completely dissolve.",,,2
+18,"Penn has instituted a special secret award called the soup scholarship in 2000.
+Each year, 5 percent of the incoming freshmen class is selected to be a recipient. How many
+soup scholarships have been awarded up until the end of 2024?",,,3
+19,"There are many fish, pork, chicken, and beef-based soups leading to so many
+unique flavours! If we distinguish the animals up to species, how many soup flavours can we
+generate if each flavour is a combination of two species?",,,15
+20,"The average U.S. frieght train is 6,500 feet long. How many cans of soup can be
+packed into this frieght train?",,,6
+21,"Eric consumes one can of soup each time he cuts his hair. Over the course of
+100 lifetimes, how many cans will he consume?",,,4
+22,"Soup is chemistry. How many compounds are found on pubchem (a chemical
+information database)?",,,6
+23,"Soup is served in cafeterias across Penn’s campus every day. How much money
+is spent on the Dining at Penn department each year?",,,7
+24,"If I harnessed the energy consumed when every Google employee googles “google”
+simultaneously, how long could I power a standard hair dryer?",,,1
+25,"If the Earth, by mass, was comprised entirely of solid silver, what would the
+acceleration due to gravity be, in m/(s^2)?",,,1
+26,"If I melted the earth down (from Question above) and sold it, how much money,
+in Japanese Yen, could I make?",,,30
+27,"How many packages of party sized Lay’s Sour Cream and Onion Potato Chips
+would I need to consume in order to equal the amount of Calories burned by a 200 lb man
+during an ironman triathlon?",,,0
+28,"If, for every time someone streamed “Cruel Summer” by Taylor Swift on Spotify,
+Taylor Swift adds an extra floor to the Empire State Building, how tall would the Empire State
+Building be, in meters?",,,10
+29,"If I randomly drop a pebble over the United States, what is the probability that
+my pebble hits a Tesla?",,,-6
+30,"How many fortnights would it take for me to run a marathon, assuming that I
+run at a pace of 5 smoots/shake?",,,-10
+31,"What is the minimum number of cans of SphagettiOs alphabet soup would I
+need to reconstruct the book Harry Potter and the Sorcerer’s Stone?",,,3
+32,"How heavy, in kg, would the newest Macbook M2 Pro be if I replaced every
+single transistor with a can of Campbell’s Chicken Soup?",,,9
+33,What is the 200th fibonacci number?,,,41
+34,How many digits does 13^123456789 have?,,,8
+35,How many primes are there less than 10000?,,,2
+36,How many gas stations are there in the US?,,,5
+37,"If the sun and earth both double in size, how long will it take for the earth to
+go around the sun?",,,0
+38,"Suppose on the day Jesus was born I got a dollar. Exactly one year later, I got
+2 dollars. Every year thereafter I receive twice as much as the year before. I am immortal and
+quite a hoarder so I don’t spend any money. How much do I have in 2023?",,,609
+39,"Eric claims that he doesn’t need any meteorology to predict the weather. Darren
+challenges him with the following game. Darren starts by paying Eric 10^10 dollars, and Eric is
+to make make daily predictions about whether or not it will rain the following day. Eric is to
+do this for an entire year, after which Darren will calculate the difference between how many
+times it rained and how many times Eric said it would rain. We call this difference x, and then
+Eric must pay Darren x^10 dollars. If Eric plays optimally, what is the maximum amount he can
+guarantee that he earns (or if he loses money - what is the minimum amount he can lose) at the
+conclusion of the game?",,,10
+40,"If the world was scaled down so that the Earth was the size of a standard soccer
+ball, what would be the volume of Jupiter in liters?",,,5
+41,"If every person in Madagascar simultaneously ate a bagel, how much heavier, in
+grams, would Madagascar’s population be?",,,9
+42,"What is the combined weight, in kg, of every elephant in the world?",,,8
+43,"Suppose a clock tells the right time exactly 100 times a day. If this clock is used
+to time an olympic 100m sprint, approximately how fast, in seconds, will the runners be?",,,-1
+44,"In Newtons, how many flicks worth force will it take to break someone’s arm?",,,1
+45,"Suppose that all the DNA from each cell in a human was stretched out and
+placed in a single row. How many gallons of gas would it take a 2023 Toyota Prius to drive the
+distance equal to all of that stretched out DNA?",,,8
+46,"Niagara falls is an absolutely iconic waterfall. That being said, what is the
+volumetric flow rate of Niagara Falls in Sverdrups during high season?",,,-3
+47,How many hydrogen atoms are contained within the water in Lake Superior?,,,38
+48,"How long would it take, in days, for me to drain all of the Oceans on Earth if I
+solely drank the recommended amount of water each day from the oceans?",,,20
+49,"What is the maximum acceptable latency (delay) for international calls as spec-
+ified by the International Telecoms Union, in quectoseconds?",,,29
+50,"What would the radius, in meters, of a sphere of solid cheddar cheese need to
+be before it collapsed into a black hole?",,,11
+51,"How many oxygen molecules would be inhaled if every single person alive on
+Earth took a collective breath?",,,31
+52,A 1 Joule is equivalent to 1 kg ? m^2 ? s^?1. What is the value of 1 Joule in the units of (troy ounce) * (furlong^2) * (microseconds)^?1?,,,-8
+1,How many pounds of water is released into the atmosphere annually by grapes drying into raisins worldwide?,"~1.3million metric tons of raisins produced per year. Grapes have 80% water, raisins have 15% water. Thus 1 metric ton of raisins contains 0.85 metric tons of pulp. Pulp is 20% of grapes, so 1 metric ton of raisins comes from 5*0.85=4.25 metric tons of grapes. A metric ton of raisins represents a loss of 4.25-1=3.25 metric tons of water. 3.25*1.3=4.225 million metric tons of water lost, which is 4.225 billion kilograms of water lost. This is 9.3 billion pounds",9.3 billion,10
+2,How long in seconds would it take to travel Route 1 at a garden snail's pace? (Note: Route 1 is about ? the length of the longest route in the US and garden snails are surprisingly fast.),"0.03 mph is garden snail pace. Route 1 is  2,369 miles.
+2,369 miles / 0.03 mph * (3600 seconds/hour) = 2.8e8",2.80E+08,8
+3,The popular trick-shot YouTube channel Dude Perfect attempts their craziest one yet: they are going to place a dartboard at a uniformly random location on the moon and then shoot a dart at a uniformly random location on the moon from orbit. They will attempt this once every minute. What is the expected number of times the Moon will go around the Earth before they succeed in their trickshot?,Dartboard surface area is 0.159 square meters. Moon surface area is 3.8 e13 square meters. It will take them 2.4e14 expected attempts ? 2.4e14 minutes= 6.2e9 27-day cycles.,6.20E+09,10
+4,How many VHS copies of the movie Titanic could fit in the original RMS Titanic ship?,"The original ship has volume 130,000 cubic meters. VHS tape has volume approx 4.8e-4 cubic meters ? 2.7e8",2.70E+08,8
+5,How many “Xs” (Tweets) were on X (Twitter) in 2023?,"Slightly vague, correct interpretation is “how many total tweets existed on the platform as of 2023.”
+~200 billion per year",200 billion,12
+6,What is the ratio of the energy of one photon of violet wavelength to the (magnitude of) energy of an electron at the first energy level in a hydrogen atom ?,"Energy of one violet photon: (3e8/380e-9) * 6.626e-34  = 5.2e-19
+Energy of electron at first energy level: 13.6eV = 2.17e-17 J
+5.2e-19/2.17e-17 = 2.4e-2",2.40E-02,-2
+7,"With standard ASCII character encoding, how many bits would the text of all the Harry Potter books occupy?","Conservative estimate of just text, no formatting or overhead:
+1.1e6 words across all books, average length of word + space is 5.7, each character is one byte. 1.1e6 * 5.7 * 8 = 5e7",5.00E+07,8
+8,How many liters of ocean water would you have to boil to end up with a ton of salt?,"35 grams salt per liter of ocean water, need 1 ton ? 907,000 grams of salt ? 25,900 liters of ocean water",2.59E+04,4
+9,How many living Princeton Alumni are there?,"~Approximately 100,000.",1.00E+05,5
+10,Bob hates Valentine's Day. He is arranging the seating for a round table of 7 couples for a Valentine’s Day gathering. How many arrangements are there such that no couples are sitting next to each other?,"Sneaky way of mainly testing 14! if you realize that the number of arrangements is not a very small fraction (the limit is 1/e of total number, so we will use that to approximate).
+
+# of arrangements <= 14! * e^(-1) = 3.2e10",3.20E+10,10
+11,What is the weight of LEGO bricks sold every year in units of average African Elephants?,7e10 elements * 2.5g/element* 1 ton / 9e5 grams * elephant/ 6 tons = 3e4,3.00E+04,4
+12,"In the time it takes for a ball to fall (from rest) from the height of the peak of Mount Everest straight down to sea level, how many blinks occur worldwide?","Blinks happen 15 times per minute per person, so worldwide there are 118.3 billion blinks per minute. Mount Everest is 8,848 meters tall. It would take a ball sqrt(2y/g)=42.49 seconds to fall, which is 0.708 min ->83.8 billion blinks",83.8 billion,11
+13,How many Lincoln pennies have been minted since the turn of the millennium?,Total mintage numbers from wikipedia for the past 23 years add to approx. 150 billion,150 billion,11
+14,How many seconds would it take for your heart to pump a volume of blood equivalent to that of an olympic sized pool?,2.5e6 Liters / (80e-3 L/ beat * 70 beat/ 60 sec)  = 2.6e7,2.60E+07,7
+15,"If Dovak Njokovic has a 25% chance of winning any tennis match, what is the probability he gets a calendar year Grand Slam?  A calendar year Grand Slam is equivalent to winning four 128-entrance single elimination bracket tournaments in a row.","Meant to test 2^x estimation in a word problem. Seemed to disguise the problem more than intended.
+0.25^(7 * 4) = 2^(-56)
+Log 2 * -56 = 0.3 * -56 = -17",1.00E-17,-17
+16,"If all the energy produced by the world’s wind turbines in the year 2022 was stored on a standard 10 microFarad capacitor, what would the voltage (in Volts) be between the two ends of the capacitor?","Energy is 1/2CV^2. 2100 terawatthours produced in 2022 by wind turbines ? 7.6e18 joules. CV^2 = 1.5e19, V^2=1.5e24? V=1.2e12 volts",1.20E+12,12
+17,It’s National Golden Retriever Day! How many golden retriever paws are in the world?,"There are estimated to be greater than 12.5 million golden retrievers in the world 8
+125 million golden retrievers is unrealistic given there are 600 to 900 million dogs in the world.",1.00E+08,8
+18,How many days would it take for McDonalds to sell a mole of hamburger assuming they continue to sell at the same rate as today?,6e23 hamburgers/(6e6 hamburgers per day) = 1e17,1.00E+17,17
+19,How many cows would I need to produce enough milk in a year to fill a hollow container the size of the earth?,"Size of earth 4/3 * pi * (6e6)^3 = 1e21m^3
+Milk per cow-year 7 gallons/day * 365 day/year = 2.5e3 gallons/year = 9.5 m^3/year
+1e21m^3/ (1e1 m^3/year) = 1e20",1.00E+20,20
+20,"In 2021, world-famous eater Joey Chestnut ate 76 hotdogs in 10 minutes. How many ounces of chestnuts would he need to eat per second for 10 minutes to match the total number of calories consumed?","76 hotdogs, 314 calories each ? 23,864 calories. One ounce of chestnuts has 37 cal, need 640 ounces of them ?1.06 ounces of chestnuts per second for 10 minutes",1.06E+00,0
+21,How many Fermi Questions will be written for tournaments in the 2023-2024 Science Olympiad Season?,~250 Division C tournaments. Much greater than 20 questions on average per test.,1.00E+04,4
+22,How many Joules would you need to power a light-year long string of Christmas lights for an hour?,"Assume 6” spacing.
+4e-1 watt-hour/bulb * 1e16 m * 6.5 bulb/meter * 3.6e3 Joules/ watt-hour = 9.36e19",9.36E+19,20
+23,How many days would it take Usain Bolt to run along every length of rail track in the US railroad system without repeating any segments at his 2008 Olympic pace?,"160,000 miles of railroad track in the US, Bolt ran 23.08mph ->6932 hours-> 288.83 days",2.89E+02,2
+24,"Given it takes 80 soldier crabs to store a bit using a flip-flop, how many soldier crabs does it take to make a 64-bit carry ripple adder?","80 soldier grabs per logic gate: 5 to 7 gates per adder (depends on if you count XOR as 1 or 2) 
+Upperbound is 7 * 64 * 80 = 3.6e4 crabs",3.60E+04,4
+25,How many steps does the population of America take per day?,"Number of steps on average = 3000 to 4000 per day
+Population of America is 3.5e8.
+3.5e8 * 3e3 = 1e12",1.00E+12,12
+26,How many popular votes separated Thomas Jefferson and John Adams in the 1796 Presidential Election?," 4,611"," 4,611",3
+27,What fraction of the GDP of Japan is the biggest price a Pokemon card has sold for?,"GDP of Japan is 4.9e12 dollars
+Illustrator Pikachu ~ 5e6 dollars
+5e6/4.9e12 = 1e-6",1.00E-06,-6
+28,How many days would it take to type out every possible ordered combination of 6 or fewer lowercase letters of the English alphabet (with no spaces between) at a rate of 10-8 (10^-8) characters per nanosecond?,"26^6 dominates number of combos, 1e-8 letters per nanosecond / 6 letters per word =1.67e-9 words per nanosecond=1.67 words per second = 100 WPM, *1440 = 144,000 words per day ? 2140 days",2.14E+03,3
+29,What velocity in meters per second do you need to launch an angry bird on the surface of the sun for it to leave orbit? ,sqrt(2GM/r) = sqrt((2*6.7e-11*2e30)/(7e8)) = 6e5,6.00E+05,6
+30,"How many treadmill belts, cut open and laid end to end, would it take to connect the distance between the two farthest apart Planet Fitness locations in the contiguous US?","2,892 miles linearly between farthest cities in contiguous US, PF locations are near these places so close enough, a treadmill belt is roughly 120 inches long ? 2,892 miles/120 inches is 1.53e6",1.53E+06,6
+31,What is the weight of the inner core of the earth in cars?,1.1e26 grams /  4000 lbs =  6e19,6.00E+19,20
+32,How many liters of room-temperature Dr. Pepper could be carbonated with the world's CO2 emissions during 2022?,"36.8 gigatonnes of co2 ? 3.68e13 kg of co2 ? at room temp, 2kg/metercubed ? 1.84e13 cubic meters of co2 ? 1.84e16 liters of co2. Ratio is 3.5 liters of CO2 per liter of beverage, so total is 0.526e16=5.26e15 liters of soda!",5.26E+15,16
+33,"On average, how many times more likely is someone to die going skydiving compared to winning the powerball?","0.5-1 in 1e5 chance to die going skydiving
+ 1 in  2.9e8 chance to win powerball
+(1e-5) * 2.9e8 = 2.9e3",2.90E+03,3
+34,"At Princeton, an undergraduate student is allocated 2700 sheets of printing paper per a year while a graduate student is allocated 3600 sheets of printing paper per a year. If all enrolled students used all of their allocated printing paper (news flash: they don’t), how tall, in inches, would a pine tree of 24 in diameter need to be to supply all this paper?","In 2023, 5,604 enrolled undergraduate students, 3238 enrolled graduate students.
+5604 * 2700 + 3238 * 3600 = 2.7e7 pieces of paper
+Density of pine wood ~ 2e-2 lb/in^3, yield between 25% to 50%
+100 sheets/lb
+Lower Bound: Height * pi * (12 in)^2 * 2e-2 lb/in^3 * 0.5 * 100 sheets/lb = 2.7e7 sheets
+Height = 6e4",6.00E+04,5
+35,"The original Rosetta Stone was a rather inefficient way to store information, in terms of words per kilogram. How many times more efficient is a hardcover copy of the first Diary of a Wimpy Kid book? (The original Rosetta Stone communicated the same message three times in three different languages, but consider the total words on it to be just the number of words in the English translation of the original (unrepeated) message)","~1600 words in OG message, rosetta stone weighs 760kg ? 2.11 words/kg
+Diary of a wimpy kid 0.391 kg, has 19,800 words ? 50639 words/kg ? 24,000 times more efficient",2.40E+04,4
+36,How many kilograms would all the eyeglasses lenses worn by Americans weigh?,"Glasses weigh 25-50g, frame weighs 5-10g, estimate lenses weigh 20 grams based on sources. ~150 million americans wear glasses, so 150 million * 20 grams = 3 billion grams -> 3 million kgs",3 million,6
+37,How many adult bed bugs would you need to stack vertically (single file) to reach the height above sea level of the tallest active volcano in the world?,"~Bedbug size 0.5 mm (on average mixing fed vs. not fed)
+Mauna Loa in Hawaii height is about 4,170 m
+4.1e3 m / 5e-4 m = 8e6",8.00E+06,7
+38,"How many dodecominos are there? 
+Note: A dodecomino is made up of 12 unit squares connected edge to edge, while a tetromino, from Tetris, has 4 unit squares connected edge to edge. Rotations are considered equivalent pieces.","126,759 possible dodecominos when considering rotations equivalent (via wikipedia). 5
+
+
+Suggestion for estimating would be estimating an average x in x^12, or an average y in 5 * y^(12 - 4) (if  you know there are 5 tetrominoes).",1.27E+05,5
+39,"If you took all the energy released when a slug of sodium reacts with chlorine gas to launch all the salt produced from the reaction straight up (on earth), what height, in meters, above the ground would it reach?","mgh = 4.1e6 J.mol * 1 mol/0.058kg * m
+h = 7e6 m 7
+Mass cancels out! Do not need to know what a slug is.",7.00E+06,7
+40,The electrostatic force between a proton and an electron 1 Angstrom apart is what fraction of the force needed to frictionlessly accelerate a neutron at a rate of 1 septillion meters per second squared?,"That electrostatic force is 2.3e-8 newtons. f=ma, mass of neutron is 1.67e-27kg, times 1 septillion is 1e24 so you need 1.67e-3 newtons. Fraction is 2.3e-8/1.67e-3=1.38e-5",1.38E-05,-5
+41,"Over the course of a fortnight, a hundredth of a furlong of rain falls over a 3-hectare area. How many slugs of water fell per minute on average?","Hundredth of a furlong times 3 hectares is 60,330 cubic meters. This much water would weigh 60.3 million kg, which is 4.13 million slugs over the course of a fortnight, which is 20160 minutes. Thus, per minute, 204 slugs of water fell",2.04E+02,2
+42,"Suppose you warm up your shoulder and throw a bowling ball at 0.995 times the speed of  light down a bowling lane. In the frame of reference of the bowling ball, how many nanoseconds will elapse before it contacts the pins?","Bowling lane is 18.29 meters long. Ball is moving at 298,293,496 meters per second. Time is dilated for the ball, factor is 1/sqrt(1-0.995^2) which is 10.01. Thus, it takes 10.01*18.29/298,293,496 -> 6.137e-7, 600 nanoseconds",6.00E+02,3
+43,"If you covered the floor of the entire Flatiron Building with quarters, what would be the total value of the quarters in USD?","Flatiron building is 255,000 square feet, circle packing is ~0.90. Quarter is 0.716 square inches. Flatiron building is 36.7 million sq inches, times circle packing is 33.0 million sq inches, so you could fit 46.1 million quarters. Total value ~10 million",10 million,7
+44,How many nanoseconds elapsed between the first tumbler (event in the Olympic Games) and the first Tumblr (account)?,"1932 to 2007 ~27,000 days ? 2.3e9 seconds -> 2.3e18 nanoseconds",2.30E+18,18
+45,"Although friends often joke that they share one brain cell, what fraction of the cells in an average adult are actually brain cells (specifically neurons)?",1.0e11 brain cells / 3.3e13 human cells =  3e-3,3.00E-03,-3
+46,How many meters of thread would you have if you unraveled all the T-shirts sold in the past 10 years?,"Roughly 2 billion T-shirts sold per year, extrapolate to 10 years 20 billion tshirts. Each one has roughly 120 meters of thread based on various sources, so 2400 billion meters -> 2.4 trillion",2.4 trillion,12
+47,How many hamsters running on wheels would you need to temporarily produce the same amount of power as an average full capacity nuclear power plant?,"Nuclear power plant power  is 0.5e9 to 1e9 Watt.
+Hamsters produce 5e-1 Watts.
+1e9/5e-1 = 2e9 hamsters",2.00E+09,9
+48,How much money (in USD) have movies starring Leonardo DiCaprio grossed worldwide?,"Just 2010-2019:
+Once upon a time in hollywood - 377 mil
+The revenant - 533mil
+Wolf of wall street 407 mil
+Great gatsby 353 mil
+Django unchained 426 mil
+J edgar 84 mil
+Inception 839 mil
+Shutter island 294 mil
+Total is 3,313 mil ->3.3 billion
+Titanic (1997) is >2billion worldwide
+Which bumps it to over 5.3 billion, hitting the roundup cutoff. He did not act in enough movies to reach 44 billion with his other movies",44 billion,10
+49,What proportion of Princeton’s undergraduate campus is taken up by the room you are currently in?,"From google maps, end to end building is 102.2meters.
+
+From floor plans:
+
+Analyzing floor plans image in google slides, width of room 009 is 0.09 of total building width, so 9.2 meters across. It’s roughly square, so it’s 84.6 square meters (this seems right), which is 0.02090512 acres. Princeton is 600 acres. Ratio is 3.48e-5",3.48E-05,-5
+50,"PUSO tournament co-director Inwoo Shin is attempting to remember her password, which she knows is exactly 10 numbers long. She randomly types 10 numbers at a rate of 1 number per second and then checks if the password is correct. She repeats this until she gets the password right. What is the expected number of minutes she will take to get the password correct?","Each attempt has 10^-10 chance of success and takes 10 seconds, so expected minutes taken is (10*10^10)/60= 1.6e9",1.60E+09,9
+51,"This time, the computer (which is also owned jointly by PUSO tournament co-director Anthony Lopez) helps her out: for each attempt, as soon as she inputs a number incorrectly, the computer clears the attempt and she has to start over. She types at the same rate of one number every second. What is the expected number of minutes she will take to get the password correct?","Let x be the expected number of key presses until the password is correctly answered. There is a 90% chance she gets a number wrong, in which case she is back to the start. There is a 9 percent change she gets the first number right and the second one wrong, and so on. Thus, we have the equation
+
+x=0.9(x+1)+0.09(x+2)+0.009(x+3)+...+1e-10(10)
+x*1e-10 = 1.11111101
+x=1.11e10
+x/60 = 1.8e8",1.80E+08,8
+52,"If every US coin in circulation was instead a bitcoin, how much would all the coins collectively be worth in US dollars? (Assume current value of bitcoin.)","Approximately 2.8e10 coins in circulation. Bitcoin value ~4e4.
+2.8e10 * 4e4 = 1.12e15",1.12E+15,15
+1,"If you’re taking this test as part SciOly, you should know that you’re part of one of the
+greatest communities in high school. This section will try to serve as a testament to this fact. How
+many secondary school students compete in Science Olympiad across the US?","According to team registration, there are currently 4,435 teams across the country, and
+we can assume pretty fairly that the average number of people on a team is between 11 and 110, so
+the answer should be 5 .",,5
+2,"If you haven’t checked it out already, the SciOly.org forum is a pretty cool place to go and
+meet people. How many total posts are there on the SciOly.org forum?","As of 1/18/2022, there are 407,000 posts, or 5 .",4.07E+05,5
+3,"One of the most exciting prospects of competing is being able to go to Nationals. How many
+total miles were travelled by Div C teams to the 2015 National Tournament in Lincoln,
+NE?","I picked 2015 because NE is kind of in the middle of the country, so It’s pretty reasonable
+to estimate that the average team travelled at least 1,000 miles, and since there were greater than
+50 teams, this comes out to 5e4 miles, or 5 .",5.00E+04,5
+4,"But even after you graduate, the Science Olympiad community will follow you around, to
+college and beyond. How many alumni of SciOly are there?","Somewhere between 500,000 and 5,000,000, so 6 . The stat they give is that 28,000
+graduate per year, and since SciOly has been running for around 35 years, this would fit into the
+range.",5.00E+05,6
+5,"You may even one day be part of running a competition yourself! How much Google Drive
+space has MIT Science Olympiad used over the years since its inception in zettabytes?","The answer is around 8 GB, or 8e-12 zettabytes, so -11 .",8.00E-12,-11
+6,"Your friend, YuQing, is a particle physics boi who works at the Large Hadron Collider. How
+many times do accelerating particles travel around the circumference of the LHC every
+fortnight?","(3e8m/s)/27km = 1.1e4 revolutions/sec. Convert to fortnights, getting 1.33e10 revs/fortnight 10 .",1.33E+10,10
+7,"Often at the LHC, employees will engage in the simple pleasure of watching YouTube during
+break time. How many views does the first video on YouTube have?","215 million as of Dec 22, 2021 (see jawed). 8",215 million,7
+8,"After engaging in the stimulating thinking experiments about particle physics, let’s instead
+talk about Large Happy Cows. What is the Big Mac Index of four-years of MIT tuition?","The Big Mac Index is how much something is worth in Big Macs. Currently, a Big Mac
+costs $3.99 before tax, and MIT’s tuition is $53,450 / year. Thus, the answer is 4 .",5.35E+04,4
+9,"Contrary to popular opinion, you only like to eat spicy things, so you decide to try a spicy
+Big Mac. How spicy, in Scoville units, is the spiciest Big Mac in the world?","According to Google, the answer is 7e6, or 7 .",7.00E+06,7
+10,"Now that you’ve eaten such a powerful Big Mac, you are feeling a bit queasy. How many
+molecules of methane are released into the atmosphere each year due to cow manure?","Let’s assume each day that a cow produces 375L of methane[9]. There are about one billion cows in the world [10]. Multiplying together, we get 3.75e11L of methane; converting using STP of 22.4L/mol · 6.022e23 molecules/mol, we get 1e34 molecules, or 34 .",1.00E+34,34
+11,"Man, climate change sucks! New studies have shown that the Arctic may be ice-free by 2035,
+fifteen years earlier than the previous estimate of 2050. Calculate how much the global sea level
+would rise in centimeters should all the ice in the Arctic melt.","Current Arctic ice cap volume is 7,830 km3 as of November 2021[11]. Volume of the
+Earth’s oceans is around 1.37e18 m3 with an average depth of 4e3 m. Thus, the surface area is
+around 3.425e14 m2. 7.83e12 m3 divided by 3.425e14 m2 yields 2.29e ? 2 m, or 2.29 cm. Thus, the
+answer is 0 . Note that this may seem low but this is because most ice is in Antarctica (3e7 km3)
+and Greenland.",2.29E+00,0
+12,"Speaking of the oceans, did you know that there are actually a ton of viruses just chilling
+on the surface of seawater? (well I guess they aren’t chilling because of climate change and increasing
+ocean temperatures... but whatever!). How many viruses would you expect to find within a
+cubic meter of surface seawater?","Campbell’s Biology states that 1e10 viruses are found per quart. Converting to cubic
+meters, we get 1.056e13 viruses per cubic meter, or 13 .",1.06E+13,13
+13,"You already knew this one was coming. How many total coronavirus vaccines have
+been given to people around the world since the start of the pandemic?","According to Google, the answer is currently around 9.48 billion as of 10 . Can also just
+assume like half the world has been double/triple vaxxed to get rough estimate",9.48 billion,10
+14,"Onto quarantine activities! My friend Kristina really likes to read: how many books have
+been bought since the start of the pandemic in 2020?","According to Google[12], the answer is around 200 million, or 8 . This can also be
+estimated by guessing that Americans purchased an average of one book since the start of the
+pandemic.",200 million,8
+15,"Another popular quarantine activity was baking. My friend Tian really likes to bake banana
+bread: how many grains (unit) of bananas were produced in the Philippines in 2020?","There were 9.056e6 metric tons of bananas produced in 2020[13]. Since a gram is around
+15.4 grains, we can do convert the units to get 1.4e14 grains, or 14 .",1.40E+14,14
+16,"Yet another popular quarantine activity was breathing. My friend Allen Ding really loves to
+breathe: how many nitrogen atoms does a human inhale in the average breath?","The average breath is 500 mL. This corresponds to 500/22.4e3 moles of gas, which is 78% nitrogen,
+coming out to around 1e22 molecules of nitrogen, or 22 .",1.00E+22,22
+17,"In The Lorax, Aloysius O’Hare tries to sell bottled air to the public, making us very glad that
+plants are here to bring us free oxygen. How many trees are there in the world?","3.04e12, so 12 .",3.04E+12,12
+18,"Reminiscing about your childhood, now you want to watch a movie. Turns out, a lot of
+Americans share the same sentiment. How much is the American film industry worth as of 2020
+in Indonesian rupiahs?","9.18e10 USD, and 1 USD = 14,360 rupiah, so 1.3e15 rupiah, or 15 .",1.30E+15,15
+19,"Apparently a significant part of my ”childhood” consisted of studying for Fermi exams on
+Quizlet... how many Quizlet sets have been made in the history of the site?","According to Quizlet, it is over 500 million, so probably 9 .",500 million,9
+20,"In a fitting end to a miscellaneous trivia section, you’ve probably heard that the canonical
+Fermi Question is ”how many piano tuners are there in Chicago,” but I’m curious: how many piano
+tuners are there in the entire world?","The answer appears to be around 11,000 via Google, so 4 .",1.10E+04,4
+21,"The year is 2025, and you are preparing to become a new MIT tour guide. However, nerdy
+students often ask many difficult questions about MIT, so as part of your training, you must learn to
+handle whatever may be thrown at you. How many iPhone 12 Pro Max’s could fit inside the
+Great Dome of MIT?","We will assume the Great Dome is a hemisphere. The diameter of this hemisphere is
+100 feet[1], or around 30 meters. This yields a hemisphere volume of 5.655e4 m3. The volume of an
+iPhone 12 Pro Max[2] is 9.3e ? 5 m3. Dividing these numbers gives us 6.1e8 iPhone 12 Pro Maxes,
+so the answer is 9 .",6.10E+08,9
+22,"History is a very important part of a school’s legacy! A curious student, Anne-Marie Xu, is
+very interested in her networking prospects should she come to MIT, and asks you how many alumni
+does MIT have?","140,000[3]. You could approach this calculation by taking the number of students in one
+undergraduate class at MIT (?1,500) and multiplying by the number of years since MIT’s founding
+since 1861 (251). This would be an overestimate as earlier classes had less students, but would give
+the correct order of magnitude, 5 .",1.40E+05,5
+23,"Anne-Marie is satisfied with your answer. She wonders just how successful these alumni are.
+What is the combined GDP of all businesses started by MIT graduates (2013)? (Hint: it is
+comparable to the 10th largest GDP country in the world).","The hint would be pretty helpful for anyone who has looked into largest GDPs (the
+US sits at around 2e13, and approximating from there. We could also approach this problem by
+considering the GDP of other companies like Meta. Koch Industries contributes the largest such
+GDP at around 1e11 (? 1/8 of Meta). Using these as baselines to estimate, we can conclude the
+answer is 2e12[4], and thus 12 .",2.00E+12,12
+24,"Enough about money! After all, an MIT education should not be sought after for the money
+– there’s a lot of cool science going on too! How many researchers, including post-doctoral
+students, worked with MIT during Fall 2020?","5,100 researchers[5]. With a student to faculty ratio of 3:1 and a total enrollment of
+around 12,000, we could get the number down to around 5, 000, as it is fair to say most professors
+do research. Adding the 1,500 postdocs was made to incline people to choose 4 .",5.10E+03,4
+25,"Recently in attempts to advance towards a sustainable fusion reactor, MIT Plasma Science
+and Fusion Center (PSFC) developed a 20 T superconducting magnet with the goal of maintaining a
+magnetic field strong enough to contain plasma the temperature of the Sun[1]
+
+. In comparison to the
+Earth’s magnetic field, how many times stronger is this new superconducting magnet?","Earth’s magnetic field is 3.05e-5 Teslas[6]. Dividing, we get 6.56e5, or 6 .",6.56E+05,6
+26,"Another curious high schooler, Beter Barker, who just happened to be bitten by a radioactive
+spider, is interested in how fast he can swing across campus. Given that his swing is purely
+dependent on acceleration due to gravity, how many femtoseconds would it take Beter
+Barker to swing across the Infinite Corridor? Assume that velocity remains constant and at its
+maximal value and that Beter is 5’7 and begins his swings at shoulder height.","We make the reasonable assumption that Beter begins his swing form arm-level height
+at around 5 feet. Using mgh = 1/2mv2
+max, we get that vmax ? 5.465m/s. The infinite corridor is 251
+meters long, so the swinging takes around 46 seconds, or 4.6e16 femtoseconds, 16 .",4.60E+16,16
+27,"Beter is also interested in joining science-related clubs at MIT. Marveling at the prospect of
+joining MIT SciOly, he innocently asks What is the cumulative total score of all teams that have
+ever competed at MIT Science Olympiad Invitational tournaments (including no-shows)?","It happens that the answer is just a shade above 500, 000. We manually ran this calculation
+based on the number of teams that competed each year, but the process was this: (1) add
+up 1 to n, the number of teams (2) multiply by 23 (# of events) (3) add to cumulative sum. MIT
+SciOly has been running for 7(!) years now, but the key thing to note was that 2021 had 150 teams,
+accounting for more than half of this value, 6 .",5.00E+05,6
+28,"One of the greatest worries in the daily life of an MIT student is to be hit by a car while
+crossing Mass Ave on the way to class. We are here to see just how much of a concern this really is!
+Given that each person living in Boston has an equal chance of getting in a car accident
+and struck by lightning in the next year, how many times more likely are you to be struck
+by lightning in your lifetime than to die as a pedestrian being hit by a car in your four
+years at MIT?","Probability of getting struck by lightning in lifetime[7] is 1/15,300 , or 6.5e?5. The odds of
+being hit as a pedestrian[8] per year are 1/42,806 , or 2.336e?5. Thus, the odds of not being hit 4 years
+in a row are (1?2.336e?5)4, and the odds of being hit within those four years is the complement,
+or 9.34e ? 5. So yeah, the answer is 0 , and fear is real.",,0
+29,"On November 8th, 2021, MIT students around campus awoke to a special surprise: to com-
+memorate a hack from seventy years ago, seventy poles around MIT were turned into barbershop poles
+
+using red, white, and blue ribbon. If all such poles were as tall as those seen in Lobby 7, how
+many square feet of ribbon would this have taken?","Computing lateral surface area of one such pole, we can just multiply by 70. The height
+of Lobby 7 (and thus the pole), is approximately 100 feet. Each pole is also approximately 1.5 feet
+in radius, so the lateral area is 942.48ft2. Multiplying by 70, we get 6.6e4ft2, or 5 .",6.60E+04,5
+30,"A popular destination among students of MIT is the campus’s famed Banana Lounge, where
+boxes upon boxes of bananas are made available for free to all students 24/7. How many bananas
+were purchased for the banana lounge during the Fall 2018 semester?","The answer is 23,000 based on MIT UA spending for that semester, so 4 .",2.30E+04,4
+31,"You have been selected to try out for an estimation game show, GalaxyBrain. This show
+will consist of three rounds, each with one question, with the first round offering you a hefty prize
+of $250,000 and each round thereafter being double-or-nothing. However, the host of GalaxyBrain,
+a prominent individual named Haphne Dao, has sent you a challenging mathematics question to be
+completed as a pre-requisite. The question reads: how many primes are there that are less than
+6^350?","log 6 = log 2 + log 3 = 0.301 + 0.477 = 0.778
+0.778 ? 350 = 272.3
+ln 6^(3) * 50 = 350 ln 6 = 350 ? (0.778 ? 0.434) = 120.4
+By Prime Number Theorem, ?(N) ? N/lnN = 1.66e270, or 270 .",1.66E+270,270
+32,"Sometimes life is unfair... despite you solving the question correctly, Haphne Dao insists that
+you can only participate on the show if you flip an unfair coin that comes up heads 3/7
+of the time fifty times and get exactly 25 heads. What is the probability of this happening?","Estimate (50C25)· ( 3/7 )^25 · ( 4/7 )^25 using Stirling’s approximation to get around 0.067, or -1 .
+Note that you could’ve definitely just assumed the coin was fair and gotten the same answer.",6.70E-02,-1
+33,"You get lucky and land exactly 25 heads! You’ve made it onto the show. For the first question,
+Haphne asks you to estimate the 127th Fibonacci number.","Converting Binet’s formula into logs, we get an approximation of 0.209n ? .349 for the
+nth Fibonacci number, which should be accurate for n = 127. Plugging in, we get 26 .",,26
+34,"With some money secured through that first round, you move on to the second round, which
+features a diagram of a 5x5 square. How many ways are there to place the numbers 1-25 into
+this square such that every row and column is increasing?","For all of the math people out there, we apply the wonderful hook-length formula[14].
+25!/(9 ? 8^2 ? 7^3 ? 6^4 ? 5^5 ? 4^4 ? 3^3 ? 2^2)
+? 7e8
+Thus, the answer is 9 .",7.00E+08,9
+35,"You’ve moved on to the final round with a chance to win a million dollars. How-
+ever, if you get it wrong, you will lose all of your earnings up to now... what will you do? Compute 49^2^10^?2","So we start by taking log 50/ log 49 ? 1.005 to get an idea of what the exponent needs to
+be above 49. The task now becomes to compare 2^(10^?2) to 1.005. This is 2^(1/100), which we can log pretty
+easily as 1/100 * log 2 ? 0.003. So what is log 1.005? To tackle this, we can use a linear approximation
+for log (1 + x). d/dx log (1 + x) = 1/(1+x) . Applying x = 0.005 now, we get f(1+x) = f(1)+f?(1)?(x) =
+log 1 + 1/2 ? (0.05) = 0.0025. The higher-order derivatives of log (1 + x) alternate between positive
+and negative, so we know that this is an overestimate and can safely say that 0.003 > log 1.005.
+Thus, the expression evaluates to a value greater than 50, and the answer is 2 .",5.00E+01,2
+36,"While writing this exam, I am currently listening to some nice lofi hip hop radio - beats to
+relax/study to. Lo-Fi Girl on YouTube seems to be expending a lot of energy since her desk lamp is
+on 24/7... How many jiffies (unit) will a standard 1600-lumen lightbulb stay on for after
+capturing the energy released in one minute by the Sun that hits a square-meter of Earth
+at noon at the equator at summer equinox?","This is approximately 1120W/m2, so 67, 200J. A standard 1600-lumen lightbulb is
+equivalent to 100 incandescent watts, so it will last 672 seconds, or just over 11 minutes. A jiffy is
+defined as around 33.35e ? 12 seconds. Converting seconds to jiffies, we get 2e13, or 13 .",2.00E+13,13
+37,"I will fight you on this, but Christopher Nolan films are absolutely fire. In Interstellar,
+scientists observe a disturbance in space-time within the orbit of Saturn and decide to send a crew to
+explore it, to which they found a completely new star system. Although we are not close to sending
+people out that far, we have at least made some progress! How many meters away from Earth is
+the Voyager II spacecraft?","As of 1/18/2022, the answer is 1.9e13 meters, or 13",1.90E+13,13
+38,"In Up, Carl uses a bunch of balloons to lift his house up off of the ground. I often wonder how
+
+feasible this is, because my dorm is inconveniently far away from main campus. How many helium-
+filled balloons would it take to lift the weight of an average house off of the ground?","It is safe to assume that an average house weighs around 1e5 kg. A standard helium
+balloon can lift 14g of weight. Dividing, we get 7.1e6, or 7 .",7.10E+06,7
+39,"You’re doing great so far on this exam! What a star! Assuming that humans are perfect
+blackbodies, what is our peak wavelength of emission in nanometers?","Plug into Wien’s law with temperature of 310K and get 9.3e3 nm, or 4 .",9.30E+03,4
+40,"I’m getting pretty tired writing this test though, and it really feels like my bed is calling
+me. What is the gravitational attraction between me and my bed while I am sitting at my
+desk?","F = Gm1m2/r^2 = (6.67e ? 11m^3kg^?1s^?2) · (70kg) · (100kg)/(4m)^2 = 2.9e ? 8N (1)
+Average adult human male is 70 kg (and I guess I’m an average human), Bedframe is around 80kg,
+Mattress is around 20kg. -8",2.90E-08,-8
+41,"Sometimes when I sleep, I’m really good at sleeping through my alarms. Assuming that
+my alarm is a 50W speaker and that I sleep five meters away from it, what is the amount
+of energy in kJ that my eardrum absorbs per minute if the surface area of my ear is 80
+mm^2?","Using I = P/A, we get I = 50/(4???5^2) = 0.159W/m2. Thus, the ear is absorbing 1.59e ?
+7W/mm2 ? 1.27e ? 5W. Over one minute, this comes out to be 7.62e ? 4J, thus 7.62 ? e7kJ and
+-6 .",7.62E-07,-6
+42,"If you can’t already tell from this exam, I’m really good at spacing out. That’s my crappy
+transition into writing a question about space. How many kJ of energy has been produced in all
+of the supernovas that have thus far been recorded?","According to the Open Supernova Catalog, there have been around 94,000 observed
+supernovae. The average supernova releases around 1e44 J, or 1e41 kJ. Multiplying together, we get
+46 .",1.00E+41,46
+43,"A very cool remnant of a supernova that occurred near us is Sagittarius A*. Assuming
+perfect efficiency, how much energy would be produced from the entirety of the mass
+contained in Sag A*?","The mass is 4e6 Msol. We use E = mc^2 to get E = (4e6) ? (1.989e30) ? (9e16) = 7.2e53,
+and thus the answer is 53 .",7.20E+53,53
+44,"Approximately this amount of energy will be released through Hawking Radiation across a
+very, very long time. How many years will it take for Sag A* to completely evaporate?","The answer is on the order of 1e87 years, so 87 .",1.00E+87,87
+45,"Now that’s a lot of energy! In America, we also use a lot of energy. How many pounds
+(lbs) of wood need to be burned per year in order to sustain the yearly energy consumption
+of America?","Googling, we get around 93e9 BTU, which converts to 2.7e7 kWh, or 9.72e13J. Wood
+burns at around 2e7 J/kg, so we would need 4.86e6 kg of wood. Converting to lbs, we get 1e7, or
+7 .",1.00E+07,7
+1,"What was the total global energy consumption of Google in 2022, in Joules?",,,11
+2,"How many times more permutations of a deck of cards exist than the number of positions
+of a Rubik’s cube?",,,48
+3,"What is the ratio of the gross domestic product (GDP) of the United States to that of San
+Marino?",,,4
+4,"A “blue moon” occurs when a full moon occurs twice in a single calendar month. How
+many times could light circle the Earth’s equator between one blue moon and the next, on
+average?",,,9
+5,"If you pick a random point on the night sky, what is the probability that it is contained
+within the shadow of Sagittarius A*, the black hole in the center of the Milky Way?",,,-20
+6,"What is the probability that, on any given day in Singapore, there is a total solar eclipse?",,,-5
+7,How many milliseconds are between the Battle of Hastings and D-Day?,,,13
+8,"One of this tournament’s sponsors, Jane Street Capital, is known as a high-frequency
+quantitative trading firm, with multiple offices around the world. In 2020, what was the
+total worth of the securities that they traded, in US dollars?",,,13
+9,"How many sheets of paper, stacked on top of each other, would it take to equal the height
+of the Stanford Tree?",,,4
+10,"In years, how old is the universe thought to be, in years?",,,10
+11,"If all of the world’s freshwater was replaced by FairlifeTM Ultra-filtered Chocolate Milk,
+then how many calories would I gain from drinking it all?",,,22
+12,"How long, in seconds, would it take for someone driving a Koenigsegg Jesko Absolut to
+drive from UC Berkeley to Stanford, by way of I-280 South (over the Bay Bridge, down
+through SF and San Mateo County)? Assume the driver is a speed demon and
+continuously maintains the theoretical highest speed while operating on E85 race fuel.",,,3
+13,"The California Academy of Sciences in Golden Gate Park is home to a colony of African
+penguins. Suppose that a highly motivated wild African penguin wants to visit his captive
+comrades, and is blessed by the ancient penguin gods to not require any food, water, or
+rest. How many hours would it take him to swim at top speed from his homeland of
+South Africa to San Francisco? By the way, I’m pretty sure he doesn’t know of the
+Panama Canal’s existence...",,,3
+14,How many peregrine falcons does it take to lift up an average human?,,,2
+15,How many base pairs are in the human genome?,,,9
+16,"If the US Department of Transportation was around back then, what would they value the
+statistical loss of life from the Hindenburg disaster to be, in 2022 dollars?",,,8
+17,"A flop is a basic unit of computation denoting 1 addition, subtraction, multiplication, or
+division operation. On average, how many flops does it take to solve a system of linear
+equations in 80 variables and 80 equations?",,,6
+18,"Suppose that I’m getting tired of eating at school dining halls and instead want to eat the
+Dunkin’ Donuts Sourdough breakfast sandwich 2 times a day for the entirety of spring
+semester at UC Berkeley. How many times would I have to run the Boston Marathon in
+order to burn all of those calories?",,,2
+19,"How much money would McDonald’s lose if for every Big Mac sold last year,
+McDonald’s gave out a 14 oz Filet Mignon instead?",,,11
+20,"It’s often said that a human should consume 2000 Calories/day. But how much energy is
+that in terms of electron volts (eV)?",,,26
+21,"How many days would I have to eat exactly 2000 Calories to have consumed energy
+equivalent to that of the “Fat Man” nuclear bomb?",,,7
+22,"Ramen noodles are a classic of any college student’s diet. How many packs of Shin Black
+Ramen would I need to eat to have consumed the recommended daily amount of sodium
+for 50 people?",,,2
+23,"How many shots of espresso would an average U.S male need to consume in order to
+have consumed enough caffeine equivalent to the LD50 of caffeine?",,,2
+24,How many peanut M&M’s would I need to equal the weight of a Boeing 737-800?,,,7
+25,The number of oxygen atoms in 1L of water?,,,25
+26,"How many potatoes would I need to replace every utility (telephone) pole in the U.S with
+a McDonald’s hash brown?",,,8
+27,"Going off of the previous question, if I dropped a pebble at a random location in the U.S,
+what is the probability that I hit one of the McDonald’s hash browns I put down?",,,-25
+28,"How many Bugatti Chiron’s could I buy with the combined endowment of all Ivy League
+Schools from the 2018 year?",,,5
+29,"What is the (outer) diameter of a standard flu shot needle, in parsecs?",,,-20
+30,"How many standard hairdryers would I need to run simultaneously to have a power
+output equal to that of the sun’s?",,,23
+31,"Apparently woodchucks don’t actually chuck wood. But anyways, how much wood, in
+mm^3 could a woodchuck chuck in a galactic year if a woodchuck chucks wood at a rate
+of 1 mm^3 per picosecond?",,,28
+32,"How many ways are there to travel from the coordinates (0,0) to (100, 100) if you can
+only move to the right and upwards and cannot cross above the main diagonal?",,,57
+33,"What is 49!!? Here, ‘!!’ refers to double factorial, where n!! means the product of all
+positive integers less than or equal n with the same parity as n.",,,32
+34,Let x =sum from n=1 to n=100000 of (1/n) What is e^x?,,,5
+35,"What is the probability that a random chosen subset of the positive integers less than or
+equal to 10 is a subset of the positive integers less than or equal to 4?",,,-2
+36,"What is the total distance, in meters, traveled by the world’s commercial airplanes in one
+day?",,,10
+37,How many Stanford alumni are living today?,,,5
+38,How many book volumes are in UC Berkeley libraries?,,,7
+39,"What is the total combined annual budget of the Lawrence Berkeley National Laboratory
+and the SLAC National Accelerator Laboratory, in U.S. dollars?",,,9
+40,How many colors are used in the tile mosaics in Stanford’s Memorial Church?,,,4
+41,"How many undergraduate international students’ yearly tuition at UC Berkeley can be
+paid for by China’s 2023 defense budget?",,,7
+42,"How many Nobel Prize medals could be cast using the amount of gold that Mansa Musa
+donated during his historically significant pilgrimage to Mecca?",,,5
+43,"The plucky tardigrades of Lawrence Berkeley National Laboratory, inspired by their
+distinct cousin Oski the Bear, seek to attack Stanford University on the eve of the Axe
+Game. Taking advantage of a captured cache of human blood, how many red blood cells
+will these “water bears” need to build a bridge to Stanford Stadium? The bridge has to be
+wide enough for them to march single-file, and is a straight line in the air.",,,12
+44,"DDT is an insecticide that was widely used in the 20th century, before being banned due
+to public outcry that it was inadvertently causing declines in populations of America’s
+national bird, the bald eagle, due to fertility issues. How much DDT, ingested orally, in
+picograms, would have a 50% chance of killing an adult blue whale?",,,17
+45,"How many rolls of toilet paper would I need to completely cover the surface area of the
+earth?",,,14
+46,"If I drained 50000 cubic meters of water from Lake Superior for everytime Wildest
+Dreams (Taylor’s Version) was streamed on Spotify, how much would the depth of Lake
+Superior change, in meters?",,,2
+47,"How many oxygen atoms would I inhale if I sat and listened to the entirety of the
+Midnights (The Til Dawn Edition) album by Taylor Swift?",,,25
+48,"In “invisible string”, Taylor Swift sings “one single thread of gold tied me to you”. How
+much would a rod of solid gold, stretching from Philadelphia to Berkeley with diameter
+equal to that of 3-ply twine, be worth, in US Dollars?",,,11
+49,"What is the angular velocity of the Big Ass Fans E-Series 12-ft 6-blade commercial
+Ceiling Fan spinning at its highest speed in gradians/millisecond? (gradians is not a typo)",,,-5
+50,"How much Bitcoin (at the highest recorded price in history) could I buy with the cost of a
+35-stick pack of Wrigley’s Extra Spearmint Sugar Free Chewing Gum?",,,-5
+51,"Fun fact: there’s a (not-so) secret tunnel underneath UC Berkeley that connects the
+Gardner Main Stacks under our flagship Doe Memorial Library to Moffitt Undergraduate
+Library next door. Although you’ll need a Cal 1 Card to gain access, this event supervisor
+luckily has one :D Suppose I’m practicing for a marathon and need a quiet place to train.
+How many times would I need to run through the Moffitt portion of the tunnel to get to
+an equivalent distance of a marathon?",,,3
+52,"In the name of inter-university cooperation, the administration of UC Berkeley decides to
+dig another tunnel connecting two libraries. One is Doe Memorial, and the other is...
+Cecil H. Green Library at Stanford... If this new passageway is a direct, straight line
+from Doe to Green, and has the same height and width as an average door, then how
+many cubic inches of earth would have to be displaced?",,,10
+53,"Continuing in the spirit of inter-university cooperation, suppose that the students from
+Berkeley and Stanford want to break the record for the loudest sound ever recorded. To
+do this, each student decides to scream as loud as they can. How many students,
+collectively screaming, will be needed to break this record? Assume that each student
+screams at a sound level of 80 dB.",,,23
+54,"Realizing that breaking the record for loudest sound may be a little difficult, the students
+decide to try their hand at breaking the record for “most people brushing their teeth
+simultaneously”. With the minimum number of students needed to break this record, how
+many total grams of fluoride would be found in all the toothpaste used? Assume each
+
+student uses a standard, pea-sized amount of toothpaste and everyone uses Colgate Total
+Original Toothpaste.",,,1
+55,"After all that brushing, these students suddenly feel like having a sweet treat: Honey.
+However, they want to source their honey only from the bees (assume all bees are honey
+bees) that assisted Ruan Liangming in his record for “world’s largest mantle of bees”.
+How much total honey, in tablespoons, would all of those bees produce in their lifetime?",,,4
+56,"Let’s say that all of the rotisserie chickens that Costco sold in 2021 were all alive on the
+same day. How much feed, in pounds, would be collectively consumed by all of those
+chickens on that day?",,,7
+57,"If every Leopard 2 main battle tank ever manufactured, the primary tank used by
+Germany as well as a host of other Western countries, suddenly turned into adult
+leopards, then how many kilograms of meat would they consume each year?",,,6
+58,"The vast majority of the world’s Internet data is transmitted through underwater
+fiber-optic cables. What is the total length of these underwater cables, in meters?",,,9
+59,"What is the maximum power a horse can produce, in horsepower?",,,1
+60,"The General Electric GE9X is the world’s largest commercial jet engine, used exclusively
+on Boeing 777X airplanes. If 10,000 GE9X jet engines were strapped to the Earth’s
+equator, pointed eastward, and started, how long would it take to stop the Earth’s rotation,
+in years? Don’t worry about the mass of the Earth changing due to fuel consumption.",,,10
+1,Calculate 10^100 ? 10^99 ? 10^98 ? . . . ? 10^1,,,100
+2,"How many unique tetrominoes are there? Tetrominoes are any arrangement of four squares on a grid
+such that all four are connected by edges. Rotationally symmetric (in the grid plane) pieces are only counted as
+one unique piece.",,,1
+3,How many bird species are there in North America?,,,3
+4,"If you gained one dollar per mouse click, and you click at a continuous rate of the fastest click a
+human can achieve, how long in years would it take for you to reach Jeff Bezos’ net wealth?",,,2
+5,"How tall are you, in millimeters?",,,3
+6,"If each US citizen paid an equal amount to pay off the US national debt, how many dollars would
+each person have to pay?",,,5
+7,"Ti-5Al-2.5Sn-ELI is a Titanium alloy composed of (in weight percentage) 5% Aluminum (Al), 2.5%
+Tin (Sn), and the base metal Titanium (Ti). How many cans of Arizona iced tea do you need to provide enough
+aluminum for a kilogram of Ti-5Al-2.5Sn-ELI?",,,0
+8,How many gallons of milk are sold in the US a year?,,,11
+9,"What will the overall BirdSO Satellite B/C (not just Fermi Questions) winning team’s team number
+be?",,,2
+10,What will the winning team score for BirdSO Satellite B/C (not just Fermi Questions) be?,,,2
+11,"What is the sum of the numbers from 1 to 10^5
+?",,,10
+12,How many cars were scrapped in the EU in 2019?,,,7
+13,What is 2× (the number of letters in the English alphabet)?,,,2
+14,"The current world record single for the 3x3 Rubik’s Cube is 3.47 seconds by Yusheng Du. If he could
+continue solving at world record pace, how many times could he solve the Rubik’s Cube in one day?",,,4
+15,How many mitochondria are in the average adult human body?,,,17
+16,How many dollars worth of salmon does an adult female brown bear consume a year?,,,4
+17,"The board game Monopoly includes a certain amount of money for the bank and a number of “Get
+Out of Jail Free” cards. Suppose the bank money is equivalent to real life money and each card is worth the
+median bail in California, how many Monopoly sets would you need to purchase the average home in Palo Alto
+in 2021?",,,1
+18,"Assuming that the Emus won the Emu War with the minimum number of emus they needed to win
+and that the chances of the emus winning is proportional to human population, how many emus would there
+have to be worldwide in order to win an Emu War against all humans today?",,,7
+19,How much would it cost in USD to cover the average American house in 24 inches of fake snow?,,,6
+20,How many molecules of ATP are used in an average human in one day?,,,26
+21,"The NBA trade deadline was pretty recent. What is the total value in Japanese Yen of all contracts
+traded on the trade deadline?",,,10
+22,"How many Greek triremes could float on the Aegean Sea, packed as tightly as possible but not stacked
+on top of one another?",,,9
+23,"How many times more money would you gain from sweeping gold medals in the Winter Olympics
+(and selling for the equivalent precious metal value) compared to sweeping gold medals at a 23 event Science
+Olympiad competition (and selling for the purchase value)?",,,3
+24,"The winner of the 2013 MIT Mystery Hunt’s team name was the complete text of Atlas Shrugged.
+How many words long is that team’s name?",,,6
+25,"How many times more energy is released due to the mass-energy equivalent of of glucose compared
+to the metabolism of glucose?",,,10
+26,How many characters are in the text of this test?,,,4
+27,What is the mass of all humans on Earth in daltons?,,,39
+28,How many ways are there to make change for a dollar?,,,2
+29,"What is the worldwide coffee bean production, in picograms?",,,25
+30,How many gallons of water does it take to grow one almond?,,,0
+31,"What is the difference in dollars between the amount of Skittles and the amount of Swedish Fish sold
+in the US in 2017?",,,8
+32,What percent of the world’s salt is used to de-ice American roads?,,,1
+33,How much power (in Watts) did the space shuttle consume?,,,4
+34,"There are a total of 636 teams attending the 2022 BirdSO tournaments. Suppose geon, in their
+benevolence, decided to give away free T-Shirts to four teams. How many ways are there to randomly select
+those four winners?",,,10
+35,"The mantis shrimp has sixteen color-receptive cones. One can assume that if they developed advanced
+technology, they would eventually create RGBESUCLYKNOZWJM LEDs (as opposed to our RGB LEDs). If
+each color can have an intensity level of 0 to 6, how many possible colors would there be?",,,13
+36,How many carbon atoms does an average size antigen contain?,,,2
+37,"We are designing a space station that can mimic Earth’s gravity using centrifugal acceleration. Sup-
+pose the space station is a spinning torus with a diameter equal to the width of the ISS, what angular acceleration
+
+would be needed, in arcseconds per second?",,,5
+38,"In Beauty and the Beast, Gaston famously ate 4 dozen eggs each day in his childhood (let’s assume
+until age 18), and then upon adulthood, he ate 5 dozen eggs each day. How many kilocalories worth of protein
+has Gaston eaten from eggs in his life so far? Gaston is canonically 25 years old.",,,7
+39,"Minecraft Steve decides to rob a bank. He mines through the obsidian walls and fills his inventory
+(36 slots) with stacks (64 items per stack) of gold blocks (each block is 1 meter^3
+
+). What equivalent USD value
+
+of gold did Steve escape with?",,,12
+40,How many meters would a strand of DNA be that could hold the entire data storage of the internet?,,,14
+41,Count the number of unique homeomorphically irreducible trees of size n=10.,,,1
+42,"In case you weren’t aware, Donkey Kong’s Coconut Gun can fire in spurts. What the DK Rap didn’t
+tell you was that his Coconut Gun can also fire constantly, shooting coconuts about as quickly as a real-life
+machine gun. If Donkey Kong were to buy all the coconuts produced in the world in 2020, how many hours
+could he fire his coconut gun before running out of coconuts?",,,6
+43,How many attoparsecs are in a foot?,,,1
+44,Norway is the 118th most populous country in the world. What is the population of Norway?,,,7
+45,"How many fish are there, on average, per meter cubed of water in the earths ocean?",,,-6
+46,"The James Webb Space Telescope was recently deployed to L2, a point of equilibrium (one of five) in
+space relative to the Sun and the Earth. The equation to calculate L2 is M_1/(R+r)^2 + M_2/r^2 =
+((M_1*R/(M1+M2)) + r)*(M1+M2)/R^3
+where M1 is the mass of the larger object, M2 is the mass of the smaller object, R is the distance between the
+two objects, and r is the distance to L2 from the smaller object. Calculate the distance, in meters, to L2 for a
+system with a 2.0 × 10^30 firkin and a 1.5 × 10^22 firkin object that are 2.2 × 10^10 furlongs apart.",,,10
+47,"How many 2 liters bottles of Coke would you need to bottle such that the amount of CO2 in the Coke
+is equivalent to the amount of CO2 released from streaming everything on Netflix?",,,4
+48,"Express Hubble’s constant (taken as 68 km/s/Mpc) in Planck units, given: 1 Planck Length =
+1.616255 × 10^?35 m, 1 Planck Mass = 2.176434 × 10^?8 kg, 1 Planck Time = 5.391247 × 10^?44 s",,,-61
+49,"How many prime numbers are there that are less than the number of kilometers that equal the
+diameter of the observable universe?",,,22
+50,"The AIME has fifteen questions, each of which with an answer that is an integer from 000 to 999
+inclusive. If you guessed all the questions on the AIME, what is the probability that you get exactly 12 questions
+correct?",,,-34
+51,"The median person has ten fingers and can easily press ten keys on a keyboard at once. They could
+even use their palms to press more keys. Suppose the median American woman (by weight) can somehow
+distribute their entire body mass to press keys. How many Anne Pro 2 60% keyboards with Gateron Brown
+switches could they press down at once?",,,2
+52,Compute 2^2^2^2^2,,,19728
+53,"Express Coulomb’s constant
+
+8.988 × 10^9 kg m^3/s^2 * C^2
+using the units
+
+(picogram)*(smoot)^2*(miles)/((Planck time)(femtosecond)(exacoulomb)(yottacoulomb))",,,-22
+54,"Calculate 2[6]2 (alternate formatting 2????2) where [6] or ???? represents hexation. Hexation is
+defined as iterated pentation, pentation is defined as iterated tetration, and tetration is defined as iterated
+exponentiation. (Exponentiation is iterated multiplication, and multiplication is iterated addition).",,,0
+55,"In the video game Stardew Valley, one cup of coffee costs 300g (g is the in-game currency). Buying
+three coffees in the game allows you to cook a Triple-Shot Espresso, which sells for 450g. If you were to convert
+the United States’ yearly coffee consumption into Triple-Shot Espresso, how much g would you lose?",,,13
+56,"How many buckminsterfullerene (buckyballs) can you create using all the carbon in the air inside a
+standard soccer ball?",,,15
+57,"Convert 1 (tons4 × nanograms3 × parsecs2 × years) / (attoseconds2 × light year × pounds3 ×
+kilograms3) to newton-seconds (standard SI units)",,,46
+58,"If I randomly shot a bullet horizontally at a 1 cm wide target 10 meters away every minute with my
+mouth wide open and pointed to the sky, and everytime I hit the target, a flying bird would poop somewhere on
+earth, and everytime I had bird poop land into my mouth, I would run a one mile loop, how many food calories
+would I burn purely from running in a galactic year?",,,-5
+59,"If all of the energy from a type Ia supernova was pumped into the ice in Antarctica, what would be
+the final temperature of the ice?",,,21
+60,"If a photon with a wavelength of Planck’s length were to collapse its mass-energy equivalent to a black
+hole, how long in seconds would it take for this black hole to evaporate due to Hawking radiation, given that
+the lifetime of a black hole with the mass of the sun is around 2E67 years, and that time taken to evaporate is
+inversely proportional to the mass3
+?",,,-37
+1,"Assuming notes actually get that high, what is the frequency of E300?",,,91
+2,"What would the minimum population of the United States be so that the GDP per capita would be
+below 1?",,,13
+3,"How many people would need to be in a room so that the probability 2 people randomly selected from
+the room share a birthday is at least 99.9999",,,2
+4,How many characters are in this bizarre sentence?,,,1
+5,How many keys are on the standard US keyboard layout?,,,2
+6,How many times older is the first bird-line archosaurs compared to BirdSO?,,,8
+7,How many atoms are in a human body?,,,28
+8,What is the circumference of the sun in millimeters?,,,12
+9,What is the mass of the moon in tons?,,,20
+10,How many cows are in the world?,,,9
+11,"On average, how many feathers are on a pigeon?",,,4
+12,"In Iowa 2020, how many ears of corn were harvested per baby ear born?",,,6
+13,"What is the average frequency of light emitted by an American robin egg, in hertz?",,,15
+14,How many creases are in a brown paper bag?,,,1
+15,"If each mango tree leaf was $1, how many bluefin tunas can you buy with one mango tree?",,,0
+16,"How many crows would actually be needed for a murder, that is, how many crows would it take so that
+their combined weight would crush a human being by breaking their bones?",,,3
+17,"How many direct airplane flights between Los Angeles (LAX) and New York City (JFK) could you take
+back and forth in the time since the end of the Mesozoic Era?",,,11
+18,"How many Quiz Bowl Tossups can someone read aloud in the time it takes a top-5 Super Mario Odyssey
+speedrunner to complete the game Any%?",,,2
+19,"Twister Feast starts a campaign called teamteas. If they are successful in their goal in dumping 40 million
+cups of tea into the world ocean, by what percent does the world ocean’s total volume increase?",,,-12
+20,"Suppose that Starbucks buys out The Roost (Brewster’s coffee shop) in Animal Crossing: New Leaf. If
+one cup of coffee costs 200 Bells, how much money, in US dollars, does one need to pay to Tom Nook in order to
+completely expand their house?",,,5
+21,"How many characters are in the source code for the official YouTube video of “Never Gonna Give You
+Up”?",,,6
+22,"How many Olympic-sized swimming pools would you have to dig out of the ground in order to have a pile
+of dirt weighing the same as an adult blue whale?",,,-2
+23,"I have a wall that is the size of Greenland. How many 2-gallon buckets of paint do I need to completely
+paint my wall?",,,10
+24,How many hairs are on all the heads at a typical NFL game?,,,10
+25,How many Amazon boxes could be made from all the trees in the Amazon rainforest?,,,14
+26,"What percentage of food produced worldwide are poultry and other products derived from domesticated
+birds?",,,0
+27,"Express the ideal gas constant in units of (volume of the Pacific Ocean)(pressure at the bottom of the
+Mariana Trench)/((Rankine)(mol))",,,-25
+28,How many traffic lights are there in the United States?,,,5
+29,What is the worldwide sugar consumption in grams per year?,,,14
+30,What is the tensile strength of Kevlar rope in Pascals?,,,9
+31,"How many unique ways are there to arrange 5 red, 5 blue, 5 green, and 5 yellow marbles?",,,10
+32,"In Squid Game, assuming the players cooperate, what is the probability of everyone dying on the game
+glass bridge? (16 players, 18 tiles)",,,-3
+33,How many atoms of Hydrogen do humans intake due to the consumption of Aspirin?,,,22
+34,What is the temperature of the cosmic microwave background in degrees Delisle?,,,3
+35,What is the volume of a Minecraft world in 1.18 in blocks?,,,18
+36,"Let “A” map to 1, “B” to 2, and so on, up to “Z” to 26. What is the expected product of 10 letters taken
+from any English text?",,,9
+37,"Take the current 3-6-3 cup stacking world record (1 stack of 6 cups and 2 stacks of 3 cups) as the speed
+at which 12 cups can be placed. Assuming you have to stack in a pyramid (each row down must have one additional
+cup), how long would it take to stack from Earth to the asteroid belt, in seconds?",,,23
+38,How many times greater is the average separation of water molecules than the covalent bond within them?,,,0
+39,"What is the additional acceleration of Voyager 1 by shining a red laser pointer at it, in meters per second
+squared?",,,-15
+40,How many satellites are currently orbiting the Earth for every moon of Uranus?,,,3
+41,How many sievert of radiation were in the 2002 production of bananas in Uganda?,,,3
+42,How many grains of tapioca starch fit into the volume of one boba pearl?,,,8
+43,"Assuming constant area density of cells and a laboratory setting, what is the average speed of expansion
+of a 2 meter diameter flat circle of E. coli, in miles per Pentium 4 clock cycle?",,,-17
+44,"Assuming a Bluetooth 4 connection, how many Airpod earbuds would you need to cover the entire Earth?",,,10
+45,"If we provide every bird in the world with a bird house, how many Congo rainforests would we need to
+chop down?",,,-4
+46,"How many Dyck paths are there from (0, 0) to (420, 420)?
+A Dyck path from (0, 0) to (n, n) is a path in which the only legal moves are to move 1 unit right or 1 unit up and
+the path does not cross the main diagonal (the line y = x).",,,248
+47,"Compute 5^5^5 · 4^4^4 · 3^3^3 · 2^2^2 · 1^1^1
+",,,2352
+48,"Define a sequence of sums as follows: S_n*n + 2n^2 + 3n^3 + · · · + 21n^21 =
+sum_from_k=1_to_21 of ( kn^k). Compute sum from i=1 to 20 of Si.",,,29
+49,What is the 100-volume in (beard seconds)^100 of a 100-dimensional hypersphere with radius 1 angstrom?,,,-210
+50,"In thermodynamics, Boltzmann–Planck equation describes the relationship between entropy and the total
+number of microstates in the macrostate of an ideal gas. It is given as the equation: S = K_B ln(W) where K_B is the
+Boltzmann constant. (Boltzmann’s constant is also equivalent to the ideal gas constant / Avogadro’s constant)
+Let n = number of molecules present and e = total energy, where the energy of a molecule is at least 1.
+In a system where n = 2 and e = 4, W is found to be 3.
+Similarly, in a system where n = 4 and e = 8, W is found to be 35.
+Find the entropy of a system in J/K where n = 10^24 and e = 2 × 10^24",,,1
+51,"Take the density of the observable universe to be approximately 6 protons/m3. Find the radius of a
+Schwarzschild black hole such that the density of the black hole is the same as the density of the observable universe.",,,26
+52,"Given Information:
+1 Planck Temperature = 1.416784×10^32 K 1 Planck Length = 1.616255×10^?35 m 1 Planck Mass = 2.176434×10^?8
+Kg 1 Planck Time = 5.391247 × 10^?44 s
+The R-value is a measure of how well a 2-D barrier can resist the conductivity of heat. The SI units for R-value is
+Kelvin meters squared per Watt, where the units for Watts are kilogram meters squared per seconds cubed. Convert
+1 R-value to Planck R-value, where Planck R-value is the R-value expressed in Planck units.",,,-90
+53,"The peak wavelength emitted due to Hawking radiation (in meters), the temperature (Kelvins) of a black
+hole, Stefan-Boltzmann’s Law, and the Schwarzschild radius (meters) are given. Find how many photons are released
+per second of a 1 solar mass Schwarzschild black hole.
+Lambert’s W function W(?4e^?4)
+can be approximated as 0. ? = h/2, where h = 6.626 × 10^?34. Boltmann’s
+constant = ideal gas constant/Avogadro’s constant.
+Calculate temperature and then use Stefan-Boltzmann’s law to find the power per unit area. Find the Schwarzschild
+radius and use it to calculate the surface area of the black hole. Multiply that by the power per unit area to find
+the total power. Find the peak wavelength of the photons emitted. Determine the frequency of the corresponding
+wavelength. Multiply by Planck’s constant to find the energy of the photons emitted. Divide the total power by the
+energy per photons to find the number of photons released per second.
+Equations:
+?_logpeak = M*16?^2*G/(c^2(W(?4e^?4)+4))
+T = 1/M * (?c^3/(8?k_bG)
+P/A = ?T^4 J/m^2s, ? = 5.6703 × 10^?8 W/m^2K^4
+R = M2G/(c^2)",,,1
+54,"Observe the previous problem. How many times more photons are released per second for a 1 billion solar
+mass Schwarzschild supermassive black hole compared to the 1 solar mass Schwarzschild black hole?",,,-9
+55,"A 10 watt light emits only 10 micron photons. These photons all hit a polar bear. How many are reflected
+off the polar bear in one second?",,,19
+56,"How many of the smallest Nintendo DS game cards would you need to store one image displayed on the
+largest Times Square digital billboard?",,,1
+57,"Sandy sells seashells by the seashore. If she sells a seashell for every selenium atom in the Sargasso Sea
+in seventy seconds and each seashell scoops the sea and scares a squid, how many sverdrups of ink are secreted?",,,21
+58,"Wing loading is the total mass of an object divided by the area of its wing. Calculate the ratio of the
+wing loading of a Boeing 747 to that of a Monarch butterfly and multiply it by the ratio of the average flight speed
+of a Boeing 747 to that of a Monarch butterfly.",,,5
+59,"In the board game Risk, each of the six players receive armies that consist of infantry, cavalry, and artillery.
+Suppose each of them were their full size equivalent. If all infantry (from all six armies) were running, all cavalry
+were galloping, and all artillery fired a cannonball, what is the total kinetic energy, in eV?",,,26
+,,,,
