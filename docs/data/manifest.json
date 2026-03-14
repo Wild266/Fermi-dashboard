@@ -2,46 +2,23 @@
   "title": "LLN Dashboard",
   "datasets": [
     {
-      "id": "collect_topk_40",
-      "label": "collect_topk_40",
+      "id": "lln_dataset",
+      "label": "LLN Dataset CSV",
       "files": [
         {
-          "label": "T=0.1 (temp_0_1)",
-          "path": "data/collect_topk_40/temp_0_1/responses.csv"
-        },
-        {
-          "label": "T=0.4 (temp_0_4)",
-          "path": "data/collect_topk_40/temp_0_4/responses.csv"
-        },
-        {
-          "label": "T=0.7 (temp_0_7)",
-          "path": "data/collect_topk_40/temp_0_7/responses.csv"
-        },
-        {
-          "label": "T=1 (temp_1_0)",
-          "path": "data/collect_topk_40/temp_1_0/responses.csv"
+          "label": "LLN_Dataset.csv",
+          "path": "data/LLN_Dataset.csv"
         }
       ]
-    },
+    }
+  ,
     {
-      "id": "collect_topk_none",
-      "label": "collect_topk_none",
+      "id": "lln_dataset",
+      "label": "LLN Dataset CSV",
       "files": [
         {
-          "label": "T=0.1 (temp_0_1)",
-          "path": "data/collect_topk_none/temp_0_1/responses.csv"
-        },
-        {
-          "label": "T=0.4 (temp_0_4)",
-          "path": "data/collect_topk_none/temp_0_4/responses.csv"
-        },
-        {
-          "label": "T=0.7 (temp_0_7)",
-          "path": "data/collect_topk_none/temp_0_7/responses.csv"
-        },
-        {
-          "label": "T=1 (temp_1_0)",
-          "path": "data/collect_topk_none/temp_1_0/responses.csv"
+          "label": "LLN_Dataset.csv",
+          "path": "data/LLN_Dataset.csv"
         }
       ]
     }
