@@ -3,27 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Model Analytics Dashboard</title>
+  <title>Fermi Model Analytics Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="title-row">
-      <h1>Model Analytics Dashboard</h1>
+      <h1>Fermi Model Analytics Dashboard</h1>
       <span id="manifestMeta" class="muted"></span>
     </div>
 
-    <div class="controls">
+    <nav class="tab-bar" id="tabBar">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="plots">Plots</button>
+      <button class="tab" data-tab="metrics">Metrics</button>
+      <button class="tab" data-tab="histograms">Histograms</button>
+      <button class="tab" data-tab="rawdata">Raw Data</button>
+      <button class="tab" data-tab="dataset">LLN Dataset</button>
+    </nav>
+
+    <div class="controls header-controls">
       <label>
         Model
         <select id="modelSelect"></select>
       </label>
-
       <label>
         Run
         <select id="aggSelect"></select>
       </label>
-
       <button id="reloadBtn" type="button">Reload</button>
     </div>
 
@@ -31,105 +38,175 @@
   </header>
 
   <main>
-    <section class="card summaryCard">
-      <h2>Overview</h2>
-      <div id="selectionSummary" class="summary"></div>
+    <!-- OVERVIEW TAB -->
+    <section id="tab-overview" class="tab-content active">
+      <div class="card summaryCard">
+        <h2>Overview</h2>
+        <div id="selectionSummary" class="summary"></div>
+      </div>
+
+      <div class="card">
+        <h2>Quick Comparison</h2>
+        <p class="muted" style="margin:4px 0 10px">Side-by-side metrics across all runs for the selected model.</p>
+        <div id="comparisonTable" class="tableWrap"></div>
+      </div>
     </section>
 
-    <section class="card">
-      <div class="sectionHead">
-        <h2>Plots</h2>
-        <div class="controls small inline">
+    <!-- PLOTS TAB -->
+    <section id="tab-plots" class="tab-content">
+      <div class="card">
+        <div class="sectionHead">
+          <h2>Plots</h2>
+          <div class="controls small inline">
+            <label>
+              Plot type
+              <select id="plotTypeSelect"></select>
+            </label>
+          </div>
+        </div>
+        <div id="plots" class="gallery"></div>
+        <div id="plotsEmpty" class="muted"></div>
+      </div>
+
+      <!-- Lightbox for full-size plot viewing -->
+      <div id="lightbox" class="lightbox" hidden>
+        <div class="lightbox-backdrop"></div>
+        <div class="lightbox-content">
+          <button class="lightbox-close" aria-label="Close">&times;</button>
+          <img id="lightboxImg" alt="Full size plot" />
+          <div id="lightboxCaption" class="lightbox-caption"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS TAB -->
+    <section id="tab-metrics" class="tab-content">
+      <div class="card">
+        <h2>Key files</h2>
+        <div id="downloads" class="downloads"></div>
+
+        <div class="grid2">
+          <div>
+            <h3>metrics_overall.csv</h3>
+            <div id="metricsOverall" class="tableWrap"></div>
+          </div>
+          <div>
+            <h3>metrics_global.csv</h3>
+            <div id="metricsGlobal" class="tableWrap"></div>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <h3>method_rankings.txt</h3>
+            <pre id="methodRankings" class="pre"></pre>
+          </div>
+          <div>
+            <h3>run_config.json</h3>
+            <pre id="runConfig" class="pre"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTOGRAMS TAB -->
+    <section id="tab-histograms" class="tab-content">
+      <div class="card">
+        <h2>Histogram viewer</h2>
+        <div class="controls small">
           <label>
-            Plot type
-            <select id="plotTypeSelect"></select>
+            topk
+            <select id="histTopk"></select>
+          </label>
+          <label>
+            kind
+            <select id="histKind"></select>
+          </label>
+          <label>
+            temp
+            <select id="histTemp"></select>
+          </label>
+          <label>
+            q
+            <input id="histQ" type="number" min="0" step="1" value="0" />
+          </label>
+          <button id="prevQ" type="button">&#9664; Prev</button>
+          <button id="nextQ" type="button">Next &#9654;</button>
+          <span id="histRange" class="muted"></span>
+        </div>
+
+        <div class="histWrap">
+          <a id="histLink" href="#" target="_blank" rel="noreferrer">
+            <img id="histImg" alt="histogram" />
+          </a>
+          <div id="histEmpty" class="muted"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RAW DATA TAB -->
+    <section id="tab-rawdata" class="tab-content">
+      <div class="card">
+        <h2>Raw Data Explorer</h2>
+        <p class="muted" style="margin:4px 0 10px">
+          Browse full raw datasets for each model size. Large files are streamed on demand.
+        </p>
+        <div class="controls small">
+          <label>
+            Model size
+            <select id="rawModelSelect"></select>
+          </label>
+          <label>
+            Dataset
+            <select id="rawFileSelect"></select>
+          </label>
+          <button id="rawLoadBtn" type="button">Load Dataset</button>
+        </div>
+        <div id="rawStatus" class="muted" style="margin:10px 0"></div>
+        <div class="raw-search-bar">
+          <label style="flex:1">
+            Search / filter rows
+            <input id="rawSearch" type="text" placeholder="Type to filter rows..." style="width:100%" />
           </label>
         </div>
-      </div>
-      <div id="plots" class="gallery"></div>
-      <div id="plotsEmpty" class="muted"></div>
-    </section>
-
-    <section class="card">
-      <h2>Key files</h2>
-      <div id="downloads" class="downloads"></div>
-
-      <div class="grid2">
-        <div>
-          <h3>metrics_overall.csv</h3>
-          <div id="metricsOverall" class="tableWrap"></div>
-        </div>
-        <div>
-          <h3>metrics_global.csv</h3>
-          <div id="metricsGlobal" class="tableWrap"></div>
-        </div>
-      </div>
-
-      <div class="grid2">
-        <div>
-          <h3>method_rankings.txt</h3>
-          <pre id="methodRankings" class="pre"></pre>
-        </div>
-        <div>
-          <h3>run_config.json</h3>
-          <pre id="runConfig" class="pre"></pre>
-        </div>
+        <div id="rawPreview" class="tableWrap raw-table-wrap"></div>
+        <div class="raw-pagination" id="rawPagination"></div>
       </div>
     </section>
 
-
-    <section class="card">
-      <h2>LLN dataset explorer</h2>
-      <div class="controls small">
-        <label>
-          Dataset
-          <select id="llnDatasetSelect"></select>
-        </label>
-        <label>
-          File
-          <select id="llnFileSelect"></select>
-        </label>
-      </div>
-      <div id="llnMeta" class="muted"></div>
-      <div id="llnPreview" class="tableWrap"></div>
-    </section>
-
-    <section class="card">
-      <h2>Histogram viewer</h2>
-      <div class="controls small">
-        <label>
-          topk
-          <select id="histTopk"></select>
-        </label>
-        <label>
-          kind
-          <select id="histKind"></select>
-        </label>
-        <label>
-          temp
-          <select id="histTemp"></select>
-        </label>
-        <label>
-          q
-          <input id="histQ" type="number" min="0" step="1" value="0" />
-        </label>
-        <button id="prevQ" type="button">◀</button>
-        <button id="nextQ" type="button">▶</button>
-        <span id="histRange" class="muted"></span>
-      </div>
-
-      <div class="histWrap">
-        <a id="histLink" href="#" target="_blank" rel="noreferrer">
-          <img id="histImg" alt="histogram" />
-        </a>
-        <div id="histEmpty" class="muted"></div>
+    <!-- LLN DATASET TAB -->
+    <section id="tab-dataset" class="tab-content">
+      <div class="card">
+        <h2>LLN Dataset Explorer</h2>
+        <div class="controls small">
+          <label>
+            Dataset
+            <select id="llnDatasetSelect"></select>
+          </label>
+          <label>
+            File
+            <select id="llnFileSelect"></select>
+          </label>
+        </div>
+        <div class="lln-search-bar">
+          <label style="flex:1">
+            Search questions
+            <input id="llnSearch" type="text" placeholder="Type to search questions..." style="width:100%" />
+          </label>
+        </div>
+        <div id="llnMeta" class="muted"></div>
+        <div id="llnPreview" class="tableWrap"></div>
       </div>
     </section>
 
     <footer class="muted">
       <p>
-        Put analytics folders under <code>docs/models/&lt;MODEL&gt;/&lt;RUN&gt;/</code> (example: <code>docs/models/7B/agg_v2/</code>), then run:
+        Put analytics folders under <code>docs/models/&lt;MODEL&gt;/&lt;RUN&gt;/</code>, then run:
         <code>python tools/build_manifest.py</code>
+      </p>
+      <p>
+        For raw data, upload CSVs/JSONs to a GitHub Release tagged <code>data-v1</code> and update
+        <code>docs/data/manifest.json</code>.
       </p>
     </footer>
   </main>
