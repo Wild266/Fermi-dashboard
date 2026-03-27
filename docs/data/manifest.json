@@ -11,16 +11,70 @@
         }
       ]
     }
-  ,
+  ],
+  "raw_datasets": [
     {
-      "id": "lln_dataset",
-      "label": "LLN Dataset CSV",
-      "files": [
-        {
-          "label": "LLN_Dataset.csv",
-          "path": "data/LLN_Dataset.csv"
-        }
-      ]
+      "model": "7B",
+      "label": "7B - Raw Predictions (CSV)",
+      "filename": "7B_raw_predictions.csv",
+      "format": "csv",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/7B_raw_predictions.csv"
+    },
+    {
+      "model": "7B",
+      "label": "7B - Per-Question Results (CSV)",
+      "filename": "7B_per_question_results.csv",
+      "format": "csv",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/7B_per_question_results.csv"
+    },
+    {
+      "model": "7B",
+      "label": "7B - Full Run Log (JSON)",
+      "filename": "7B_full_run_log.json",
+      "format": "json",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/7B_full_run_log.json"
+    },
+    {
+      "model": "14B",
+      "label": "14B - Raw Predictions (CSV)",
+      "filename": "14B_raw_predictions.csv",
+      "format": "csv",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/14B_raw_predictions.csv"
+    },
+    {
+      "model": "14B",
+      "label": "14B - Per-Question Results (CSV)",
+      "filename": "14B_per_question_results.csv",
+      "format": "csv",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/14B_per_question_results.csv"
+    },
+    {
+      "model": "14B",
+      "label": "14B - Full Run Log (JSON)",
+      "filename": "14B_full_run_log.json",
+      "format": "json",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/14B_full_run_log.json"
+    },
+    {
+      "model": "32B",
+      "label": "32B - Raw Predictions (CSV)",
+      "filename": "32B_raw_predictions.csv",
+      "format": "csv",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/32B_raw_predictions.csv"
+    },
+    {
+      "model": "32B",
+      "label": "32B - Per-Question Results (CSV)",
+      "filename": "32B_per_question_results.csv",
+      "format": "csv",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/32B_per_question_results.csv"
+    },
+    {
+      "model": "32B",
+      "label": "32B - Full Run Log (JSON)",
+      "filename": "32B_full_run_log.json",
+      "format": "json",
+      "url": "https://github.com/wild266/fermi-dashboard/releases/download/data-v1/32B_full_run_log.json"
     }
   ]
 }
