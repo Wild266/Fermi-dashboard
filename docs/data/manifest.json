@@ -1,5 +1,7 @@
 {
-  "title": "LLN Dashboard",
+  "generated_at": "2026-03-28T00:00:00+00:00",
+  "release_base_url": "https://github.com/Wild266/Fermi-dashboard/releases/download/data-v1",
+  "title": "Fermi Dashboard Data",
   "datasets": [
     {
       "id": "lln_dataset",
@@ -11,16 +13,6 @@
         }
       ]
     }
-  ,
-    {
-      "id": "lln_dataset",
-      "label": "LLN Dataset CSV",
-      "files": [
-        {
-          "label": "LLN_Dataset.csv",
-          "path": "data/LLN_Dataset.csv"
-        }
-      ]
-    }
-  ]
+  ],
+  "raw_datasets": []
 }
