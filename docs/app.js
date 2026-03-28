@@ -84,6 +84,24 @@ async function safeFetchText(url) {
   } catch { return null; }
 }
 
+/**
+ * Fetch a GitHub Release asset by its asset_id via the API (CORS-safe).
+ * GitHub's direct download URLs (github.com/.../releases/download/...)
+ * redirect with a 302 that lacks CORS headers. The API endpoint
+ * (api.github.com) does include CORS headers and redirects to a
+ * CORS-enabled CDN.
+ */
+async function fetchReleaseAsset(repo, assetId) {
+  const apiUrl = `https://api.github.com/repos/${repo}/releases/assets/${assetId}`;
+  try {
+    const r = await fetch(apiUrl, {
+      headers: { 'Accept': 'application/octet-stream' },
+    });
+    if (!r.ok) return null;
+    return await r.text();
+  } catch { return null; }
+}
+
 /* ── Enhanced Table Rendering ──────────────────────────── */
 
 function renderTable(container, csvText, opts = {}) {
@@ -529,31 +547,40 @@ function renderRawFileTree() {
 }
 
 async function loadRawFile(fileEntry) {
-  const baseUrl = dataManifest?.release_base_url;
-  if (!baseUrl) {
-    setStatus('rawDataStatus', 'No release_base_url in data manifest', true);
+  const repo = dataManifest?.repo;
+  if (!repo) {
+    setStatus('rawDataStatus', 'No repo in data manifest', true);
     return;
   }
 
   el('rawFileName').textContent = fileEntry.key;
   el('rawFileSize').textContent = formatBytes(fileEntry.size_bytes);
   el('rawDownloadBtn').style.display = 'inline-flex';
+  // Direct download link works when clicked (browser handles redirect)
+  const tag = dataManifest?.release_tag || 'data-v1';
   el('rawDownloadBtn').onclick = () => {
-    window.open(`${baseUrl}/${fileEntry.asset_name || fileEntry.release_asset}`, '_blank');
+    window.open(`https://github.com/${repo}/releases/download/${tag}/${fileEntry.asset_name}`, '_blank');
   };
 
-  const assetId = fileEntry.asset_name || fileEntry.release_asset;
   const sizeNote = fileEntry.size_bytes > 5_000_000
     ? ` (${formatBytes(fileEntry.size_bytes)} — this may take a moment)`
     : '';
   setStatus('rawDataStatus', `Loading ${basename(fileEntry.key)}${sizeNote}...`);
 
-  const url = `${baseUrl}/${assetId}`;
-  const text = await safeFetchText(url);
+  // Fetch via GitHub API (CORS-safe), fall back to direct URL
+  let text = null;
+  if (fileEntry.asset_id) {
+    text = await fetchReleaseAsset(repo, fileEntry.asset_id);
+  }
+  if (!text) {
+    // Fallback: try direct URL (works if same-origin or CORS is allowed)
+    const directUrl = `https://github.com/${repo}/releases/download/${tag}/${fileEntry.asset_name}`;
+    text = await safeFetchText(directUrl);
+  }
 
   if (!text) {
-    setStatus('rawDataStatus', `Failed to load: ${assetId}. File may not be uploaded to the release yet.`, true);
-    el('rawPreview').innerHTML = '<div class="muted" style="padding:10px">Could not fetch file. Make sure it has been uploaded to the GitHub Release.</div>';
+    setStatus('rawDataStatus', `Failed to load: ${fileEntry.asset_name}. Check browser console for details.`, true);
+    el('rawPreview').innerHTML = '<div class="muted" style="padding:10px">Could not fetch file. This may be a CORS or rate-limit issue. Try the Download button instead, or check the GitHub API rate limit (60 requests/hour unauthenticated).</div>';
     el('rawPreview').style.display = 'block';
     el('rawJsonPreview').style.display = 'none';
     el('rawTableControls').style.display = 'none';

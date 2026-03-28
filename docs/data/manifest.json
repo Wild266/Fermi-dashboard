@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-03-28T05:00:00+00:00",
-  "release_base_url": "https://github.com/Wild266/Fermi-dashboard/releases/download/data-v1",
+  "generated_at": "2026-03-28T05:30:00+00:00",
+  "repo": "Wild266/Fermi-dashboard",
+  "release_tag": "data-v1",
   "title": "Fermi Dashboard Data",
   "datasets": [
     {
@@ -23,114 +24,133 @@
         {
           "key": "responses/responses.csv",
           "asset_name": "responses.csv",
+          "asset_id": 383353778,
           "size_bytes": 62745808,
           "type": "csv"
         },
         {
           "key": "responses/responses_labeled.csv",
           "asset_name": "responses_labeled.csv",
+          "asset_id": 383354964,
           "size_bytes": 62976296,
           "type": "csv"
         },
         {
           "key": "metrics/metrics_overall.csv",
           "asset_name": "metrics_overall.csv",
+          "asset_id": 383350047,
           "size_bytes": 18991,
           "type": "csv"
         },
         {
           "key": "metrics/metrics_global.csv",
           "asset_name": "metrics_global.csv",
+          "asset_id": 383350042,
           "size_bytes": 5992,
           "type": "csv"
         },
         {
           "key": "metrics/metrics_by_group.csv",
           "asset_name": "metrics_by_group.csv",
+          "asset_id": 383350036,
           "size_bytes": 77318,
           "type": "csv"
         },
         {
           "key": "metrics/metrics_by_temp_kind.csv",
           "asset_name": "metrics_by_temp_kind.csv",
+          "asset_id": 383350041,
           "size_bytes": 77318,
           "type": "csv"
         },
         {
           "key": "metrics/per_group_predictions.csv",
           "asset_name": "per_group_predictions.csv",
+          "asset_id": 383350050,
           "size_bytes": 1990587,
           "type": "csv"
         },
         {
           "key": "config/run_config.json",
           "asset_name": "run_config.json",
+          "asset_id": 383351246,
           "size_bytes": 167,
           "type": "json"
         },
         {
           "key": "config/metadata.json",
           "asset_name": "metadata.json",
+          "asset_id": 383353621,
           "size_bytes": 550,
           "type": "json"
         },
         {
           "key": "config/method_rankings.txt",
           "asset_name": "method_rankings.txt",
+          "asset_id": 383350033,
           "size_bytes": 4961,
           "type": "txt"
         },
         {
           "key": "config/method_styles.json",
           "asset_name": "method_styles.json",
+          "asset_id": 383350063,
           "size_bytes": 8001,
           "type": "json"
         },
         {
           "key": "reports/label_report.csv",
           "asset_name": "label_report.csv",
+          "asset_id": 383354868,
           "size_bytes": 139,
           "type": "csv"
         },
         {
           "key": "reports/split_report.csv",
           "asset_name": "split_report.csv",
+          "asset_id": 383352516,
           "size_bytes": 110,
           "type": "csv"
         },
         {
           "key": "infra/endpoints.json",
           "asset_name": "endpoints.json",
+          "asset_id": 383350871,
           "size_bytes": 99,
           "type": "json"
         },
         {
           "key": "infra/collect_endpoints.json",
           "asset_name": "collect_endpoints.json",
+          "asset_id": 383352196,
           "size_bytes": 155,
           "type": "json"
         },
         {
           "key": "infra/collect_endpoints_report.json",
           "asset_name": "collect_endpoints_report.json",
+          "asset_id": 383352203,
           "size_bytes": 1064,
           "type": "json"
         },
         {
           "key": "infra/worker_endpoints_report.json",
           "asset_name": "worker_endpoints_report.json",
+          "asset_id": 383352207,
           "size_bytes": 556,
           "type": "json"
         },
         {
           "key": "infra/pids.txt",
           "asset_name": "pids.txt",
+          "asset_id": 383352189,
           "size_bytes": 6,
           "type": "txt"
         },
         {
           "key": "infra/ports.txt",
           "asset_name": "ports.txt",
+          "asset_id": 383352194,
           "size_bytes": 6,
           "type": "txt"
         }
