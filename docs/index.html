@@ -3,133 +3,278 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Model Analytics Dashboard</title>
+  <title>Fermi Model Analytics Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="title-row">
-      <h1>Model Analytics Dashboard</h1>
+      <h1>Fermi Model Analytics</h1>
       <span id="manifestMeta" class="muted"></span>
     </div>
 
-    <div class="controls">
-      <label>
-        Model
-        <select id="modelSelect"></select>
-      </label>
-
-      <label>
-        Run
-        <select id="aggSelect"></select>
-      </label>
-
-      <button id="reloadBtn" type="button">Reload</button>
-    </div>
-
-    <div id="status" class="status"></div>
+    <nav class="tabs" id="mainTabs">
+      <button class="tab active" data-tab="tab-analytics">Analytics</button>
+      <button class="tab" data-tab="tab-compare">Compare Models</button>
+      <button class="tab" data-tab="tab-rawdata">Raw Data Explorer</button>
+      <button class="tab" data-tab="tab-lln">LLN Dataset</button>
+      <button class="tab" data-tab="tab-histograms">Histograms</button>
+    </nav>
   </header>
 
   <main>
-    <section class="card summaryCard">
-      <h2>Overview</h2>
-      <div id="selectionSummary" class="summary"></div>
-    </section>
+    <!-- ==================== ANALYTICS TAB ==================== -->
+    <div class="tab-panel active" id="tab-analytics">
+      <div class="controls-bar">
+        <label>
+          Model
+          <select id="modelSelect"></select>
+        </label>
+        <label>
+          Run
+          <select id="aggSelect"></select>
+        </label>
+        <button id="reloadBtn" type="button">Reload</button>
+      </div>
 
-    <section class="card">
-      <div class="sectionHead">
-        <h2>Plots</h2>
-        <div class="controls small inline">
+      <section class="card summaryCard">
+        <h2>Overview</h2>
+        <div id="selectionSummary" class="summary"></div>
+      </section>
+
+      <section class="card">
+        <div class="sectionHead">
+          <h2>Plots</h2>
+          <div class="controls small inline">
+            <label>
+              Filter
+              <select id="plotTypeSelect"></select>
+            </label>
+          </div>
+        </div>
+        <div id="plots" class="gallery"></div>
+        <div id="plotsEmpty" class="muted"></div>
+      </section>
+
+      <section class="card">
+        <h2>Key Files</h2>
+        <div id="downloads" class="downloads"></div>
+
+        <div class="grid2">
+          <div>
+            <h3>metrics_overall.csv</h3>
+            <div id="metricsOverall" class="tableWrap"></div>
+          </div>
+          <div>
+            <h3>metrics_global.csv</h3>
+            <div id="metricsGlobal" class="tableWrap"></div>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <h3>method_rankings.txt</h3>
+            <pre id="methodRankings" class="pre"></pre>
+          </div>
+          <div>
+            <h3>run_config.json</h3>
+            <pre id="runConfig" class="pre"></pre>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== COMPARE TAB ==================== -->
+    <div class="tab-panel" id="tab-compare">
+      <div class="controls-bar">
+        <label>
+          Model A
+          <select id="cmpModelA"></select>
+        </label>
+        <label>
+          Run A
+          <select id="cmpAggA"></select>
+        </label>
+        <span class="vs-badge">vs</span>
+        <label>
+          Model B
+          <select id="cmpModelB"></select>
+        </label>
+        <label>
+          Run B
+          <select id="cmpAggB"></select>
+        </label>
+        <button id="cmpBtn" type="button">Compare</button>
+      </div>
+      <section class="card">
+        <h2>Side-by-Side: metrics_overall.csv</h2>
+        <div class="grid2">
+          <div>
+            <h3 id="cmpLabelA" class="accent">A</h3>
+            <div id="cmpOverallA" class="tableWrap"></div>
+          </div>
+          <div>
+            <h3 id="cmpLabelB" class="accent">B</h3>
+            <div id="cmpOverallB" class="tableWrap"></div>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Side-by-Side: metrics_global.csv</h2>
+        <div class="grid2">
+          <div>
+            <div id="cmpGlobalA" class="tableWrap"></div>
+          </div>
+          <div>
+            <div id="cmpGlobalB" class="tableWrap"></div>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Side-by-Side: Plots</h2>
+        <div class="controls small" style="margin-bottom:10px">
           <label>
-            Plot type
-            <select id="plotTypeSelect"></select>
+            Filter
+            <select id="cmpPlotType"></select>
           </label>
         </div>
-      </div>
-      <div id="plots" class="gallery"></div>
-      <div id="plotsEmpty" class="muted"></div>
-    </section>
-
-    <section class="card">
-      <h2>Key files</h2>
-      <div id="downloads" class="downloads"></div>
-
-      <div class="grid2">
-        <div>
-          <h3>metrics_overall.csv</h3>
-          <div id="metricsOverall" class="tableWrap"></div>
+        <div class="grid2">
+          <div id="cmpPlotsA" class="gallery compact"></div>
+          <div id="cmpPlotsB" class="gallery compact"></div>
         </div>
-        <div>
-          <h3>metrics_global.csv</h3>
-          <div id="metricsGlobal" class="tableWrap"></div>
+      </section>
+    </div>
+
+    <!-- ==================== RAW DATA EXPLORER TAB ==================== -->
+    <div class="tab-panel" id="tab-rawdata">
+      <section class="card">
+        <h2>Raw Data Explorer</h2>
+        <p class="muted">Browse the full raw datasets for each model. Files are loaded on demand from external storage.</p>
+        <div id="rawDataStatus" class="muted" style="margin-bottom:10px"></div>
+        <div class="controls-bar">
+          <label>
+            Model
+            <select id="rawModelSelect"></select>
+          </label>
         </div>
-      </div>
-
-      <div class="grid2">
-        <div>
-          <h3>method_rankings.txt</h3>
-          <pre id="methodRankings" class="pre"></pre>
+        <div class="raw-data-layout">
+          <div class="file-tree-panel">
+            <h3>Files</h3>
+            <div id="rawFileTree" class="file-tree"></div>
+          </div>
+          <div class="file-content-panel">
+            <div id="rawFileHeader" class="file-header">
+              <span id="rawFileName" class="muted">Select a file to view</span>
+              <span id="rawFileSize" class="muted"></span>
+              <button id="rawDownloadBtn" class="small-btn" style="display:none">Download</button>
+            </div>
+            <div class="controls small" id="rawTableControls" style="display:none">
+              <label>
+                Search
+                <input type="text" id="rawSearch" placeholder="Filter rows..." />
+              </label>
+              <label>
+                Page size
+                <select id="rawPageSize">
+                  <option value="50">50</option>
+                  <option value="100" selected>100</option>
+                  <option value="250">250</option>
+                  <option value="500">500</option>
+                  <option value="0">All</option>
+                </select>
+              </label>
+              <div class="pagination" id="rawPagination"></div>
+            </div>
+            <div id="rawPreview" class="tableWrap tall"></div>
+            <pre id="rawJsonPreview" class="pre tall" style="display:none"></pre>
+          </div>
         </div>
-        <div>
-          <h3>run_config.json</h3>
-          <pre id="runConfig" class="pre"></pre>
+      </section>
+    </div>
+
+    <!-- ==================== LLN DATASET TAB ==================== -->
+    <div class="tab-panel" id="tab-lln">
+      <section class="card">
+        <h2>LLN Dataset Explorer</h2>
+        <div class="controls-bar">
+          <label>
+            Dataset
+            <select id="llnDatasetSelect"></select>
+          </label>
+          <label>
+            File
+            <select id="llnFileSelect"></select>
+          </label>
         </div>
-      </div>
-    </section>
+        <div class="controls small" style="margin-top:8px">
+          <label>
+            Search
+            <input type="text" id="llnSearch" placeholder="Filter rows..." />
+          </label>
+          <label>
+            Page size
+            <select id="llnPageSize">
+              <option value="50">50</option>
+              <option value="100" selected>100</option>
+              <option value="250">250</option>
+              <option value="0">All</option>
+            </select>
+          </label>
+          <div class="pagination" id="llnPagination"></div>
+        </div>
+        <div id="llnMeta" class="muted"></div>
+        <div id="llnPreview" class="tableWrap tall"></div>
+      </section>
+    </div>
 
+    <!-- ==================== HISTOGRAMS TAB ==================== -->
+    <div class="tab-panel" id="tab-histograms">
+      <section class="card">
+        <h2>Histogram Viewer</h2>
+        <div class="controls-bar">
+          <label>
+            Model
+            <select id="histModel"></select>
+          </label>
+          <label>
+            Run
+            <select id="histAgg"></select>
+          </label>
+          <label>
+            topk
+            <select id="histTopk"></select>
+          </label>
+          <label>
+            kind
+            <select id="histKind"></select>
+          </label>
+          <label>
+            temp
+            <select id="histTemp"></select>
+          </label>
+          <label>
+            q
+            <input id="histQ" type="number" min="0" step="1" value="0" />
+          </label>
+          <button id="prevQ" type="button">&#9664; Prev</button>
+          <button id="nextQ" type="button">Next &#9654;</button>
+          <span id="histRange" class="muted"></span>
+        </div>
 
-    <section class="card">
-      <h2>LLN dataset explorer</h2>
-      <div class="controls small">
-        <label>
-          Dataset
-          <select id="llnDatasetSelect"></select>
-        </label>
-        <label>
-          File
-          <select id="llnFileSelect"></select>
-        </label>
-      </div>
-      <div id="llnMeta" class="muted"></div>
-      <div id="llnPreview" class="tableWrap"></div>
-    </section>
-
-    <section class="card">
-      <h2>Histogram viewer</h2>
-      <div class="controls small">
-        <label>
-          topk
-          <select id="histTopk"></select>
-        </label>
-        <label>
-          kind
-          <select id="histKind"></select>
-        </label>
-        <label>
-          temp
-          <select id="histTemp"></select>
-        </label>
-        <label>
-          q
-          <input id="histQ" type="number" min="0" step="1" value="0" />
-        </label>
-        <button id="prevQ" type="button">◀</button>
-        <button id="nextQ" type="button">▶</button>
-        <span id="histRange" class="muted"></span>
-      </div>
-
-      <div class="histWrap">
-        <a id="histLink" href="#" target="_blank" rel="noreferrer">
-          <img id="histImg" alt="histogram" />
-        </a>
-        <div id="histEmpty" class="muted"></div>
-      </div>
-    </section>
+        <div class="histWrap">
+          <a id="histLink" href="#" target="_blank" rel="noreferrer">
+            <img id="histImg" alt="histogram" />
+          </a>
+          <div id="histEmpty" class="muted"></div>
+        </div>
+      </section>
+    </div>
 
     <footer class="muted">
       <p>
-        Put analytics folders under <code>docs/models/&lt;MODEL&gt;/&lt;RUN&gt;/</code> (example: <code>docs/models/7B/agg_v2/</code>), then run:
-        <code>python tools/build_manifest.py</code>
+        Analytics: <code>docs/models/&lt;MODEL&gt;/&lt;RUN&gt;/</code> &mdash;
+        Raw data: upload to GitHub Releases, then run
+        <code>python tools/build_data_manifest.py</code>
       </p>
     </footer>
   </main>
