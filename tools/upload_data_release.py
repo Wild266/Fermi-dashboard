@@ -18,8 +18,10 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 SUPPORTED_EXTS = {".csv", ".json", ".txt", ".tsv"}
@@ -97,29 +99,47 @@ def main() -> None:
         except (json.JSONDecodeError, KeyError):
             pass
 
-    # Upload files
+    # Upload files — gh uses the local filename as the asset name,
+    # so we create a temp symlink/copy with the prefixed name.
     uploaded = 0
     skipped = 0
     failed = 0
-    for asset_name, fpath in files_to_upload:
-        if asset_name in existing_assets:
-            print(f"  SKIP (exists): {asset_name}")
-            skipped += 1
-            continue
+    tmpdir = tempfile.mkdtemp(prefix="fermi_upload_")
 
-        print(f"  Uploading: {asset_name} ({fpath.stat().st_size / 1024:.1f} KB)")
-        result = run([
-            "gh", "release", "upload", args.tag,
-            str(fpath),
-            "--clobber",
-            "-R", REPO,
-        ], check=False)
+    try:
+        for asset_name, fpath in files_to_upload:
+            if asset_name in existing_assets:
+                print(f"  SKIP (exists): {asset_name}")
+                skipped += 1
+                continue
 
-        if result.returncode == 0:
-            uploaded += 1
-        else:
-            print(f"    FAILED: {result.stderr.strip()}")
-            failed += 1
+            size_kb = fpath.stat().st_size / 1024
+            print(f"  Uploading: {asset_name} ({size_kb:.1f} KB)")
+
+            # Create a symlink (or copy on Windows) with the target name
+            link_path = Path(tmpdir) / asset_name
+            try:
+                os.symlink(fpath.resolve(), link_path)
+            except OSError:
+                shutil.copy2(fpath, link_path)
+
+            result = run([
+                "gh", "release", "upload", args.tag,
+                str(link_path),
+                "--clobber",
+                "-R", REPO,
+            ], check=False)
+
+            # Clean up the temp link
+            link_path.unlink(missing_ok=True)
+
+            if result.returncode == 0:
+                uploaded += 1
+            else:
+                print(f"    FAILED: {result.stderr.strip()}")
+                failed += 1
+    finally:
+        shutil.rmtree(tmpdir, ignore_errors=True)
 
     print(f"\nDone: {uploaded} uploaded, {skipped} skipped, {failed} failed")
     print(f"Release URL: https://github.com/{REPO}/releases/tag/{args.tag}")
