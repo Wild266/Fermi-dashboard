@@ -539,16 +539,20 @@ async function loadRawFile(fileEntry) {
   el('rawFileSize').textContent = formatBytes(fileEntry.size_bytes);
   el('rawDownloadBtn').style.display = 'inline-flex';
   el('rawDownloadBtn').onclick = () => {
-    window.open(`${baseUrl}/${fileEntry.release_asset}`, '_blank');
+    window.open(`${baseUrl}/${fileEntry.asset_name || fileEntry.release_asset}`, '_blank');
   };
 
-  setStatus('rawDataStatus', `Loading ${basename(fileEntry.key)}...`);
+  const assetId = fileEntry.asset_name || fileEntry.release_asset;
+  const sizeNote = fileEntry.size_bytes > 5_000_000
+    ? ` (${formatBytes(fileEntry.size_bytes)} — this may take a moment)`
+    : '';
+  setStatus('rawDataStatus', `Loading ${basename(fileEntry.key)}${sizeNote}...`);
 
-  const url = `${baseUrl}/${fileEntry.release_asset}`;
+  const url = `${baseUrl}/${assetId}`;
   const text = await safeFetchText(url);
 
   if (!text) {
-    setStatus('rawDataStatus', `Failed to load: ${fileEntry.release_asset}. File may not be uploaded to the release yet.`, true);
+    setStatus('rawDataStatus', `Failed to load: ${assetId}. File may not be uploaded to the release yet.`, true);
     el('rawPreview').innerHTML = '<div class="muted" style="padding:10px">Could not fetch file. Make sure it has been uploaded to the GitHub Release.</div>';
     el('rawPreview').style.display = 'block';
     el('rawJsonPreview').style.display = 'none';

@@ -48,9 +48,10 @@ def scan_dir(root: Path, prefix: str = "") -> List[Dict]:
                 continue
             rel = fpath.relative_to(root).as_posix()
             full_key = f"{prefix}/{rel}" if prefix else rel
+            asset_name = full_key.replace("/", "--")
             entries.append({
                 "key": full_key,               # display / lookup key
-                "release_asset": full_key.replace("/", "--"),  # flat name in GH Release
+                "asset_name": asset_name,      # flat name used in GH Release
                 "size_bytes": fpath.stat().st_size,
                 "type": fpath.suffix.lower().lstrip("."),
             })
