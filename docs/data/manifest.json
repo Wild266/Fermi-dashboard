@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-03-28T05:30:00+00:00",
+  "generated_at": "2026-03-28T20:04:57.216737+00:00",
   "repo": "Wild266/Fermi-dashboard",
-  "release_tag": "data-v1",
+  "release_tag": "data-v2",
   "title": "Fermi Dashboard Data",
   "datasets": [
     {
@@ -17,142 +17,1514 @@
   ],
   "raw_datasets": [
     {
-      "id": "raw_data",
-      "label": "Model Data (data-v1)",
-      "model": "all",
+      "id": "raw_14b",
+      "label": "14B Raw Data",
+      "model": "14B",
       "files": [
         {
-          "key": "responses/responses.csv",
-          "asset_name": "responses.csv",
-          "asset_id": 383353778,
-          "size_bytes": 62745808,
-          "type": "csv"
-        },
-        {
-          "key": "responses/responses_labeled.csv",
-          "asset_name": "responses_labeled.csv",
-          "asset_id": 383354964,
-          "size_bytes": 62976296,
-          "type": "csv"
-        },
-        {
-          "key": "metrics/metrics_overall.csv",
-          "asset_name": "metrics_overall.csv",
-          "asset_id": 383350047,
-          "size_bytes": 18991,
-          "type": "csv"
-        },
-        {
-          "key": "metrics/metrics_global.csv",
-          "asset_name": "metrics_global.csv",
-          "asset_id": 383350042,
-          "size_bytes": 5992,
-          "type": "csv"
-        },
-        {
-          "key": "metrics/metrics_by_group.csv",
-          "asset_name": "metrics_by_group.csv",
-          "asset_id": 383350036,
-          "size_bytes": 77318,
-          "type": "csv"
-        },
-        {
-          "key": "metrics/metrics_by_temp_kind.csv",
-          "asset_name": "metrics_by_temp_kind.csv",
-          "asset_id": 383350041,
-          "size_bytes": 77318,
-          "type": "csv"
-        },
-        {
-          "key": "metrics/per_group_predictions.csv",
-          "asset_name": "per_group_predictions.csv",
-          "asset_id": 383350050,
-          "size_bytes": 1990587,
-          "type": "csv"
-        },
-        {
-          "key": "config/run_config.json",
-          "asset_name": "run_config.json",
-          "asset_id": 383351246,
-          "size_bytes": 167,
-          "type": "json"
-        },
-        {
-          "key": "config/metadata.json",
-          "asset_name": "metadata.json",
-          "asset_id": 383353621,
-          "size_bytes": 550,
-          "type": "json"
-        },
-        {
-          "key": "config/method_rankings.txt",
-          "asset_name": "method_rankings.txt",
-          "asset_id": 383350033,
-          "size_bytes": 4961,
-          "type": "txt"
-        },
-        {
-          "key": "config/method_styles.json",
-          "asset_name": "method_styles.json",
-          "asset_id": 383350063,
-          "size_bytes": 8001,
-          "type": "json"
-        },
-        {
-          "key": "reports/label_report.csv",
-          "asset_name": "label_report.csv",
-          "asset_id": 383354868,
-          "size_bytes": 139,
-          "type": "csv"
-        },
-        {
-          "key": "reports/split_report.csv",
-          "asset_name": "split_report.csv",
-          "asset_id": 383352516,
-          "size_bytes": 110,
-          "type": "csv"
-        },
-        {
-          "key": "infra/endpoints.json",
-          "asset_name": "endpoints.json",
-          "asset_id": 383350871,
+          "key": "14B/endpoints.json",
+          "asset_name": "14B--endpoints.json",
           "size_bytes": 99,
-          "type": "json"
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kBH"
         },
         {
-          "key": "infra/collect_endpoints.json",
-          "asset_name": "collect_endpoints.json",
-          "asset_id": 383352196,
+          "key": "14B/agg_v2/20260226_211809_job33241492/method_rankings.txt",
+          "asset_name": "14B--agg_v2--20260226_211809_job33241492--method_rankings.txt",
+          "size_bytes": 2288,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kBJ"
+        },
+        {
+          "key": "14B/agg_v2/20260226_211809_job33241492/metrics_by_group.csv",
+          "asset_name": "14B--agg_v2--20260226_211809_job33241492--metrics_by_group.csv",
+          "size_bytes": 39278,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kBM"
+        },
+        {
+          "key": "14B/agg_v2/20260226_211809_job33241492/metrics_by_temp_kind.csv",
+          "asset_name": "14B--agg_v2--20260226_211809_job33241492--metrics_by_temp_kind.csv",
+          "size_bytes": 39278,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kBP"
+        },
+        {
+          "key": "14B/agg_v2/20260226_211809_job33241492/metrics_global.csv",
+          "asset_name": "14B--agg_v2--20260226_211809_job33241492--metrics_global.csv",
+          "size_bytes": 2600,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kBQ"
+        },
+        {
+          "key": "14B/agg_v2/20260226_211809_job33241492/metrics_overall.csv",
+          "asset_name": "14B--agg_v2--20260226_211809_job33241492--metrics_overall.csv",
+          "size_bytes": 9623,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kBT"
+        },
+        {
+          "key": "14B/agg_v2/20260226_211809_job33241492/per_group_predictions.csv",
+          "asset_name": "14B--agg_v2--20260226_211809_job33241492--per_group_predictions.csv",
+          "size_bytes": 1746457,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kBV"
+        },
+        {
+          "key": "14B/agg_v2/20260226_211809_job33241492/run_config.json",
+          "asset_name": "14B--agg_v2--20260226_211809_job33241492--run_config.json",
+          "size_bytes": 503,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kBX"
+        },
+        {
+          "key": "14B/agg_v2/20260226_211809_job33241492/plots/method_styles.json",
+          "asset_name": "14B--agg_v2--20260226_211809_job33241492--plots--method_styles.json",
+          "size_bytes": 4011,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kBa"
+        },
+        {
+          "key": "14B/agg_v2/20260227_091222_job33296471/method_rankings.txt",
+          "asset_name": "14B--agg_v2--20260227_091222_job33296471--method_rankings.txt",
+          "size_bytes": 2657,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kBb"
+        },
+        {
+          "key": "14B/agg_v2/20260227_091222_job33296471/metrics_by_group.csv",
+          "asset_name": "14B--agg_v2--20260227_091222_job33296471--metrics_by_group.csv",
+          "size_bytes": 44087,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kBf"
+        },
+        {
+          "key": "14B/agg_v2/20260227_091222_job33296471/metrics_by_temp_kind.csv",
+          "asset_name": "14B--agg_v2--20260227_091222_job33296471--metrics_by_temp_kind.csv",
+          "size_bytes": 44087,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kBh"
+        },
+        {
+          "key": "14B/agg_v2/20260227_091222_job33296471/metrics_global.csv",
+          "asset_name": "14B--agg_v2--20260227_091222_job33296471--metrics_global.csv",
+          "size_bytes": 2998,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kBo"
+        },
+        {
+          "key": "14B/agg_v2/20260227_091222_job33296471/metrics_overall.csv",
+          "asset_name": "14B--agg_v2--20260227_091222_job33296471--metrics_overall.csv",
+          "size_bytes": 10843,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kB0"
+        },
+        {
+          "key": "14B/agg_v2/20260227_091222_job33296471/per_group_predictions.csv",
+          "asset_name": "14B--agg_v2--20260227_091222_job33296471--per_group_predictions.csv",
+          "size_bytes": 1746457,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kB7"
+        },
+        {
+          "key": "14B/agg_v2/20260227_091222_job33296471/run_config.json",
+          "asset_name": "14B--agg_v2--20260227_091222_job33296471--run_config.json",
+          "size_bytes": 503,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kCB"
+        },
+        {
+          "key": "14B/agg_v2/20260227_091222_job33296471/plots/method_styles.json",
+          "asset_name": "14B--agg_v2--20260227_091222_job33296471--plots--method_styles.json",
+          "size_bytes": 4011,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kCH"
+        },
+        {
+          "key": "14B/agg_weighted/20260227_091024_job33296419/method_rankings.txt",
+          "asset_name": "14B--agg_weighted--20260227_091024_job33296419--method_rankings.txt",
+          "size_bytes": 4961,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kCJ"
+        },
+        {
+          "key": "14B/agg_weighted/20260227_091024_job33296419/metrics_by_group.csv",
+          "asset_name": "14B--agg_weighted--20260227_091024_job33296419--metrics_by_group.csv",
+          "size_bytes": 77318,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kCO"
+        },
+        {
+          "key": "14B/agg_weighted/20260227_091024_job33296419/metrics_by_temp_kind.csv",
+          "asset_name": "14B--agg_weighted--20260227_091024_job33296419--metrics_by_temp_kind.csv",
+          "size_bytes": 77318,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kCP"
+        },
+        {
+          "key": "14B/agg_weighted/20260227_091024_job33296419/metrics_global.csv",
+          "asset_name": "14B--agg_weighted--20260227_091024_job33296419--metrics_global.csv",
+          "size_bytes": 5992,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kCU"
+        },
+        {
+          "key": "14B/agg_weighted/20260227_091024_job33296419/metrics_overall.csv",
+          "asset_name": "14B--agg_weighted--20260227_091024_job33296419--metrics_overall.csv",
+          "size_bytes": 18991,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kCb"
+        },
+        {
+          "key": "14B/agg_weighted/20260227_091024_job33296419/per_group_predictions.csv",
+          "asset_name": "14B--agg_weighted--20260227_091024_job33296419--per_group_predictions.csv",
+          "size_bytes": 1990587,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kCd"
+        },
+        {
+          "key": "14B/agg_weighted/20260227_091024_job33296419/run_config.json",
+          "asset_name": "14B--agg_weighted--20260227_091024_job33296419--run_config.json",
+          "size_bytes": 509,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kCi"
+        },
+        {
+          "key": "14B/agg_weighted/20260227_091024_job33296419/plots/method_styles.json",
+          "asset_name": "14B--agg_weighted--20260227_091024_job33296419--plots--method_styles.json",
+          "size_bytes": 8001,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kCj"
+        },
+        {
+          "key": "14B/collect_topk_40/run_config.json",
+          "asset_name": "14B--collect_topk_40--run_config.json",
+          "size_bytes": 201,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kCl"
+        },
+        {
+          "key": "14B/collect_topk_40/base/temp_0_1/metadata.json",
+          "asset_name": "14B--collect_topk_40--base--temp_0_1--metadata.json",
+          "size_bytes": 436,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kCs"
+        },
+        {
+          "key": "14B/collect_topk_40/base/temp_0_1/responses.csv",
+          "asset_name": "14B--collect_topk_40--base--temp_0_1--responses.csv",
+          "size_bytes": 13250131,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kCt"
+        },
+        {
+          "key": "14B/collect_topk_40/base/temp_0_4/metadata.json",
+          "asset_name": "14B--collect_topk_40--base--temp_0_4--metadata.json",
+          "size_bytes": 436,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kC9"
+        },
+        {
+          "key": "14B/collect_topk_40/base/temp_0_4/responses.csv",
+          "asset_name": "14B--collect_topk_40--base--temp_0_4--responses.csv",
+          "size_bytes": 17030549,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kDC"
+        },
+        {
+          "key": "14B/collect_topk_40/base/temp_0_7/metadata.json",
+          "asset_name": "14B--collect_topk_40--base--temp_0_7--metadata.json",
+          "size_bytes": 436,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kDQ"
+        },
+        {
+          "key": "14B/collect_topk_40/base/temp_0_7/responses.csv",
+          "asset_name": "14B--collect_topk_40--base--temp_0_7--responses.csv",
+          "size_bytes": 21717246,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kDY"
+        },
+        {
+          "key": "14B/collect_topk_40/base/temp_1_0/metadata.json",
+          "asset_name": "14B--collect_topk_40--base--temp_1_0--metadata.json",
+          "size_bytes": 436,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kDr"
+        },
+        {
+          "key": "14B/collect_topk_40/base/temp_1_0/responses.csv",
+          "asset_name": "14B--collect_topk_40--base--temp_1_0--responses.csv",
+          "size_bytes": 19277163,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kDx"
+        },
+        {
+          "key": "14B/collect_topk_40/reasoning/temp_0_1/metadata.json",
+          "asset_name": "14B--collect_topk_40--reasoning--temp_0_1--metadata.json",
+          "size_bytes": 446,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kEM"
+        },
+        {
+          "key": "14B/collect_topk_40/reasoning/temp_0_1/responses.csv",
+          "asset_name": "14B--collect_topk_40--reasoning--temp_0_1--responses.csv",
+          "size_bytes": 40082165,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kEP"
+        },
+        {
+          "key": "14B/collect_topk_40/reasoning/temp_0_4/metadata.json",
+          "asset_name": "14B--collect_topk_40--reasoning--temp_0_4--metadata.json",
+          "size_bytes": 446,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kE5"
+        },
+        {
+          "key": "14B/collect_topk_40/reasoning/temp_0_4/responses.csv",
+          "asset_name": "14B--collect_topk_40--reasoning--temp_0_4--responses.csv",
+          "size_bytes": 40668461,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kE9"
+        },
+        {
+          "key": "14B/collect_topk_40/reasoning/temp_0_7/metadata.json",
+          "asset_name": "14B--collect_topk_40--reasoning--temp_0_7--metadata.json",
+          "size_bytes": 446,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kFn"
+        },
+        {
+          "key": "14B/collect_topk_40/reasoning/temp_0_7/responses.csv",
+          "asset_name": "14B--collect_topk_40--reasoning--temp_0_7--responses.csv",
+          "size_bytes": 40691756,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kFq"
+        },
+        {
+          "key": "14B/collect_topk_40/reasoning/temp_1_0/metadata.json",
+          "asset_name": "14B--collect_topk_40--reasoning--temp_1_0--metadata.json",
+          "size_bytes": 446,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kF9"
+        },
+        {
+          "key": "14B/collect_topk_40/reasoning/temp_1_0/responses.csv",
+          "asset_name": "14B--collect_topk_40--reasoning--temp_1_0--responses.csv",
+          "size_bytes": 41711559,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kGC"
+        },
+        {
+          "key": "14B/collect_topk_40/temp_0_1/responses.csv",
+          "asset_name": "14B--collect_topk_40--temp_0_1--responses.csv",
+          "size_bytes": 53340186,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kGM"
+        },
+        {
+          "key": "14B/collect_topk_40/temp_0_4/responses.csv",
+          "asset_name": "14B--collect_topk_40--temp_0_4--responses.csv",
+          "size_bytes": 57702666,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kGr"
+        },
+        {
+          "key": "14B/collect_topk_40/temp_0_7/responses.csv",
+          "asset_name": "14B--collect_topk_40--temp_0_7--responses.csv",
+          "size_bytes": 62414060,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kG6"
+        },
+        {
+          "key": "14B/collect_topk_40/temp_1_0/responses.csv",
+          "asset_name": "14B--collect_topk_40--temp_1_0--responses.csv",
+          "size_bytes": 60966629,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kHc"
+        },
+        {
+          "key": "14B/collect_topk_none/run_config.json",
+          "asset_name": "14B--collect_topk_none--run_config.json",
+          "size_bytes": 203,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kH2"
+        },
+        {
+          "key": "14B/collect_topk_none/base/temp_0_1/metadata.json",
+          "asset_name": "14B--collect_topk_none--base--temp_0_1--metadata.json",
+          "size_bytes": 440,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kH5"
+        },
+        {
+          "key": "14B/collect_topk_none/base/temp_0_1/responses.csv",
+          "asset_name": "14B--collect_topk_none--base--temp_0_1--responses.csv",
+          "size_bytes": 13193017,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kH7"
+        },
+        {
+          "key": "14B/collect_topk_none/base/temp_0_4/metadata.json",
+          "asset_name": "14B--collect_topk_none--base--temp_0_4--metadata.json",
+          "size_bytes": 440,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kID"
+        },
+        {
+          "key": "14B/collect_topk_none/base/temp_0_4/responses.csv",
+          "asset_name": "14B--collect_topk_none--base--temp_0_4--responses.csv",
+          "size_bytes": 16489298,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kII"
+        },
+        {
+          "key": "14B/collect_topk_none/base/temp_0_7/metadata.json",
+          "asset_name": "14B--collect_topk_none--base--temp_0_7--metadata.json",
+          "size_bytes": 440,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kIT"
+        },
+        {
+          "key": "14B/collect_topk_none/base/temp_0_7/responses.csv",
+          "asset_name": "14B--collect_topk_none--base--temp_0_7--responses.csv",
+          "size_bytes": 22332705,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kIc"
+        },
+        {
+          "key": "14B/collect_topk_none/base/temp_1_0/metadata.json",
+          "asset_name": "14B--collect_topk_none--base--temp_1_0--metadata.json",
+          "size_bytes": 440,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kIw"
+        },
+        {
+          "key": "14B/collect_topk_none/base/temp_1_0/responses.csv",
+          "asset_name": "14B--collect_topk_none--base--temp_1_0--responses.csv",
+          "size_bytes": 22789305,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kIx"
+        },
+        {
+          "key": "14B/collect_topk_none/reasoning/temp_0_1/metadata.json",
+          "asset_name": "14B--collect_topk_none--reasoning--temp_0_1--metadata.json",
+          "size_bytes": 450,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kI-"
+        },
+        {
+          "key": "14B/collect_topk_none/reasoning/temp_0_1/responses.csv",
+          "asset_name": "14B--collect_topk_none--reasoning--temp_0_1--responses.csv",
+          "size_bytes": 40039864,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kI_"
+        },
+        {
+          "key": "14B/collect_topk_none/reasoning/temp_0_4/metadata.json",
+          "asset_name": "14B--collect_topk_none--reasoning--temp_0_4--metadata.json",
+          "size_bytes": 450,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kJZ"
+        },
+        {
+          "key": "14B/collect_topk_none/reasoning/temp_0_4/responses.csv",
+          "asset_name": "14B--collect_topk_none--reasoning--temp_0_4--responses.csv",
+          "size_bytes": 40765312,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kJd"
+        },
+        {
+          "key": "14B/collect_topk_none/reasoning/temp_0_7/metadata.json",
+          "asset_name": "14B--collect_topk_none--reasoning--temp_0_7--metadata.json",
+          "size_bytes": 450,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kJw"
+        },
+        {
+          "key": "14B/collect_topk_none/reasoning/temp_0_7/responses.csv",
+          "asset_name": "14B--collect_topk_none--reasoning--temp_0_7--responses.csv",
+          "size_bytes": 40906069,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kJ6"
+        },
+        {
+          "key": "14B/collect_topk_none/reasoning/temp_1_0/metadata.json",
+          "asset_name": "14B--collect_topk_none--reasoning--temp_1_0--metadata.json",
+          "size_bytes": 450,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kKV"
+        },
+        {
+          "key": "14B/collect_topk_none/reasoning/temp_1_0/responses.csv",
+          "asset_name": "14B--collect_topk_none--reasoning--temp_1_0--responses.csv",
+          "size_bytes": 42099398,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kKh"
+        },
+        {
+          "key": "14B/collect_topk_none/temp_0_1/responses.csv",
+          "asset_name": "14B--collect_topk_none--temp_0_1--responses.csv",
+          "size_bytes": 53237085,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kK1"
+        },
+        {
+          "key": "14B/collect_topk_none/temp_0_4/responses.csv",
+          "asset_name": "14B--collect_topk_none--temp_0_4--responses.csv",
+          "size_bytes": 57258116,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kLK"
+        },
+        {
+          "key": "14B/collect_topk_none/temp_0_7/responses.csv",
+          "asset_name": "14B--collect_topk_none--temp_0_7--responses.csv",
+          "size_bytes": 63245538,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kLl"
+        },
+        {
+          "key": "14B/collect_topk_none/temp_1_0/responses.csv",
+          "asset_name": "14B--collect_topk_none--temp_1_0--responses.csv",
+          "size_bytes": 64863385,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kL2"
+        },
+        {
+          "key": "14B/vllm_logs/label70b_31753993/llama70b/pids.txt",
+          "asset_name": "14B--vllm_logs--label70b_31753993--llama70b--pids.txt",
+          "size_bytes": 7,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kND"
+        },
+        {
+          "key": "14B/vllm_logs/label70b_31753993/llama70b/ports.txt",
+          "asset_name": "14B--vllm_logs--label70b_31753993--llama70b--ports.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kNE"
+        },
+        {
+          "key": "14B/vllm_logs/ll_14b_g2_30275550/base/pids.txt",
+          "asset_name": "14B--vllm_logs--ll_14b_g2_30275550--base--pids.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kNH"
+        },
+        {
+          "key": "14B/vllm_logs/ll_14b_g2_30275550/base/ports.txt",
+          "asset_name": "14B--vllm_logs--ll_14b_g2_30275550--base--ports.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kNI"
+        },
+        {
+          "key": "14B/vllm_logs/ll_14b_g2_30275550/reasoning/pids.txt",
+          "asset_name": "14B--vllm_logs--ll_14b_g2_30275550--reasoning--pids.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kNK"
+        },
+        {
+          "key": "14B/vllm_logs/ll_14b_g2_30275550/reasoning/ports.txt",
+          "asset_name": "14B--vllm_logs--ll_14b_g2_30275550--reasoning--ports.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kNL"
+        }
+      ]
+    },
+    {
+      "id": "raw_32b",
+      "label": "32B Raw Data",
+      "model": "32B",
+      "files": [
+        {
+          "key": "32B/endpoints.json",
+          "asset_name": "32B--endpoints.json",
+          "size_bytes": 99,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kNO"
+        },
+        {
+          "key": "32B/collect_topk_40/run_config.json",
+          "asset_name": "32B--collect_topk_40--run_config.json",
+          "size_bytes": 165,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kNR"
+        },
+        {
+          "key": "32B/collect_topk_40/base/temp_0_1/metadata.json",
+          "asset_name": "32B--collect_topk_40--base--temp_0_1--metadata.json",
+          "size_bytes": 436,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kNT"
+        },
+        {
+          "key": "32B/collect_topk_40/base/temp_0_1/responses.csv",
+          "asset_name": "32B--collect_topk_40--base--temp_0_1--responses.csv",
+          "size_bytes": 44780245,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kNV"
+        },
+        {
+          "key": "32B/collect_topk_40/base/temp_0_4/metadata.json",
+          "asset_name": "32B--collect_topk_40--base--temp_0_4--metadata.json",
+          "size_bytes": 436,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kNl"
+        },
+        {
+          "key": "32B/collect_topk_40/base/temp_0_4/responses.csv",
+          "asset_name": "32B--collect_topk_40--base--temp_0_4--responses.csv",
+          "size_bytes": 41496214,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kNp"
+        },
+        {
+          "key": "32B/collect_topk_40/base/temp_0_7/metadata.json",
+          "asset_name": "32B--collect_topk_40--base--temp_0_7--metadata.json",
+          "size_bytes": 436,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kN9"
+        },
+        {
+          "key": "32B/collect_topk_40/base/temp_0_7/responses.csv",
+          "asset_name": "32B--collect_topk_40--base--temp_0_7--responses.csv",
+          "size_bytes": 32808695,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kN-"
+        },
+        {
+          "key": "32B/collect_topk_40/base/temp_1_0/metadata.json",
+          "asset_name": "32B--collect_topk_40--base--temp_1_0--metadata.json",
+          "size_bytes": 436,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kOL"
+        },
+        {
+          "key": "32B/collect_topk_40/base/temp_1_0/responses.csv",
+          "asset_name": "32B--collect_topk_40--base--temp_1_0--responses.csv",
+          "size_bytes": 20860781,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kON"
+        },
+        {
+          "key": "32B/collect_topk_40/reasoning/temp_0_1/metadata.json",
+          "asset_name": "32B--collect_topk_40--reasoning--temp_0_1--metadata.json",
+          "size_bytes": 446,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kOV"
+        },
+        {
+          "key": "32B/collect_topk_40/reasoning/temp_0_1/responses.csv",
+          "asset_name": "32B--collect_topk_40--reasoning--temp_0_1--responses.csv",
+          "size_bytes": 29799333,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kOZ"
+        },
+        {
+          "key": "32B/collect_topk_40/reasoning/temp_0_4/metadata.json",
+          "asset_name": "32B--collect_topk_40--reasoning--temp_0_4--metadata.json",
+          "size_bytes": 446,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kOp"
+        },
+        {
+          "key": "32B/collect_topk_40/reasoning/temp_0_4/responses.csv",
+          "asset_name": "32B--collect_topk_40--reasoning--temp_0_4--responses.csv",
+          "size_bytes": 29956717,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kOs"
+        },
+        {
+          "key": "32B/collect_topk_40/reasoning/temp_0_7/metadata.json",
+          "asset_name": "32B--collect_topk_40--reasoning--temp_0_7--metadata.json",
+          "size_bytes": 446,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kPC"
+        },
+        {
+          "key": "32B/collect_topk_40/reasoning/temp_0_7/responses.csv",
+          "asset_name": "32B--collect_topk_40--reasoning--temp_0_7--responses.csv",
+          "size_bytes": 30813132,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kPE"
+        },
+        {
+          "key": "32B/collect_topk_40/reasoning/temp_1_0/metadata.json",
+          "asset_name": "32B--collect_topk_40--reasoning--temp_1_0--metadata.json",
+          "size_bytes": 446,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kPQ"
+        },
+        {
+          "key": "32B/collect_topk_40/reasoning/temp_1_0/responses.csv",
+          "asset_name": "32B--collect_topk_40--reasoning--temp_1_0--responses.csv",
+          "size_bytes": 31980811,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kPU"
+        },
+        {
+          "key": "32B/collect_topk_40/temp_0_1/responses.csv",
+          "asset_name": "32B--collect_topk_40--temp_0_1--responses.csv",
+          "size_bytes": 74585546,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kPZ"
+        },
+        {
+          "key": "32B/collect_topk_40/temp_0_4/responses.csv",
+          "asset_name": "32B--collect_topk_40--temp_0_4--responses.csv",
+          "size_bytes": 71458069,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kPk"
+        },
+        {
+          "key": "32B/collect_topk_40/temp_0_7/responses.csv",
+          "asset_name": "32B--collect_topk_40--temp_0_7--responses.csv",
+          "size_bytes": 63626336,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kP8"
+        },
+        {
+          "key": "32B/collect_topk_40/temp_1_0/responses.csv",
+          "asset_name": "32B--collect_topk_40--temp_1_0--responses.csv",
+          "size_bytes": 52820241,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kQG"
+        },
+        {
+          "key": "32B/collect_topk_none/run_config.json",
+          "asset_name": "32B--collect_topk_none--run_config.json",
+          "size_bytes": 167,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kQl"
+        },
+        {
+          "key": "32B/collect_topk_none/base/temp_0_1/metadata.json",
+          "asset_name": "32B--collect_topk_none--base--temp_0_1--metadata.json",
+          "size_bytes": 440,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kQo"
+        },
+        {
+          "key": "32B/collect_topk_none/base/temp_0_1/responses.csv",
+          "asset_name": "32B--collect_topk_none--base--temp_0_1--responses.csv",
+          "size_bytes": 44364758,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kQs"
+        },
+        {
+          "key": "32B/collect_topk_none/base/temp_0_4/metadata.json",
+          "asset_name": "32B--collect_topk_none--base--temp_0_4--metadata.json",
+          "size_bytes": 440,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kQ-"
+        },
+        {
+          "key": "32B/collect_topk_none/base/temp_0_4/responses.csv",
+          "asset_name": "32B--collect_topk_none--base--temp_0_4--responses.csv",
+          "size_bytes": 41456410,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kRC"
+        },
+        {
+          "key": "32B/collect_topk_none/base/temp_0_7/metadata.json",
+          "asset_name": "32B--collect_topk_none--base--temp_0_7--metadata.json",
+          "size_bytes": 440,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kRR"
+        },
+        {
+          "key": "32B/collect_topk_none/base/temp_0_7/responses.csv",
+          "asset_name": "32B--collect_topk_none--base--temp_0_7--responses.csv",
+          "size_bytes": 32194950,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kRU"
+        },
+        {
+          "key": "32B/collect_topk_none/base/temp_1_0/metadata.json",
+          "asset_name": "32B--collect_topk_none--base--temp_1_0--metadata.json",
+          "size_bytes": 440,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kRs"
+        },
+        {
+          "key": "32B/collect_topk_none/base/temp_1_0/responses.csv",
+          "asset_name": "32B--collect_topk_none--base--temp_1_0--responses.csv",
+          "size_bytes": 22795776,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kR1"
+        },
+        {
+          "key": "32B/collect_topk_none/reasoning/temp_0_1/metadata.json",
+          "asset_name": "32B--collect_topk_none--reasoning--temp_0_1--metadata.json",
+          "size_bytes": 450,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kSJ"
+        },
+        {
+          "key": "32B/collect_topk_none/reasoning/temp_0_1/responses.csv",
+          "asset_name": "32B--collect_topk_none--reasoning--temp_0_1--responses.csv",
+          "size_bytes": 30301495,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kSP"
+        },
+        {
+          "key": "32B/collect_topk_none/reasoning/temp_0_4/metadata.json",
+          "asset_name": "32B--collect_topk_none--reasoning--temp_0_4--metadata.json",
+          "size_bytes": 450,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kSh"
+        },
+        {
+          "key": "32B/collect_topk_none/reasoning/temp_0_4/responses.csv",
+          "asset_name": "32B--collect_topk_none--reasoning--temp_0_4--responses.csv",
+          "size_bytes": 30236480,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kSn"
+        },
+        {
+          "key": "32B/collect_topk_none/reasoning/temp_0_7/metadata.json",
+          "asset_name": "32B--collect_topk_none--reasoning--temp_0_7--metadata.json",
+          "size_bytes": 450,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kS0"
+        },
+        {
+          "key": "32B/collect_topk_none/reasoning/temp_0_7/responses.csv",
+          "asset_name": "32B--collect_topk_none--reasoning--temp_0_7--responses.csv",
+          "size_bytes": 30835112,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kS4"
+        },
+        {
+          "key": "32B/collect_topk_none/reasoning/temp_1_0/metadata.json",
+          "asset_name": "32B--collect_topk_none--reasoning--temp_1_0--metadata.json",
+          "size_bytes": 450,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kTD"
+        },
+        {
+          "key": "32B/collect_topk_none/reasoning/temp_1_0/responses.csv",
+          "asset_name": "32B--collect_topk_none--reasoning--temp_1_0--responses.csv",
+          "size_bytes": 32357392,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kTF"
+        },
+        {
+          "key": "32B/collect_topk_none/temp_0_1/responses.csv",
+          "asset_name": "32B--collect_topk_none--temp_0_1--responses.csv",
+          "size_bytes": 74670989,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kTW"
+        },
+        {
+          "key": "32B/collect_topk_none/temp_0_4/responses.csv",
+          "asset_name": "32B--collect_topk_none--temp_0_4--responses.csv",
+          "size_bytes": 71697197,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kUV"
+        },
+        {
+          "key": "32B/collect_topk_none/temp_0_7/responses.csv",
+          "asset_name": "32B--collect_topk_none--temp_0_7--responses.csv",
+          "size_bytes": 63033956,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kUj"
+        },
+        {
+          "key": "32B/collect_topk_none/temp_1_0/responses.csv",
+          "asset_name": "32B--collect_topk_none--temp_1_0--responses.csv",
+          "size_bytes": 55111264,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kVS"
+        },
+        {
+          "key": "32B/vllm_logs/label70b_33241479/llama70b/pids.txt",
+          "asset_name": "32B--vllm_logs--label70b_33241479--llama70b--pids.txt",
+          "size_bytes": 8,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kVk"
+        },
+        {
+          "key": "32B/vllm_logs/label70b_33241479/llama70b/ports.txt",
+          "asset_name": "32B--vllm_logs--label70b_33241479--llama70b--ports.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kVq"
+        },
+        {
+          "key": "32B/vllm_logs/label70b_33273825/llama70b/pids.txt",
+          "asset_name": "32B--vllm_logs--label70b_33273825--llama70b--pids.txt",
+          "size_bytes": 8,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kVv"
+        },
+        {
+          "key": "32B/vllm_logs/label70b_33273825/llama70b/ports.txt",
+          "asset_name": "32B--vllm_logs--label70b_33273825--llama70b--ports.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kVy"
+        },
+        {
+          "key": "32B/vllm_logs/ll_32b_g4_30275829/base/pids.txt",
+          "asset_name": "32B--vllm_logs--ll_32b_g4_30275829--base--pids.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kV1"
+        },
+        {
+          "key": "32B/vllm_logs/ll_32b_g4_30275829/base/ports.txt",
+          "asset_name": "32B--vllm_logs--ll_32b_g4_30275829--base--ports.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kV2"
+        },
+        {
+          "key": "32B/vllm_logs/ll_32b_g4_30275829/reasoning/pids.txt",
+          "asset_name": "32B--vllm_logs--ll_32b_g4_30275829--reasoning--pids.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kV3"
+        },
+        {
+          "key": "32B/vllm_logs/ll_32b_g4_30275829/reasoning/ports.txt",
+          "asset_name": "32B--vllm_logs--ll_32b_g4_30275829--reasoning--ports.txt",
+          "size_bytes": 6,
+          "type": "txt",
+          "asset_id": "RA_kwDORgGWOs4W3kV4"
+        }
+      ]
+    },
+    {
+      "id": "raw_7b",
+      "label": "7B Raw Data",
+      "model": "7B",
+      "files": [
+        {
+          "key": "7B/collect_endpoints.json",
+          "asset_name": "7B--collect_endpoints.json",
           "size_bytes": 155,
-          "type": "json"
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kV8"
         },
         {
-          "key": "infra/collect_endpoints_report.json",
-          "asset_name": "collect_endpoints_report.json",
-          "asset_id": 383352203,
+          "key": "7B/collect_endpoints_report.json",
+          "asset_name": "7B--collect_endpoints_report.json",
           "size_bytes": 1064,
-          "type": "json"
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kWM"
         },
         {
-          "key": "infra/worker_endpoints_report.json",
-          "asset_name": "worker_endpoints_report.json",
-          "asset_id": 383352207,
+          "key": "7B/worker_endpoints_report.json",
+          "asset_name": "7B--worker_endpoints_report.json",
           "size_bytes": 556,
-          "type": "json"
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kWP"
         },
         {
-          "key": "infra/pids.txt",
-          "asset_name": "pids.txt",
-          "asset_id": 383352189,
-          "size_bytes": 6,
-          "type": "txt"
+          "key": "7B/collect_attemptsplit_topk_40/split_report.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_40--split_report.csv",
+          "size_bytes": 110,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kWT"
         },
         {
-          "key": "infra/ports.txt",
-          "asset_name": "ports.txt",
-          "asset_id": 383352194,
-          "size_bytes": 6,
-          "type": "txt"
+          "key": "7B/collect_attemptsplit_topk_40/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_40--temp_0_1--responses.csv",
+          "size_bytes": 151458417,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kWW"
+        },
+        {
+          "key": "7B/collect_attemptsplit_topk_40/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_40--temp_0_4--responses.csv",
+          "size_bytes": 154306167,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kXd"
+        },
+        {
+          "key": "7B/collect_attemptsplit_topk_40/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_40--temp_0_7--responses.csv",
+          "size_bytes": 167299754,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kch"
+        },
+        {
+          "key": "7B/collect_attemptsplit_topk_40/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_40--temp_1_0--responses.csv",
+          "size_bytes": 164444779,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kd7"
+        },
+        {
+          "key": "7B/collect_attemptsplit_topk_none/split_report.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_none--split_report.csv",
+          "size_bytes": 110,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kfM"
+        },
+        {
+          "key": "7B/collect_attemptsplit_topk_none/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_none--temp_0_1--responses.csv",
+          "size_bytes": 153120515,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kfP"
+        },
+        {
+          "key": "7B/collect_attemptsplit_topk_none/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_none--temp_0_4--responses.csv",
+          "size_bytes": 157363036,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kio"
+        },
+        {
+          "key": "7B/collect_attemptsplit_topk_none/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_none--temp_0_7--responses.csv",
+          "size_bytes": 160046738,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kjv"
+        },
+        {
+          "key": "7B/collect_attemptsplit_topk_none/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_attemptsplit_topk_none--temp_1_0--responses.csv",
+          "size_bytes": 167108954,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3klR"
+        },
+        {
+          "key": "7B/collect_topk_40/base/temp_0_1/metadata.json",
+          "asset_name": "7B--collect_topk_40--base--temp_0_1--metadata.json",
+          "size_bytes": 444,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kmf"
+        },
+        {
+          "key": "7B/collect_topk_40/base/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_topk_40--base--temp_0_1--responses.csv",
+          "size_bytes": 10523063,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kmj"
+        },
+        {
+          "key": "7B/collect_topk_40/base/temp_0_4/metadata.json",
+          "asset_name": "7B--collect_topk_40--base--temp_0_4--metadata.json",
+          "size_bytes": 444,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kmx"
+        },
+        {
+          "key": "7B/collect_topk_40/base/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_topk_40--base--temp_0_4--responses.csv",
+          "size_bytes": 11441070,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kmz"
+        },
+        {
+          "key": "7B/collect_topk_40/base/temp_0_7/metadata.json",
+          "asset_name": "7B--collect_topk_40--base--temp_0_7--metadata.json",
+          "size_bytes": 444,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3km2"
+        },
+        {
+          "key": "7B/collect_topk_40/base/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_topk_40--base--temp_0_7--responses.csv",
+          "size_bytes": 13020911,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3km6"
+        },
+        {
+          "key": "7B/collect_topk_40/base/temp_1_0/metadata.json",
+          "asset_name": "7B--collect_topk_40--base--temp_1_0--metadata.json",
+          "size_bytes": 444,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3knB"
+        },
+        {
+          "key": "7B/collect_topk_40/base/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_topk_40--base--temp_1_0--responses.csv",
+          "size_bytes": 13917545,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3knI"
+        },
+        {
+          "key": "7B/collect_topk_40/base_thinker/temp_0_1/metadata.json",
+          "asset_name": "7B--collect_topk_40--base_thinker--temp_0_1--metadata.json",
+          "size_bytes": 452,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3knU"
+        },
+        {
+          "key": "7B/collect_topk_40/base_thinker/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_topk_40--base_thinker--temp_0_1--responses.csv",
+          "size_bytes": 14873056,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3knZ"
+        },
+        {
+          "key": "7B/collect_topk_40/base_thinker/temp_0_4/metadata.json",
+          "asset_name": "7B--collect_topk_40--base_thinker--temp_0_4--metadata.json",
+          "size_bytes": 452,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kni"
+        },
+        {
+          "key": "7B/collect_topk_40/base_thinker/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_topk_40--base_thinker--temp_0_4--responses.csv",
+          "size_bytes": 14979240,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3knm"
+        },
+        {
+          "key": "7B/collect_topk_40/base_thinker/temp_0_7/metadata.json",
+          "asset_name": "7B--collect_topk_40--base_thinker--temp_0_7--metadata.json",
+          "size_bytes": 452,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kn1"
+        },
+        {
+          "key": "7B/collect_topk_40/base_thinker/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_topk_40--base_thinker--temp_0_7--responses.csv",
+          "size_bytes": 16710081,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kn7"
+        },
+        {
+          "key": "7B/collect_topk_40/base_thinker/temp_1_0/metadata.json",
+          "asset_name": "7B--collect_topk_40--base_thinker--temp_1_0--metadata.json",
+          "size_bytes": 452,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kom"
+        },
+        {
+          "key": "7B/collect_topk_40/base_thinker/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_topk_40--base_thinker--temp_1_0--responses.csv",
+          "size_bytes": 17362811,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kop"
+        },
+        {
+          "key": "7B/collect_topk_40/reasoning/temp_0_1/metadata.json",
+          "asset_name": "7B--collect_topk_40--reasoning--temp_0_1--metadata.json",
+          "size_bytes": 546,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kow"
+        },
+        {
+          "key": "7B/collect_topk_40/reasoning/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_topk_40--reasoning--temp_0_1--responses.csv",
+          "size_bytes": 25748843,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ko0"
+        },
+        {
+          "key": "7B/collect_topk_40/reasoning/temp_0_4/metadata.json",
+          "asset_name": "7B--collect_topk_40--reasoning--temp_0_4--metadata.json",
+          "size_bytes": 546,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3ko8"
+        },
+        {
+          "key": "7B/collect_topk_40/reasoning/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_topk_40--reasoning--temp_0_4--responses.csv",
+          "size_bytes": 26130889,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ko-"
+        },
+        {
+          "key": "7B/collect_topk_40/reasoning/temp_0_7/metadata.json",
+          "asset_name": "7B--collect_topk_40--reasoning--temp_0_7--metadata.json",
+          "size_bytes": 546,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kpS"
+        },
+        {
+          "key": "7B/collect_topk_40/reasoning/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_topk_40--reasoning--temp_0_7--responses.csv",
+          "size_bytes": 27998887,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kpX"
+        },
+        {
+          "key": "7B/collect_topk_40/reasoning/temp_1_0/metadata.json",
+          "asset_name": "7B--collect_topk_40--reasoning--temp_1_0--metadata.json",
+          "size_bytes": 546,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kpi"
+        },
+        {
+          "key": "7B/collect_topk_40/reasoning/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_topk_40--reasoning--temp_1_0--responses.csv",
+          "size_bytes": 29296087,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kpm"
+        },
+        {
+          "key": "7B/collect_topk_40/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_topk_40--temp_0_1--responses.csv",
+          "size_bytes": 51200380,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kp3"
+        },
+        {
+          "key": "7B/collect_topk_40/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_topk_40--temp_0_4--responses.csv",
+          "size_bytes": 52606609,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kqG"
+        },
+        {
+          "key": "7B/collect_topk_40/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_topk_40--temp_0_7--responses.csv",
+          "size_bytes": 57785273,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kqW"
+        },
+        {
+          "key": "7B/collect_topk_40/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_topk_40--temp_1_0--responses.csv",
+          "size_bytes": 60631847,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kq8"
+        },
+        {
+          "key": "7B/collect_topk_none/base/temp_0_1/metadata.json",
+          "asset_name": "7B--collect_topk_none--base--temp_0_1--metadata.json",
+          "size_bytes": 448,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3ksA"
+        },
+        {
+          "key": "7B/collect_topk_none/base/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_topk_none--base--temp_0_1--responses.csv",
+          "size_bytes": 10593998,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ksD"
+        },
+        {
+          "key": "7B/collect_topk_none/base/temp_0_4/metadata.json",
+          "asset_name": "7B--collect_topk_none--base--temp_0_4--metadata.json",
+          "size_bytes": 448,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3ksH"
+        },
+        {
+          "key": "7B/collect_topk_none/base/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_topk_none--base--temp_0_4--responses.csv",
+          "size_bytes": 11386010,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ksK"
+        },
+        {
+          "key": "7B/collect_topk_none/base/temp_0_7/metadata.json",
+          "asset_name": "7B--collect_topk_none--base--temp_0_7--metadata.json",
+          "size_bytes": 448,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3ksv"
+        },
+        {
+          "key": "7B/collect_topk_none/base/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_topk_none--base--temp_0_7--responses.csv",
+          "size_bytes": 12903543,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ks7"
+        },
+        {
+          "key": "7B/collect_topk_none/base/temp_1_0/metadata.json",
+          "asset_name": "7B--collect_topk_none--base--temp_1_0--metadata.json",
+          "size_bytes": 448,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3ktF"
+        },
+        {
+          "key": "7B/collect_topk_none/base/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_topk_none--base--temp_1_0--responses.csv",
+          "size_bytes": 15071382,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ktH"
+        },
+        {
+          "key": "7B/collect_topk_none/base_thinker/temp_0_1/metadata.json",
+          "asset_name": "7B--collect_topk_none--base_thinker--temp_0_1--metadata.json",
+          "size_bytes": 456,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3ktV"
+        },
+        {
+          "key": "7B/collect_topk_none/base_thinker/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_topk_none--base_thinker--temp_0_1--responses.csv",
+          "size_bytes": 14841107,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ktb"
+        },
+        {
+          "key": "7B/collect_topk_none/base_thinker/temp_0_4/metadata.json",
+          "asset_name": "7B--collect_topk_none--base_thinker--temp_0_4--metadata.json",
+          "size_bytes": 456,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3ktf"
+        },
+        {
+          "key": "7B/collect_topk_none/base_thinker/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_topk_none--base_thinker--temp_0_4--responses.csv",
+          "size_bytes": 15066780,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ktj"
+        },
+        {
+          "key": "7B/collect_topk_none/base_thinker/temp_0_7/metadata.json",
+          "asset_name": "7B--collect_topk_none--base_thinker--temp_0_7--metadata.json",
+          "size_bytes": 456,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3ktp"
+        },
+        {
+          "key": "7B/collect_topk_none/base_thinker/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_topk_none--base_thinker--temp_0_7--responses.csv",
+          "size_bytes": 16740357,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kts"
+        },
+        {
+          "key": "7B/collect_topk_none/base_thinker/temp_1_0/metadata.json",
+          "asset_name": "7B--collect_topk_none--base_thinker--temp_1_0--metadata.json",
+          "size_bytes": 456,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kt1"
+        },
+        {
+          "key": "7B/collect_topk_none/base_thinker/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_topk_none--base_thinker--temp_1_0--responses.csv",
+          "size_bytes": 18416286,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kt3"
+        },
+        {
+          "key": "7B/collect_topk_none/reasoning/temp_0_1/metadata.json",
+          "asset_name": "7B--collect_topk_none--reasoning--temp_0_1--metadata.json",
+          "size_bytes": 550,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kuA"
+        },
+        {
+          "key": "7B/collect_topk_none/reasoning/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_topk_none--reasoning--temp_0_1--responses.csv",
+          "size_bytes": 25832528,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kuD"
+        },
+        {
+          "key": "7B/collect_topk_none/reasoning/temp_0_4/metadata.json",
+          "asset_name": "7B--collect_topk_none--reasoning--temp_0_4--metadata.json",
+          "size_bytes": 550,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kuM"
+        },
+        {
+          "key": "7B/collect_topk_none/reasoning/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_topk_none--reasoning--temp_0_4--responses.csv",
+          "size_bytes": 26764405,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kuR"
+        },
+        {
+          "key": "7B/collect_topk_none/reasoning/temp_0_7/metadata.json",
+          "asset_name": "7B--collect_topk_none--reasoning--temp_0_7--metadata.json",
+          "size_bytes": 550,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kuc"
+        },
+        {
+          "key": "7B/collect_topk_none/reasoning/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_topk_none--reasoning--temp_0_7--responses.csv",
+          "size_bytes": 27329025,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kud"
+        },
+        {
+          "key": "7B/collect_topk_none/reasoning/temp_1_0/metadata.json",
+          "asset_name": "7B--collect_topk_none--reasoning--temp_1_0--metadata.json",
+          "size_bytes": 550,
+          "type": "json",
+          "asset_id": "RA_kwDORgGWOs4W3kux"
+        },
+        {
+          "key": "7B/collect_topk_none/reasoning/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_topk_none--reasoning--temp_1_0--responses.csv",
+          "size_bytes": 29202760,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kuy"
+        },
+        {
+          "key": "7B/collect_topk_none/temp_0_1/responses.csv",
+          "asset_name": "7B--collect_topk_none--temp_0_1--responses.csv",
+          "size_bytes": 51323047,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3ku9"
+        },
+        {
+          "key": "7B/collect_topk_none/temp_0_4/responses.csv",
+          "asset_name": "7B--collect_topk_none--temp_0_4--responses.csv",
+          "size_bytes": 53272613,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kvN"
+        },
+        {
+          "key": "7B/collect_topk_none/temp_0_7/responses.csv",
+          "asset_name": "7B--collect_topk_none--temp_0_7--responses.csv",
+          "size_bytes": 57028299,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kvX"
+        },
+        {
+          "key": "7B/collect_topk_none/temp_1_0/responses.csv",
+          "asset_name": "7B--collect_topk_none--temp_1_0--responses.csv",
+          "size_bytes": 62745808,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kv1"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_40/label_report.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_40--label_report.csv",
+          "size_bytes": 145,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kwb"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_40/temp_0_1/responses_labeled.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_40--temp_0_1--responses_labeled.csv",
+          "size_bytes": 151788690,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kwj"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_40/temp_0_4/responses_labeled.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_40--temp_0_4--responses_labeled.csv",
+          "size_bytes": 154637474,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kyC"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_40/temp_0_7/responses_labeled.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_40--temp_0_7--responses_labeled.csv",
+          "size_bytes": 167632425,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3kzc"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_40/temp_1_0/responses_labeled.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_40--temp_1_0--responses_labeled.csv",
+          "size_bytes": 164761756,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k0b"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_none/label_report.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_none--label_report.csv",
+          "size_bytes": 146,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k1v"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_none/temp_0_1/responses_labeled.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_none--temp_0_1--responses_labeled.csv",
+          "size_bytes": 153451822,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k1z"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_none/temp_0_4/responses_labeled.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_none--temp_0_4--responses_labeled.csv",
+          "size_bytes": 157697258,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k3H"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_none/temp_0_7/responses_labeled.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_none--temp_0_7--responses_labeled.csv",
+          "size_bytes": 160371682,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k3y"
+        },
+        {
+          "key": "7B/labeled_attemptsplit_topk_none/temp_1_0/responses_labeled.csv",
+          "asset_name": "7B--labeled_attemptsplit_topk_none--temp_1_0--responses_labeled.csv",
+          "size_bytes": 167422884,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k5D"
+        },
+        {
+          "key": "7B/labeled_topk_40/label_report.csv",
+          "asset_name": "7B--labeled_topk_40--label_report.csv",
+          "size_bytes": 139,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k5_"
+        },
+        {
+          "key": "7B/labeled_topk_40/temp_0_1/responses_labeled.csv",
+          "asset_name": "7B--labeled_topk_40--temp_0_1--responses_labeled.csv",
+          "size_bytes": 51438444,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k6A"
+        },
+        {
+          "key": "7B/labeled_topk_40/temp_0_4/responses_labeled.csv",
+          "asset_name": "7B--labeled_topk_40--temp_0_4--responses_labeled.csv",
+          "size_bytes": 52843499,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k7H"
+        },
+        {
+          "key": "7B/labeled_topk_40/temp_0_7/responses_labeled.csv",
+          "asset_name": "7B--labeled_topk_40--temp_0_7--responses_labeled.csv",
+          "size_bytes": 58019765,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k7t"
+        },
+        {
+          "key": "7B/labeled_topk_40/temp_1_0/responses_labeled.csv",
+          "asset_name": "7B--labeled_topk_40--temp_1_0--responses_labeled.csv",
+          "size_bytes": 60864076,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k8I"
+        },
+        {
+          "key": "7B/labeled_topk_none/label_report.csv",
+          "asset_name": "7B--labeled_topk_none--label_report.csv",
+          "size_bytes": 139,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k8a"
+        },
+        {
+          "key": "7B/labeled_topk_none/temp_0_1/responses_labeled.csv",
+          "asset_name": "7B--labeled_topk_none--temp_0_1--responses_labeled.csv",
+          "size_bytes": 51560989,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k8b"
+        },
+        {
+          "key": "7B/labeled_topk_none/temp_0_4/responses_labeled.csv",
+          "asset_name": "7B--labeled_topk_none--temp_0_4--responses_labeled.csv",
+          "size_bytes": 53509694,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k82"
+        },
+        {
+          "key": "7B/labeled_topk_none/temp_0_7/responses_labeled.csv",
+          "asset_name": "7B--labeled_topk_none--temp_0_7--responses_labeled.csv",
+          "size_bytes": 57263051,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k9a"
+        },
+        {
+          "key": "7B/labeled_topk_none/temp_1_0/responses_labeled.csv",
+          "asset_name": "7B--labeled_topk_none--temp_1_0--responses_labeled.csv",
+          "size_bytes": 62976296,
+          "type": "csv",
+          "asset_id": "RA_kwDORgGWOs4W3k9r"
         }
       ]
     }
